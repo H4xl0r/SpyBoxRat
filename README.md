@@ -4,8 +4,26 @@ Remote Access Tool written in VBNET
 
 * Key Features : 
 
-* -File Manager  :  - Delete , Download , Launch Files - Go through Folders and Disks , Go Back
+* -File Manager  :  Delete , Download , Launch Files  , Go through Folders and Disks , Go Back
 * -Passwords Recovery
+* -Tasks Manager : Kill Tasks , Refresh 
+* -Remote Desktop Viewer (OPTIONAL) : If you do not want to forward second port , do not use
+* -Change Wallpaper
+* -TaskBar : Hide , Show , Hide Apps , SHow Apps
+* -Mouse  : Swap Mouse Button , Lock Left Click , Lock Right Click , Lock Movements ,Lock All , Unlock All
+* -Keyboard : Lock , Unlock
+* -Message 
+* -Computer Power : Log Out , Reboot , Shutdown
+* -BSOD
+* -DDOS : UDP
+* -OS INFORMATION : Get Precious Information about OS
+* -Client : Close , Close And Delete
+<br /><br />
+* -Builder : X86 ,X64 (Default is AnyCPU)  , Stealth Mode , Spread , Add To Startup
+
+<br /><br /><br /><br />
+
+Note about Mouse and Keyboard Locking / Unlocking : It will lock windows with same rights : Example with normal rights : will lock nearly all windows (except TasksManager and Windows opened with Admin Rights) , If you launch it with admin rights , you will be able to lock interaction with TasksManager
 
 
 
