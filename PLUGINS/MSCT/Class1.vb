@@ -3,7 +3,8 @@ Imports System.Net.Sockets
 Imports System.Runtime.InteropServices
 Imports System.Threading
 Imports System.Windows.Forms
-
+''||       AUTHOR Arsium       ||
+''||       github : https://github.com/arsium       ||
 Public Class MainCL
 
     Public Shared ghjk As New Thread(AddressOf gdzbfhbjedzfhujnezdfhjezdfhjezfhjdgsfegrjk)
