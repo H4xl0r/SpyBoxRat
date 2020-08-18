@@ -1,0 +1,20 @@
+E:\PROJECT VBNET\AnonMon\AnonMon\bin\x64\Debug\Anon ToolKit.exe.config
+E:\PROJECT VBNET\AnonMon\AnonMon\bin\x64\Debug\Anon ToolKit.exe
+E:\PROJECT VBNET\AnonMon\AnonMon\bin\x64\Debug\Anon ToolKit.pdb
+E:\PROJECT VBNET\AnonMon\AnonMon\bin\x64\Debug\Anon ToolKit.xml
+E:\PROJECT VBNET\AnonMon\AnonMon\bin\x64\Debug\HZH_Controls.dll
+E:\PROJECT VBNET\AnonMon\AnonMon\bin\x64\Debug\XanderUI.dll
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\AnonMon.vbprojAssemblyReference.cache
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\AnonMon.Custom_Form.resources
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\AnonMon.FM.resources
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\AnonMon.Form1.resources
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\AnonMon.PW.resources
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\AnonMon.REMOTE_BUILDER.resources
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\AnonMon.Tasks_Form.resources
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\AnonMon.Resources.resources
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\AnonMon.vbproj.GenerateResource.cache
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\AnonMon.vbproj.CoreCompileInputs.cache
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\AnonMon.vbproj.CopyComplete
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\Anon ToolKit.exe
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\Anon ToolKit.xml
+E:\PROJECT VBNET\AnonMon\AnonMon\obj\x64\Debug\Anon ToolKit.pdb

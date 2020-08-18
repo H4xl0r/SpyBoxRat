@@ -1,0 +1,10 @@
+E:\PROJECT VBNET\AnonMon\HWDR\bin\Debug\HWDR.dll
+E:\PROJECT VBNET\AnonMon\HWDR\bin\Debug\HWDR.pdb
+E:\PROJECT VBNET\AnonMon\HWDR\bin\Debug\HWDR.xml
+E:\PROJECT VBNET\AnonMon\HWDR\obj\Debug\PL.Resources.resources
+E:\PROJECT VBNET\AnonMon\HWDR\obj\Debug\HWDR.vbproj.GenerateResource.cache
+E:\PROJECT VBNET\AnonMon\HWDR\obj\Debug\HWDR.vbproj.CoreCompileInputs.cache
+E:\PROJECT VBNET\AnonMon\HWDR\obj\Debug\HWDR.dll
+E:\PROJECT VBNET\AnonMon\HWDR\obj\Debug\HWDR.xml
+E:\PROJECT VBNET\AnonMon\HWDR\obj\Debug\HWDR.pdb
+E:\PROJECT VBNET\AnonMon\HWDR\obj\Debug\HWDR.vbprojAssemblyReference.cache

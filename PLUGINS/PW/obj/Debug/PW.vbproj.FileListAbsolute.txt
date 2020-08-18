@@ -1,0 +1,10 @@
+E:\PROJECT VBNET\AnonMon\PW\bin\Debug\PW.dll
+E:\PROJECT VBNET\AnonMon\PW\bin\Debug\PW.pdb
+E:\PROJECT VBNET\AnonMon\PW\bin\Debug\PW.xml
+E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PW.vbproj.GenerateResource.cache
+E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PW.vbproj.CoreCompileInputs.cache
+E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PW.dll
+E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PW.xml
+E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PW.pdb
+E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PW.vbprojAssemblyReference.cache
+E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PL.Resources.resources

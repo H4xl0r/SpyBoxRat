@@ -1,0 +1,111 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TASKS
+</name>
+</assembly>
+<members>
+<member name="T:PL.My.Resources.Resources">
+<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member>
+<member name="P:PL.My.Resources.Resources.ResourceManager">
+<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member>
+<member name="P:PL.My.Resources.Resources.Culture">
+<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member>
+<member name="F:PL.MainCL.WM_Message.WM_ENABLE">
+ <summary>
+ wParam : Indicates whether the window has been enabled Or disabled. This parameter Is True If the window has been enabled Or False If the window has been disabled.
+ </summary>
+</member>
+<member name="F:PL.MainCL.WM_Message.WM_SETTEXT">
+ <summary>
+ This can't be sent with PostMessage 
+ wParam
+   This parameter Is Not used.
+    lParam
+   A pointer To a null-terminated String that Is the window text.
+   Must be used like : 
+ Dim Txt As IntPtr = Marshal.StringToHGlobalAnsi("YourText)
+
+     NativeFunctions.Win32.User32.SendMessage(Me.Handle, NativeFunctions.Win32.User32.WM_Message.WM_SETTEXT, 0, Txt)
+ </summary>
+</member>
+<member name="F:PL.MainCL.WM_Message.WM_ERASEBKGD">
+ <summary>
+ Erase Background
+ </summary>
+</member>
+<member name="F:PL.MainCL.WM_Message.WM_HSCROLL">
+ <summary>
+ Refer to https://docs.microsoft.com/en-us/windows/win32/controls/wm-hscroll
+ </summary>
+</member>
+<member name="F:PL.MainCL.WM_Message.WM_VSCROLL">
+ <summary>
+ Refer to https://docs.microsoft.com/en-us/windows/win32/controls/wm-vscroll
+ </summary>
+</member>
+<member name="F:PL.MainCL.WM_Message.WM_KEYDOWN">
+ <summary>
+ wParam : 
+
+  The virtual-key code Of the key being pressed. See Virtual-Key Codes.
+
+lParam : 
+ The repeat count, scan code, extended-key flag, context code, previous key-state flag, And transition-state flag, As shown In the following table.
+ Refer to  : https://docs.microsoft.com/en-us/windows/win32/inputdev/wm-keydown
+ </summary>
+ 
+</member>
+<member name="F:PL.MainCL.WM_Message.WM_SYSKEYDOWN">
+ <summary>
+ wParam : 
+
+  The virtual-key code Of the key being pressed. See Virtual-Key Codes.
+
+lParam : 
+ The repeat count, scan code, extended-key flag, context code, previous key-state flag, And transition-state flag, As shown In the following table.
+ Refer to  : https://docs.microsoft.com/en-us/windows/win32/inputdev/wm-syskeydown
+ </summary>
+</member>
+<member name="F:PL.MainCL.WM_Message.WM_KEYUP">
+ <summary>
+ Parameters
+     wParam : 
+
+    The virtual-key code Of the nonsystem key. See Virtual-Key Codes.
+     lParam : 
+
+    The repeat count, scan code, extended-key flag, context code, previous key-state flag, And transition-state flag, As shown In the following table.
+    Refer to : https://docs.microsoft.com/en-us/windows/win32/inputdev/wm-keyup
+ </summary>
+</member>
+<member name="F:PL.MainCL.WM_Message.WM_SYSKEYUP">
+ <summary>
+ Parameters
+     wParam : 
+
+    The virtual-key code Of the nonsystem key. See Virtual-Key Codes.
+     lParam : 
+
+    The repeat count, scan code, extended-key flag, context code, previous key-state flag, And transition-state flag, As shown In the following table.
+    Refer to https://docs.microsoft.com/en-us/windows/win32/inputdev/wm-syskeyup
+ </summary>
+</member>
+<member name="F:PL.MainCL.WM_Message.WM_COMMAND">
+ <summary>
+ Refer to  : https://docs.microsoft.com/en-us/windows/win32/menurc/wm-command
+ </summary>
+</member>
+</members>
+</doc>

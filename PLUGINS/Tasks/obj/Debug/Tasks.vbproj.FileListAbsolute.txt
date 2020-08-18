@@ -1,0 +1,10 @@
+E:\PROJECT VBNET\AnonMon\Tasks\bin\Debug\Tasks.dll
+E:\PROJECT VBNET\AnonMon\Tasks\bin\Debug\Tasks.pdb
+E:\PROJECT VBNET\AnonMon\Tasks\bin\Debug\Tasks.xml
+E:\PROJECT VBNET\AnonMon\Tasks\obj\Debug\PL.Resources.resources
+E:\PROJECT VBNET\AnonMon\Tasks\obj\Debug\Tasks.vbproj.GenerateResource.cache
+E:\PROJECT VBNET\AnonMon\Tasks\obj\Debug\Tasks.vbproj.CoreCompileInputs.cache
+E:\PROJECT VBNET\AnonMon\Tasks\obj\Debug\Tasks.dll
+E:\PROJECT VBNET\AnonMon\Tasks\obj\Debug\Tasks.xml
+E:\PROJECT VBNET\AnonMon\Tasks\obj\Debug\Tasks.pdb
+E:\PROJECT VBNET\AnonMon\Tasks\obj\Debug\TASKS.vbprojAssemblyReference.cache

