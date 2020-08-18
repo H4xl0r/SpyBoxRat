@@ -19,9 +19,8 @@ Remote Access Tool written in VBNET
 * -OS INFORMATION : Get Precious Information about OS
 * -Client : Close , Close And Delete
 * -Client Size :  14KB at least (depending on the options you add) => easy to encrypt and bind
-<br /><br />
 * -Builder : X86 ,X64 (Default is AnyCPU)  , Stealth Mode , Spread , Add To Startup
-<br />
+<br /><br />
 More Information and how to use : https://youtu.be/5t55kD6cQ5c
 
 <br /><br /><br /><br />
