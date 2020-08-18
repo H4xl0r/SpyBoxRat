@@ -3,7 +3,7 @@ Remote Access Tool written in VBNET
 
 
 * Key Features : 
-
+<br /><br /><br /><br />
 * -File Manager  :  Delete , Download , Launch Files  , Go through Folders and Disks , Go Back
 * -Passwords Recovery
 * -Tasks Manager : Kill Tasks , Refresh 
@@ -18,6 +18,7 @@ Remote Access Tool written in VBNET
 * -DDOS : UDP
 * -OS INFORMATION : Get Precious Information about OS
 * -Client : Close , Close And Delete
+* -Client Size :  14KB at least (depending on the options you add) => easy to encrypt and bind
 <br /><br />
 * -Builder : X86 ,X64 (Default is AnyCPU)  , Stealth Mode , Spread , Add To Startup
 <br />
