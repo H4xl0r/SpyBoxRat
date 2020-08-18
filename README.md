@@ -2,8 +2,8 @@
 [WIP]Remote Access Tool written in VBNET UNDER LICENSE READ THE END OF THIS PAGE !
 
 
-* Key Features : 
-<br /><br /><br /><br />
+Key Features : 
+<br /><br />
 * -File Manager  :  Delete , Download , Launch Files  , Go through Folders and Disks , Go Back
 * -Passwords Recovery
 * -Tasks Manager : Kill Tasks , Refresh 
@@ -20,14 +20,15 @@
 * -Client : Close , Close And Delete
 * -Client Size :  14KB at least (depending on the options you add) => easy to encrypt and bind
 * -Builder : X86 ,X64 (Default is AnyCPU)  , Stealth Mode , Spread , Add To Startup
-<br /><br />
-More Information and how to use : https://youtu.be/5t55kD6cQ5c
 
-<br /><br /><br /><br />
+<br /><br />
 
 Note about Mouse and Keyboard Locking / Unlocking : It will lock windows with same rights : Example with normal rights : will lock nearly all windows (except TasksManager and Windows opened with Admin Rights) , If you launch it with admin rights , you will be able to lock interaction with TasksManager
 
 
+<br /><br />
+
+More Information and how to use : https://youtu.be/5t55kD6cQ5c
 
 
 Images  : 
@@ -44,13 +45,7 @@ Images  :
 
 
 
-<br /><br /><br /><br /><br />
-
-
-
-
-
-
+<br /><br />
 
 
 
