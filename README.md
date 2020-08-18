@@ -4,7 +4,7 @@ Remote Access Tool written in VBNET
 
 * Key Features : 
 
-* -File Manager
+* -File Manager  :  - Delete , Download , Launch Files - Go through Folders and Disks , Go Back
 * -Passwords Recovery
 
 
@@ -18,7 +18,8 @@ Remote Access Tool written in VBNET
 
 
 
-<br /><br /><br /><br /><br />
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 
 
