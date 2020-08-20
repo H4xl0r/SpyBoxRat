@@ -28,7 +28,7 @@ Note about Mouse and Keyboard Locking / Unlocking : It will lock windows with sa
 
 <br /><br />
 
-More Information and how to use : https://youtu.be/5t55kD6cQ5c
+
 
 
 Images  : 
