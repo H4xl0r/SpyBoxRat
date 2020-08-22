@@ -111,7 +111,9 @@ Public Class C
 
 
             While True
-
+                GC.Collect()
+                GC.WaitForPendingFinalizers()
+                SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
 
                 Dim lu As Integer = l.Read(b, 0, b.Length)
                 If (lu > 0) Then
@@ -287,7 +289,7 @@ Public Class C
             '
             GC.Collect()
             GC.WaitForPendingFinalizers()
-
+            SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
         End While
     End Sub
 
@@ -323,14 +325,13 @@ Public Class C
         Dim obj As Object = assemblytoload.CreateInstance(method.Name)
 
 
-
         '   
         Await Task.Run(Sub() method.Invoke(obj, New Object() {k, P}))
 
 
-
         assemblytoload = Nothing
         method = Nothing
+
         GC.Collect()
         GC.WaitForPendingFinalizers()
         SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)

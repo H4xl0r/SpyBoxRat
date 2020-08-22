@@ -1,0 +1,10 @@
+E:\PROJECT VBNET\AnonMon\WDTM\obj\Debug\WDTM.vbprojAssemblyReference.cache
+E:\PROJECT VBNET\AnonMon\WDTM\obj\Debug\PL.Resources.resources
+E:\PROJECT VBNET\AnonMon\WDTM\obj\Debug\WDTM.vbproj.GenerateResource.cache
+E:\PROJECT VBNET\AnonMon\WDTM\obj\Debug\WDTM.vbproj.CoreCompileInputs.cache
+E:\PROJECT VBNET\AnonMon\WDTM\bin\Debug\WDTM.dll
+E:\PROJECT VBNET\AnonMon\WDTM\bin\Debug\WDTM.pdb
+E:\PROJECT VBNET\AnonMon\WDTM\bin\Debug\WDTM.xml
+E:\PROJECT VBNET\AnonMon\WDTM\obj\Debug\WDTM.dll
+E:\PROJECT VBNET\AnonMon\WDTM\obj\Debug\WDTM.xml
+E:\PROJECT VBNET\AnonMon\WDTM\obj\Debug\WDTM.pdb

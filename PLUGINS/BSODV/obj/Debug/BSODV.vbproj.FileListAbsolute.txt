@@ -1,0 +1,6 @@
+E:\PROJECT VBNET\AnonMon\BSODV\bin\Debug\BSODV.exe.config
+E:\PROJECT VBNET\AnonMon\BSODV\bin\Debug\BSODV.exe
+E:\PROJECT VBNET\AnonMon\BSODV\bin\Debug\BSODV.pdb
+E:\PROJECT VBNET\AnonMon\BSODV\obj\Debug\BSODV.vbproj.CoreCompileInputs.cache
+E:\PROJECT VBNET\AnonMon\BSODV\obj\Debug\BSODV.exe
+E:\PROJECT VBNET\AnonMon\BSODV\obj\Debug\BSODV.pdb

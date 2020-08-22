@@ -21,7 +21,6 @@ E:\PROJECT VBNET\AnonMon\AnonMon\obj\Debug\AnonMon.Info_Form.resources
 E:\PROJECT VBNET\AnonMon\AnonMon\bin\Debug\Theme.dll
 E:\PROJECT VBNET\AnonMon\AnonMon\bin\Debug\Theme.pdb
 E:\PROJECT VBNET\AnonMon\AnonMon\bin\Debug\Theme.xml
-E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBox.vbprojAssemblyReference.cache
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBox.vbproj.GenerateResource.cache
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBox.vbproj.CoreCompileInputs.cache
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBoxRat.exe
@@ -44,3 +43,4 @@ E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBox.vbproj.CopyComplete
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\bin\Debug\MKWFGA.dll
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\bin\Debug\MKWFGA.pdb
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\bin\Debug\MKWFGA.xml
+E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBox.vbprojAssemblyReference.cache

@@ -62,6 +62,12 @@ Partial Class Form1
         Me.KeyboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LockKeyboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnlockKeyboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HideIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StartIconToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StartIconHideToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowStartIconToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GetPasswordsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MiscToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MessageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -73,6 +79,10 @@ Partial Class Form1
         Me.DDOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UDPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OSInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SpreadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddToStarUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VirusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RedScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseDeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -84,8 +94,10 @@ Partial Class Form1
         Me.XuiCustomGroupbox2 = New XanderUI.XUICustomGroupbox()
         Me.XuiCheckBox1 = New XanderUI.XUICheckBox()
         Me.XuiCustomGroupbox1 = New XanderUI.XUICustomGroupbox()
+        Me.XuiCustomGroupbox4 = New XanderUI.XUICustomGroupbox()
         Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
         Me.UcBtnExt1 = New HZH_Controls.Controls.UCBtnExt()
+        Me.XuiCustomGroupbox3 = New XanderUI.XUICustomGroupbox()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -94,22 +106,29 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControlExt3 = New HZH_Controls.Controls.TabControlExt()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.AeroListView1 = New AnonMon.AeroListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.XuiCustomGroupbox3 = New XanderUI.XUICustomGroupbox()
-        Me.XuiCustomGroupbox4 = New XanderUI.XUICustomGroupbox()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.REMOTE_TOOL.SuspendLayout()
         Me.XuiCustomGroupbox2.SuspendLayout()
         Me.XuiCustomGroupbox1.SuspendLayout()
+        Me.XuiCustomGroupbox4.SuspendLayout()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.XuiCustomGroupbox3.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControlExt3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.XuiCustomGroupbox3.SuspendLayout()
-        Me.XuiCustomGroupbox4.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ListView2
@@ -117,17 +136,17 @@ Partial Class Form1
         Me.ListView2.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ListView2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9})
         Me.ListView2.ContextMenuStrip = Me.REMOTE_TOOL
-        Me.ListView2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView2.ForeColor = System.Drawing.Color.White
         Me.ListView2.HideSelection = False
-        Me.ListView2.Location = New System.Drawing.Point(3, 3)
+        Me.ListView2.Location = New System.Drawing.Point(114, 166)
         Me.ListView2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(981, 433)
+        Me.ListView2.Size = New System.Drawing.Size(263, 215)
         Me.ListView2.SmallImageList = Me.ImageList1
         Me.ListView2.TabIndex = 1
         Me.ListView2.UseCompatibleStateImageBehavior = False
         Me.ListView2.View = System.Windows.Forms.View.Details
+        Me.ListView2.Visible = False
         '
         'ColumnHeader6
         '
@@ -159,7 +178,7 @@ Partial Class Form1
         '
         'DesktopManagerToolStripMenuItem
         '
-        Me.DesktopManagerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileManagerToolStripMenuItem, Me.TaskManagerToolStripMenuItem, Me.RemoteViewerToolStripMenuItem, Me.ChangeWallPaperToolStripMenuItem, Me.TaskBarToolStripMenuItem, Me.MouseToolStripMenuItem, Me.KeyboardToolStripMenuItem})
+        Me.DesktopManagerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileManagerToolStripMenuItem, Me.TaskManagerToolStripMenuItem, Me.RemoteViewerToolStripMenuItem, Me.ChangeWallPaperToolStripMenuItem, Me.TaskBarToolStripMenuItem, Me.MouseToolStripMenuItem, Me.KeyboardToolStripMenuItem, Me.IconsToolStripMenuItem, Me.StartIconToolStripMenuItem})
         Me.DesktopManagerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.DesktopManagerToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.a1a5b9494d50bb3754bba547f2d88487_computer_monitor_flat_icon_bmpy_vexels__1_
         Me.DesktopManagerToolStripMenuItem.Name = "DesktopManagerToolStripMenuItem"
@@ -454,6 +473,62 @@ Partial Class Form1
         Me.UnlockKeyboardToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.UnlockKeyboardToolStripMenuItem.Text = "Unlock Keyboard"
         '
+        'IconsToolStripMenuItem
+        '
+        Me.IconsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.IconsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowIconsToolStripMenuItem, Me.HideIconsToolStripMenuItem})
+        Me.IconsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.IconsToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_browse_padddge_32
+        Me.IconsToolStripMenuItem.Name = "IconsToolStripMenuItem"
+        Me.IconsToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.IconsToolStripMenuItem.Text = "Icons"
+        '
+        'ShowIconsToolStripMenuItem
+        '
+        Me.ShowIconsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.ShowIconsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.ShowIconsToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_edye2
+        Me.ShowIconsToolStripMenuItem.Name = "ShowIconsToolStripMenuItem"
+        Me.ShowIconsToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.ShowIconsToolStripMenuItem.Text = "Show Icons"
+        '
+        'HideIconsToolStripMenuItem
+        '
+        Me.HideIconsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.HideIconsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.HideIconsToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_hide2
+        Me.HideIconsToolStripMenuItem.Name = "HideIconsToolStripMenuItem"
+        Me.HideIconsToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.HideIconsToolStripMenuItem.Text = "Hide Icons"
+        '
+        'StartIconToolStripMenuItem
+        '
+        Me.StartIconToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.StartIconToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartIconHideToolStripMenuItem1, Me.ShowStartIconToolStripMenuItem})
+        Me.StartIconToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.StartIconToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_winqsddows8_32
+        Me.StartIconToolStripMenuItem.Name = "StartIconToolStripMenuItem"
+        Me.StartIconToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.StartIconToolStripMenuItem.Text = "Start Icon"
+        '
+        'StartIconHideToolStripMenuItem1
+        '
+        Me.StartIconHideToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.StartIconHideToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.StartIconHideToolStripMenuItem1.Image = Global.AnonMon.My.Resources.Resources.icons8_hide2
+        Me.StartIconHideToolStripMenuItem1.Name = "StartIconHideToolStripMenuItem1"
+        Me.StartIconHideToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
+        Me.StartIconHideToolStripMenuItem1.Text = "Hide Icon"
+        '
+        'ShowStartIconToolStripMenuItem
+        '
+        Me.ShowStartIconToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.ShowStartIconToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.ShowStartIconToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_edye1
+        Me.ShowStartIconToolStripMenuItem.Name = "ShowStartIconToolStripMenuItem"
+        Me.ShowStartIconToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.ShowStartIconToolStripMenuItem.Text = "Show Icon"
+        '
         'GetPasswordsToolStripMenuItem
         '
         Me.GetPasswordsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
@@ -464,7 +539,7 @@ Partial Class Form1
         '
         'MiscToolStripMenuItem
         '
-        Me.MiscToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MessageToolStripMenuItem, Me.PowerToolStripMenuItem, Me.BSODToolStripMenuItem, Me.DDOSToolStripMenuItem, Me.OSInformationToolStripMenuItem})
+        Me.MiscToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MessageToolStripMenuItem, Me.PowerToolStripMenuItem, Me.BSODToolStripMenuItem, Me.DDOSToolStripMenuItem, Me.OSInformationToolStripMenuItem, Me.SpreadToolStripMenuItem, Me.AddToStarUpToolStripMenuItem, Me.VirusToolStripMenuItem})
         Me.MiscToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.MiscToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_settinpmgs
         Me.MiscToolStripMenuItem.Name = "MiscToolStripMenuItem"
@@ -551,6 +626,47 @@ Partial Class Form1
         Me.OSInformationToolStripMenuItem.Name = "OSInformationToolStripMenuItem"
         Me.OSInformationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.OSInformationToolStripMenuItem.Text = "OS Information"
+        '
+        'SpreadToolStripMenuItem
+        '
+        Me.SpreadToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.SpreadToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.SpreadToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_c_drive_2_32
+        Me.SpreadToolStripMenuItem.Name = "SpreadToolStripMenuItem"
+        Me.SpreadToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.SpreadToolStripMenuItem.Text = "Spread"
+        Me.SpreadToolStripMenuItem.ToolTipText = "Spread server on all devices found (option in builder)"
+        '
+        'AddToStarUpToolStripMenuItem
+        '
+        Me.AddToStarUpToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.AddToStarUpToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.AddToStarUpToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_external_link
+        Me.AddToStarUpToolStripMenuItem.Name = "AddToStarUpToolStripMenuItem"
+        Me.AddToStarUpToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.AddToStarUpToolStripMenuItem.Text = "Add To StarUp"
+        Me.AddToStarUpToolStripMenuItem.ToolTipText = "Add the server to startup (option in builder)"
+        '
+        'VirusToolStripMenuItem
+        '
+        Me.VirusToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.VirusToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RedScreenToolStripMenuItem})
+        Me.VirusToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.VirusToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_biohasqdzard_32
+        Me.VirusToolStripMenuItem.Name = "VirusToolStripMenuItem"
+        Me.VirusToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.VirusToolStripMenuItem.Text = "Virus"
+        '
+        'RedScreenToolStripMenuItem
+        '
+        Me.RedScreenToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.RedScreenToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.RedScreenToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_blue_screen_of_deatggh_32RD
+        Me.RedScreenToolStripMenuItem.Name = "RedScreenToolStripMenuItem"
+        Me.RedScreenToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.RedScreenToolStripMenuItem.Text = "Red Screen"
+        Me.RedScreenToolStripMenuItem.ToolTipText = "Block Keyboard , Block Mouse , add a watchdog to kill task manager and set a full" &
+    " red screen window " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "To Close , you need to reboot "
         '
         'ClientToolStripMenuItem
         '
@@ -663,6 +779,20 @@ Partial Class Form1
         Me.XuiCustomGroupbox1.Text = "Connection Settings"
         Me.XuiCustomGroupbox1.TextColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
         '
+        'XuiCustomGroupbox4
+        '
+        Me.XuiCustomGroupbox4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.XuiCustomGroupbox4.BorderWidth = 1
+        Me.XuiCustomGroupbox4.Controls.Add(Me.NumericUpDown2)
+        Me.XuiCustomGroupbox4.Location = New System.Drawing.Point(6, 85)
+        Me.XuiCustomGroupbox4.Name = "XuiCustomGroupbox4"
+        Me.XuiCustomGroupbox4.ShowText = True
+        Me.XuiCustomGroupbox4.Size = New System.Drawing.Size(253, 57)
+        Me.XuiCustomGroupbox4.TabIndex = 17
+        Me.XuiCustomGroupbox4.TabStop = False
+        Me.XuiCustomGroupbox4.Text = "Remote Viewer Port : "
+        Me.XuiCustomGroupbox4.TextColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
+        '
         'NumericUpDown2
         '
         Me.NumericUpDown2.BackColor = System.Drawing.Color.White
@@ -700,6 +830,20 @@ Partial Class Form1
         Me.UcBtnExt1.TabStop = False
         Me.UcBtnExt1.TipsColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.UcBtnExt1.TipsText = ""
+        '
+        'XuiCustomGroupbox3
+        '
+        Me.XuiCustomGroupbox3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.XuiCustomGroupbox3.BorderWidth = 1
+        Me.XuiCustomGroupbox3.Controls.Add(Me.NumericUpDown1)
+        Me.XuiCustomGroupbox3.Location = New System.Drawing.Point(6, 22)
+        Me.XuiCustomGroupbox3.Name = "XuiCustomGroupbox3"
+        Me.XuiCustomGroupbox3.ShowText = True
+        Me.XuiCustomGroupbox3.Size = New System.Drawing.Size(253, 57)
+        Me.XuiCustomGroupbox3.TabIndex = 16
+        Me.XuiCustomGroupbox3.TabStop = False
+        Me.XuiCustomGroupbox3.Text = "Main Connection Settings"
+        Me.XuiCustomGroupbox3.TextColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
         '
         'NumericUpDown1
         '
@@ -771,11 +915,11 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(43, 10)
+        Me.Label1.Location = New System.Drawing.Point(73, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 13)
+        Me.Label1.Size = New System.Drawing.Size(221, 13)
         Me.Label1.TabIndex = 13
-        Me.Label1.Text = "SpyBoxRat By Arsium"
+        Me.Label1.Text = "SpyBoxRat Summer Edition V1.1 By Arsium"
         '
         'TabControlExt3
         '
@@ -800,8 +944,9 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.TabPage2.Controls.Add(Me.ToolStrip1)
+        Me.TabPage2.Controls.Add(Me.AeroListView1)
         Me.TabPage2.Controls.Add(Me.ListView2)
+        Me.TabPage2.Controls.Add(Me.ToolStrip1)
         Me.TabPage2.ForeColor = System.Drawing.Color.White
         Me.TabPage2.Location = New System.Drawing.Point(54, 4)
         Me.TabPage2.Name = "TabPage2"
@@ -809,6 +954,42 @@ Partial Class Form1
         Me.TabPage2.Size = New System.Drawing.Size(987, 439)
         Me.TabPage2.TabIndex = 0
         Me.TabPage2.Text = "Clients"
+        '
+        'AeroListView1
+        '
+        Me.AeroListView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.AeroListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.AeroListView1.ContextMenuStrip = Me.REMOTE_TOOL
+        Me.AeroListView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.AeroListView1.ForeColor = System.Drawing.Color.White
+        Me.AeroListView1.HideSelection = False
+        Me.AeroListView1.Location = New System.Drawing.Point(3, 3)
+        Me.AeroListView1.Name = "AeroListView1"
+        Me.AeroListView1.Size = New System.Drawing.Size(981, 433)
+        Me.AeroListView1.SmallImageList = Me.ImageList1
+        Me.AeroListView1.TabIndex = 3
+        Me.AeroListView1.UseCompatibleStateImageBehavior = False
+        Me.AeroListView1.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "IP"
+        Me.ColumnHeader1.Width = 166
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "OS"
+        Me.ColumnHeader2.Width = 257
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Username"
+        Me.ColumnHeader3.Width = 219
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Version"
+        Me.ColumnHeader4.Width = 488
         '
         'ToolStrip1
         '
@@ -841,33 +1022,28 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'XuiCustomGroupbox3
+        'Timer2
         '
-        Me.XuiCustomGroupbox3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.XuiCustomGroupbox3.BorderWidth = 1
-        Me.XuiCustomGroupbox3.Controls.Add(Me.NumericUpDown1)
-        Me.XuiCustomGroupbox3.Location = New System.Drawing.Point(6, 22)
-        Me.XuiCustomGroupbox3.Name = "XuiCustomGroupbox3"
-        Me.XuiCustomGroupbox3.ShowText = True
-        Me.XuiCustomGroupbox3.Size = New System.Drawing.Size(253, 57)
-        Me.XuiCustomGroupbox3.TabIndex = 16
-        Me.XuiCustomGroupbox3.TabStop = False
-        Me.XuiCustomGroupbox3.Text = "Main Connection Settings"
-        Me.XuiCustomGroupbox3.TextColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.Timer2.Interval = 1000
         '
-        'XuiCustomGroupbox4
+        'Label2
         '
-        Me.XuiCustomGroupbox4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.XuiCustomGroupbox4.BorderWidth = 1
-        Me.XuiCustomGroupbox4.Controls.Add(Me.NumericUpDown2)
-        Me.XuiCustomGroupbox4.Location = New System.Drawing.Point(6, 85)
-        Me.XuiCustomGroupbox4.Name = "XuiCustomGroupbox4"
-        Me.XuiCustomGroupbox4.ShowText = True
-        Me.XuiCustomGroupbox4.Size = New System.Drawing.Size(253, 57)
-        Me.XuiCustomGroupbox4.TabIndex = 17
-        Me.XuiCustomGroupbox4.TabStop = False
-        Me.XuiCustomGroupbox4.Text = "Remote Viewer Port : "
-        Me.XuiCustomGroupbox4.TextColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(868, 3)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(76, 20)
+        Me.Label2.TabIndex = 4
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.AnonMon.My.Resources.Resources.icons8_sdummer_32
+        Me.PictureBox2.Location = New System.Drawing.Point(43, 5)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 15
+        Me.PictureBox2.TabStop = False
         '
         'Form1
         '
@@ -875,6 +1051,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1055, 487)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControlExt3)
         Me.Controls.Add(Me.Label1)
@@ -886,23 +1064,21 @@ Partial Class Form1
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Form1"
         Me.Padding = New System.Windows.Forms.Padding(5, 35, 5, 5)
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SpyBox By Arsium"
         Me.REMOTE_TOOL.ResumeLayout(False)
         Me.XuiCustomGroupbox2.ResumeLayout(False)
-        Me.XuiCustomGroupbox2.PerformLayout()
         Me.XuiCustomGroupbox1.ResumeLayout(False)
-        Me.XuiCustomGroupbox1.PerformLayout()
+        Me.XuiCustomGroupbox4.ResumeLayout(False)
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.XuiCustomGroupbox3.ResumeLayout(False)
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlExt3.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.XuiCustomGroupbox3.ResumeLayout(False)
-        Me.XuiCustomGroupbox3.PerformLayout()
-        Me.XuiCustomGroupbox4.ResumeLayout(False)
-        Me.XuiCustomGroupbox4.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -982,4 +1158,22 @@ Partial Class Form1
     Friend WithEvents AllUnlockToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents XuiCustomGroupbox4 As XanderUI.XUICustomGroupbox
     Friend WithEvents XuiCustomGroupbox3 As XanderUI.XUICustomGroupbox
+    Friend WithEvents IconsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowIconsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HideIconsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StartIconToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StartIconHideToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ShowStartIconToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SpreadToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddToStarUpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VirusToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RedScreenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AeroListView1 As AeroListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

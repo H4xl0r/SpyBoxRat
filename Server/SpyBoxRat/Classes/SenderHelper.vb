@@ -16,13 +16,13 @@ Public Class SenderHelper
 
 
 
-                    For Each i As Char In StringHelper
+                    'For Each i As Char In StringHelper ''OLD
 
-                        Dim bufFfer() As Byte = Encoding.Default.GetBytes(i)
+                    Dim bufFfer() As Byte = Encoding.Default.GetBytes(StringHelper)
 
-                        j.GetStream().WriteAsync(bufFfer, 0, bufFfer.Length)
+                    Task.Run(Sub() j.GetStream().WriteAsync(bufFfer, 0, bufFfer.Length))
 
-                    Next
+                    '  Next  ''OLD
 
 
 

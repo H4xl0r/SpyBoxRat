@@ -7,4 +7,3 @@ E:\PROJECT VBNET\AnonMon\DDOS\obj\Debug\DDOS.vbproj.CoreCompileInputs.cache
 E:\PROJECT VBNET\AnonMon\DDOS\obj\Debug\DDOS.dll
 E:\PROJECT VBNET\AnonMon\DDOS\obj\Debug\DDOS.xml
 E:\PROJECT VBNET\AnonMon\DDOS\obj\Debug\DDOS.pdb
-E:\PROJECT VBNET\AnonMon\DDOS\obj\Debug\DDOS.vbprojAssemblyReference.cache

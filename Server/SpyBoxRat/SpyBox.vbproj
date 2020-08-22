@@ -110,6 +110,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AeroListView.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\BuilderClass.vb" />
     <Compile Include="Classes\Countries.vb" />
     <Compile Include="Classes\Helper.vb" />
@@ -224,6 +227,15 @@
   <ItemGroup>
     <Content Include="Arsium-Spartan.ico" />
     <Content Include="iconfinder_anonymous_395266s.ico" />
+    <None Include="Resources\icons8_sdummer_32.png" />
+    <None Include="Resources\icons8_blue_screen_of_deatggh_32RD.png" />
+    <None Include="Resources\icons8_biohasqdzard_32.png" />
+    <None Include="Resources\icons8_external_link.ico" />
+    <None Include="Resources\icons8_c_drive_2_32.png" />
+    <None Include="Resources\icons8_winqsddows8_32.png" />
+    <None Include="Resources\icons8_browse_padddge_32.png" />
+    <None Include="Resources\icons8_hide2.ico" />
+    <None Include="Resources\icons8_edye2.ico" />
     <None Include="Resources\icons8_downloassd_32.png" />
     <None Include="Resources\icons8_skull_crossqdsbones_32.png" />
     <None Include="Resources\icons8_refresh_32.png" />
