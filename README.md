@@ -21,6 +21,13 @@ Key Features :
 * -Client Size :  14KB at least (depending on the options you add) => easy to encrypt and bind
 * -Builder : X86 ,X64 (Default is AnyCPU)  , Stealth Mode , Spread , Add To Startup
 * -Currently DOESN'T SUPPORT DNS
+* -Show and Hide Desktop Icons  
+* -Added Show and Hide Start Icons
+* -Added Spread 
+* -Added Add To Startup
+* -Added RED VIRUS : Block Keyboard , Block Mouse , add a watchdog to kill task manager and set a full red screen window 
+To Close , you need to reboot 
+
 <br /><br />
 
 Note about Mouse and Keyboard Locking / Unlocking : It will lock windows with same rights : Example with normal rights : will lock nearly all windows (except TasksManager and Windows opened with Admin Rights) , If you launch it with admin rights , you will be able to lock interaction with TasksManager
