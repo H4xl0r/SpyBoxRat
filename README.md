@@ -30,6 +30,10 @@ To Close , you need to reboot
 
 <br /><br />
 
+Note that the interface could be slightly changed with updates !
+
+<br />
+
 Note about Mouse and Keyboard Locking / Unlocking : It will lock windows with same rights : Example with normal rights : will lock nearly all windows (except TasksManager and Windows opened with Admin Rights) , If you launch it with admin rights , you will be able to lock interaction with TasksManager
 
 
