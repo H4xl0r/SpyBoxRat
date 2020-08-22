@@ -22,10 +22,10 @@ Key Features :
 * -Builder : X86 ,X64 (Default is AnyCPU)  , Stealth Mode , Spread , Add To Startup
 * -Currently DOESN'T SUPPORT DNS
 * -Show and Hide Desktop Icons  
-* -Added Show and Hide Start Icons
-* -Added Spread 
-* -Added Add To Startup
-* -Added RED VIRUS : Block Keyboard , Block Mouse , add a watchdog to kill task manager and set a full red screen window 
+* -Show and Hide Start Icons
+* -Spread Client
+* -Add Client To Startup
+* -RED VIRUS : Block Keyboard , Block Mouse , add a watchdog to kill task manager and set a full red screen window 
 To Close , you need to reboot 
 
 <br /><br />
