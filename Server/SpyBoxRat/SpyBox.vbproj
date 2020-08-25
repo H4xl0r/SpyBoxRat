@@ -138,10 +138,28 @@
     <Compile Include="Forms\Info_Form.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Injector_Form.Designer.vb">
+      <DependentUpon>Injector_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Injector_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Log_Form.Designer.vb">
+      <DependentUpon>Log_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Log_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\PassRecov_Form.Designer.vb">
       <DependentUpon>PassRecov_Form.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\PassRecov_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProcInfo_Form.Designer.vb">
+      <DependentUpon>ProcInfo_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProcInfo_Form.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\REMOTE_BUILDER.Designer.vb">
@@ -179,6 +197,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Classes\SenderHelper.vb" />
+    <Compile Include="Classes\UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\UserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\Custom_Form.resx">
@@ -193,8 +217,17 @@
     <EmbeddedResource Include="Forms\Info_Form.resx">
       <DependentUpon>Info_Form.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Injector_Form.resx">
+      <DependentUpon>Injector_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Log_Form.resx">
+      <DependentUpon>Log_Form.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PassRecov_Form.resx">
       <DependentUpon>PassRecov_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProcInfo_Form.resx">
+      <DependentUpon>ProcInfo_Form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\REMOTE_BUILDER.resx">
       <DependentUpon>REMOTE_BUILDER.vb</DependentUpon>
@@ -210,6 +243,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\UserControl1.resx">
+      <DependentUpon>UserControl1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +263,16 @@
   <ItemGroup>
     <Content Include="Arsium-Spartan.ico" />
     <Content Include="iconfinder_anonymous_395266s.ico" />
+    <None Include="Resources\icons8_automatic_32.png" />
+    <None Include="Resources\icons8_ssdd_32.png" />
+    <None Include="Resources\icons8_info_squared_32.png" />
+    <None Include="Resources\icons8_File_qsqsqxplorer_322.png" />
+    <None Include="Resources\icons8_processor_321.png" />
+    <None Include="Resources\icons8_processor_32.png" />
+    <None Include="Resources\icons8_azure_storage_32.png" />
+    <None Include="Resources\icons8_maximize_wxwc6xwindow_32.png" />
+    <None Include="Resources\icons8_explfosion_321.png" />
+    <None Include="Resources\icons8_explfosion_32.png" />
     <None Include="Resources\icons8_sdummer_32.png" />
     <None Include="Resources\icons8_blue_screen_of_deatggh_32RD.png" />
     <None Include="Resources\icons8_biohasqdzard_32.png" />
@@ -294,6 +340,10 @@
     <None Include="Icons\icons8_trashsa.ico" />
     <None Include="Icons\icons8_enter.ico" />
     <None Include="Icons\icons8_delete.ico" />
+    <None Include="Icons\icons8_expqslosion_32.png" />
+    <None Include="Icons\icons8_delete_biqsdqsn_32.png" />
+    <None Include="Icons\icons8_deskddtop_32.png" />
+    <None Include="Icons\icons8_Syringe_with_a_drop_of_bazlood_32.png" />
     <Content Include="LOGO.ico" />
     <None Include="Icons\icons8_pictures_folder_32.png" />
     <None Include="Icons\icons8_windows_client_32.png" />

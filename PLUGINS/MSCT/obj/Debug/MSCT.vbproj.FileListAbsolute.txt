@@ -7,4 +7,3 @@ E:\PROJECT VBNET\AnonMon\MSCT\obj\Debug\MSCT.vbproj.CoreCompileInputs.cache
 E:\PROJECT VBNET\AnonMon\MSCT\obj\Debug\MSCT.dll
 E:\PROJECT VBNET\AnonMon\MSCT\obj\Debug\MSCT.xml
 E:\PROJECT VBNET\AnonMon\MSCT\obj\Debug\MSCT.pdb
-E:\PROJECT VBNET\AnonMon\MSCT\obj\Debug\MSCT.vbprojAssemblyReference.cache

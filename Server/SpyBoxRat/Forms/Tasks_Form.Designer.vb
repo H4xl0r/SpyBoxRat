@@ -33,16 +33,18 @@ Partial Class Tasks_Form
         Me.TSK_TOOLSTRIP = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.RefreshToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KillToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InfoProcessToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TSK_TOOLSTRIP.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(12, 9)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.Size = New System.Drawing.Size(40, 13)
         Me.Label4.TabIndex = 22
         Me.Label4.Text = "Label4"
         '
@@ -101,7 +103,8 @@ Partial Class Tasks_Form
         Me.ListView1.BackColor = System.Drawing.Color.White
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1})
         Me.ListView1.ContextMenuStrip = Me.TSK_TOOLSTRIP
-        Me.ListView1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.ListView1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.ListView1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(12, 34)
         Me.ListView1.Name = "ListView1"
@@ -118,27 +121,36 @@ Partial Class Tasks_Form
         'TSK_TOOLSTRIP
         '
         Me.TSK_TOOLSTRIP.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.TSK_TOOLSTRIP.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RefreshToolStripMenuItem, Me.KillToolStripMenuItem})
+        Me.TSK_TOOLSTRIP.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RefreshToolStripMenuItem, Me.KillToolStripMenuItem, Me.InfoProcessToolStripMenuItem})
         Me.TSK_TOOLSTRIP.Name = "TSK_TOOLSTRIP"
-        Me.TSK_TOOLSTRIP.Size = New System.Drawing.Size(189, 86)
+        Me.TSK_TOOLSTRIP.Size = New System.Drawing.Size(147, 94)
         '
         'RefreshToolStripMenuItem
         '
-        Me.RefreshToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.RefreshToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.RefreshToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.RefreshToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_refresh_32
         Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
-        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
+        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(146, 30)
         Me.RefreshToolStripMenuItem.Text = "Refresh"
         '
         'KillToolStripMenuItem
         '
-        Me.KillToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.KillToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.KillToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.KillToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_skull_crossqdsbones_32
         Me.KillToolStripMenuItem.Name = "KillToolStripMenuItem"
-        Me.KillToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
+        Me.KillToolStripMenuItem.Size = New System.Drawing.Size(146, 30)
         Me.KillToolStripMenuItem.Text = "Kill"
+        '
+        'InfoProcessToolStripMenuItem
+        '
+        Me.InfoProcessToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.InfoProcessToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.InfoProcessToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_info_squared_32
+        Me.InfoProcessToolStripMenuItem.Name = "InfoProcessToolStripMenuItem"
+        Me.InfoProcessToolStripMenuItem.Size = New System.Drawing.Size(146, 30)
+        Me.InfoProcessToolStripMenuItem.Text = "Info Process"
         '
         'Tasks_Form
         '
@@ -170,4 +182,5 @@ Partial Class Tasks_Form
     Friend WithEvents TSK_TOOLSTRIP As ContextMenuStrip
     Friend WithEvents RefreshToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents KillToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InfoProcessToolStripMenuItem As ToolStripMenuItem
 End Class

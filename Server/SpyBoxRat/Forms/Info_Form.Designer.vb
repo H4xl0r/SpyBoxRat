@@ -37,6 +37,7 @@ Partial Class Info_Form
         '
         Me.ListView1.BackColor = System.Drawing.Color.White
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.INFO})
+        Me.ListView1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.ListView1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(12, 48)
@@ -104,10 +105,11 @@ Partial Class Info_Form
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(12, 9)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 13)
+        Me.Label4.Size = New System.Drawing.Size(106, 13)
         Me.Label4.TabIndex = 24
         Me.Label4.Text = "System Information"
         '
@@ -122,6 +124,7 @@ Partial Class Info_Form
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ListView1)
+        Me.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Info_Form"

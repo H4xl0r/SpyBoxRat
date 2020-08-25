@@ -143,6 +143,7 @@ Partial Class REMOTE_BUILDER
         Me.Spread_CHK_BOX.CheckboxHoverColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.Spread_CHK_BOX.CheckboxStyle = XanderUI.XUICheckBox.Style.Material
         Me.Spread_CHK_BOX.Checked = False
+        Me.Spread_CHK_BOX.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Spread_CHK_BOX.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Spread_CHK_BOX.Location = New System.Drawing.Point(6, 124)
         Me.Spread_CHK_BOX.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -160,6 +161,7 @@ Partial Class REMOTE_BUILDER
         Me.AddToStartup.CheckboxHoverColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.AddToStartup.CheckboxStyle = XanderUI.XUICheckBox.Style.Material
         Me.AddToStartup.Checked = False
+        Me.AddToStartup.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.AddToStartup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.AddToStartup.Location = New System.Drawing.Point(250, 78)
         Me.AddToStartup.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -176,6 +178,7 @@ Partial Class REMOTE_BUILDER
         Me.X86BOX.CheckboxHoverColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.X86BOX.CheckboxStyle = XanderUI.XUICheckBox.Style.Material
         Me.X86BOX.Checked = False
+        Me.X86BOX.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.X86BOX.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.X86BOX.Location = New System.Drawing.Point(6, 30)
         Me.X86BOX.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -192,6 +195,7 @@ Partial Class REMOTE_BUILDER
         Me.x64BOX.CheckboxHoverColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.x64BOX.CheckboxStyle = XanderUI.XUICheckBox.Style.Material
         Me.x64BOX.Checked = False
+        Me.x64BOX.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.x64BOX.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.x64BOX.Location = New System.Drawing.Point(250, 30)
         Me.x64BOX.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -208,6 +212,7 @@ Partial Class REMOTE_BUILDER
         Me.stealth_CHK_BOX.CheckboxHoverColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.stealth_CHK_BOX.CheckboxStyle = XanderUI.XUICheckBox.Style.Material
         Me.stealth_CHK_BOX.Checked = False
+        Me.stealth_CHK_BOX.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.stealth_CHK_BOX.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.stealth_CHK_BOX.Location = New System.Drawing.Point(6, 78)
         Me.stealth_CHK_BOX.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -243,7 +248,7 @@ Partial Class REMOTE_BUILDER
         Me.NumericUpDown2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NumericUpDown2.Maximum = New Decimal(New Integer() {90000, 0, 0, 0})
         Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(376, 20)
+        Me.NumericUpDown2.Size = New System.Drawing.Size(376, 22)
         Me.NumericUpDown2.TabIndex = 2
         Me.NumericUpDown2.Value = New Decimal(New Integer() {8080, 0, 0, 0})
         '
@@ -253,7 +258,7 @@ Partial Class REMOTE_BUILDER
         Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.TextBox1.Location = New System.Drawing.Point(6, 19)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(376, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(376, 22)
         Me.TextBox1.TabIndex = 1
         Me.TextBox1.Text = "127.0.0.1"
         '
@@ -270,6 +275,7 @@ Partial Class REMOTE_BUILDER
         Me.XuiCustomGroupbox1.TabStop = False
         Me.XuiCustomGroupbox1.Text = "Remote Viewer Port"
         Me.XuiCustomGroupbox1.TextColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.XuiCustomGroupbox1.Visible = False
         '
         'Remote_VPORT_UP
         '
@@ -279,7 +285,7 @@ Partial Class REMOTE_BUILDER
         Me.Remote_VPORT_UP.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Remote_VPORT_UP.Maximum = New Decimal(New Integer() {90000, 0, 0, 0})
         Me.Remote_VPORT_UP.Name = "Remote_VPORT_UP"
-        Me.Remote_VPORT_UP.Size = New System.Drawing.Size(376, 20)
+        Me.Remote_VPORT_UP.Size = New System.Drawing.Size(376, 22)
         Me.Remote_VPORT_UP.TabIndex = 3
         Me.Remote_VPORT_UP.Value = New Decimal(New Integer() {8081, 0, 0, 0})
         '
@@ -294,7 +300,7 @@ Partial Class REMOTE_BUILDER
         Me.UcBtnExt2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.UcBtnExt2.EnabledMouseEffect = True
         Me.UcBtnExt2.FillColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.UcBtnExt2.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.UcBtnExt2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.UcBtnExt2.IsRadius = True
         Me.UcBtnExt2.IsShowRect = True
         Me.UcBtnExt2.IsShowTips = False
@@ -326,6 +332,7 @@ Partial Class REMOTE_BUILDER
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "REMOTE_BUILDER"

@@ -13,4 +13,13 @@ Public Class Helper
 
     End Sub
 
+
+
+    Public Shared Async Function ConvertTB64ASYNC(ByVal o As String) As Task(Of String)
+
+        Dim hj As Byte() = Await Task.Run(Function() IO.File.ReadAllBytes(o))
+        Dim iaz As String = Await Task.Run(Function() Convert.ToBase64String(hj))
+        Return iaz
+    End Function
+
 End Class

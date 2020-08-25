@@ -54,7 +54,7 @@ Partial Class PassRecov_Form
         Me.UcBtnExt1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.UcBtnExt1.EnabledMouseEffect = True
         Me.UcBtnExt1.FillColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.UcBtnExt1.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.UcBtnExt1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.UcBtnExt1.IsRadius = True
         Me.UcBtnExt1.IsShowRect = True
         Me.UcBtnExt1.IsShowTips = False
@@ -73,10 +73,11 @@ Partial Class PassRecov_Form
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(9, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Label1"
         '
@@ -88,6 +89,7 @@ Partial Class PassRecov_Form
         Me.ListView1.BackColor = System.Drawing.Color.White
         Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.ListView1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.ListView1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(12, 34)
@@ -176,6 +178,7 @@ Partial Class PassRecov_Form
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "PassRecov_Form"

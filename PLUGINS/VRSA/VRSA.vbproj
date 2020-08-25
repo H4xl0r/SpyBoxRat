@@ -87,6 +87,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="V1.vb" />
+    <Compile Include="V2.vb" />
+    <Compile Include="V3.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

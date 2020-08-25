@@ -44,3 +44,9 @@ E:\PROJECT VBNET\AnonMon\SpyBoxRat\bin\Debug\MKWFGA.dll
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\bin\Debug\MKWFGA.pdb
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\bin\Debug\MKWFGA.xml
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBox.vbprojAssemblyReference.cache
+E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\AnonMon.ProcInfo_Form.resources
+E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\AnonMon.UserControl1.resources
+E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\AnonMon.Injector_Form.resources
+E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\AnonMon.Log_Form.resources
+E:\PROJECT VBNET\AnonMon\SpyBoxRat\bin\Debug\HZH_Controls.dll
+E:\PROJECT VBNET\AnonMon\SpyBoxRat\bin\Debug\XanderUI.dll

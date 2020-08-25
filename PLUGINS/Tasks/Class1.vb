@@ -23,8 +23,101 @@ Public Class MainCL
         ElseIf h(1) = "|CLOSETHAT|" Then
 
             Await Task.Run(Sub() CloseAFCKP(k, h(2)))
+
+
+        ElseIf h(1) = "|INFO|" Then
+            Await Task.Run(Sub() GetIinfo(h(2), k))
         End If
     End Sub
+
+    Public Shared Async Sub GetIinfo(ByVal lp As String, ByVal K As TcpClient)
+        Dim o As New StringBuilder
+        Dim jk As Process() = Process.GetProcesses
+        For Each h In jk
+            If h.ProcessName = lp Then
+
+                Try
+                    o.Append(h.Handle.ToString & "|/\|")
+                Catch ex As Exception
+                    o.Append("Do not have permission to retrieve the natif handle" & "|/\|")
+                End Try
+
+                Try
+
+
+                    o.Append(h.Modules(0).FileName & "|/\|")
+                Catch ex As Exception
+                    o.Append("Do not have permission to retrieve the path" & "|/\|")
+                End Try
+
+                Try
+                    o.Append(h.Id & "|/\|")
+                Catch ex As Exception
+                    o.Append("Cannot retrieve this process ID" & "|/\|")
+                End Try
+
+
+                Try
+                    o.Append(h.MainModule.BaseAddress.ToString & "|/\|")
+                Catch ex As Exception
+                    o.Append("Cannot retrieve this process address" & "|/\|")
+                End Try
+
+
+                Try
+                    o.Append(h.BasePriority & "|/\|")
+                Catch ex As Exception
+                    o.Append("Cannot retrieve this process priority" & "|/\|")
+                End Try
+
+
+                Try
+                    o.Append(h.MainWindowHandle.ToString & "|/\|")
+                Catch ex As Exception
+                    o.Append("Cannot retrieve this process main window handle" & "|/\|")
+                End Try
+
+
+
+
+                Try
+                    o.Append(h.MainWindowTitle.ToString & "|/\|")
+                Catch ex As Exception
+                    o.Append("Cannot retrieve this process main window title" & "|/\|")
+                End Try
+
+
+            End If
+
+
+        Next
+
+        o.Append(lp & "|ENDPROCINFO|")
+
+
+        Dim Send As String = o.ToString
+
+        Dim buffer As Byte() = System.Text.Encoding.UTF8.GetBytes(Send)
+
+
+        Await K.GetStream.WriteAsync(buffer, 0, buffer.Length)
+
+
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     Public Shared Async Sub TasksGot(ByVal k As TcpClient, Optional ByVal Helper As String = "")
         Dim ListView1 As New ListView
         Dim Ultitask As New StringBuilder

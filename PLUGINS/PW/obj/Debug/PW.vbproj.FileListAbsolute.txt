@@ -7,3 +7,4 @@ E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PW.dll
 E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PW.xml
 E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PW.pdb
 E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PL.Resources.resources
+E:\PROJECT VBNET\AnonMon\PW\obj\Debug\PW.vbprojAssemblyReference.cache

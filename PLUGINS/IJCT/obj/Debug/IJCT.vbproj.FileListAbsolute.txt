@@ -1,0 +1,9 @@
+E:\PROJECT VBNET\AnonMon\IJCT\bin\Debug\IJCT.dll
+E:\PROJECT VBNET\AnonMon\IJCT\bin\Debug\IJCT.pdb
+E:\PROJECT VBNET\AnonMon\IJCT\bin\Debug\IJCT.xml
+E:\PROJECT VBNET\AnonMon\IJCT\obj\Debug\PL.Resources.resources
+E:\PROJECT VBNET\AnonMon\IJCT\obj\Debug\IJCT.vbproj.GenerateResource.cache
+E:\PROJECT VBNET\AnonMon\IJCT\obj\Debug\IJCT.vbproj.CoreCompileInputs.cache
+E:\PROJECT VBNET\AnonMon\IJCT\obj\Debug\IJCT.dll
+E:\PROJECT VBNET\AnonMon\IJCT\obj\Debug\IJCT.xml
+E:\PROJECT VBNET\AnonMon\IJCT\obj\Debug\IJCT.pdb

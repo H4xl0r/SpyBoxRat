@@ -7,4 +7,3 @@ E:\PROJECT VBNET\AnonMon\DSK\obj\Debug\DSK.vbproj.CoreCompileInputs.cache
 E:\PROJECT VBNET\AnonMon\DSK\obj\Debug\DSK.dll
 E:\PROJECT VBNET\AnonMon\DSK\obj\Debug\DSK.xml
 E:\PROJECT VBNET\AnonMon\DSK\obj\Debug\DSK.pdb
-E:\PROJECT VBNET\AnonMon\DSK\obj\Debug\DSK.vbprojAssemblyReference.cache
