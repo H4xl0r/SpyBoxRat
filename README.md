@@ -58,8 +58,6 @@ Images  :
 ![Image description](https://github.com/arsium/SpyBoxRat/blob/master/SCREEN3.png)
 ![Image description](https://github.com/arsium/SpyBoxRat/blob/master/SCREEN4.png)
 ![Image description](https://github.com/arsium/SpyBoxRat/blob/master/SCREEN5.png)
-![Image description](https://github.com/arsium/SpyBoxRat/blob/master/SCREEN8.png)
-![Image description](https://github.com/arsium/SpyBoxRat/blob/master/SCREEN9.png)
 
 
 <br />
