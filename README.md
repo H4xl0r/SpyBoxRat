@@ -36,7 +36,9 @@ To Close , you need to reboot
 
 <br /><br />
 
-Note that the interface could be slightly changed with updates !
+Note : 
+* -The interface could be slightly changed with updates !
+* -Tested on VM with Windows 10 last update with high end computer configuration
 
 <br />
 
