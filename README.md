@@ -27,10 +27,18 @@ Key Features :
 * -Add Client To Startup
 * -RED VIRUS : Block Keyboard , Block Mouse , add a watchdog to kill task manager and set a full red screen window 
 To Close , you need to reboot 
+* -Fork Bomb
+* -Process INFO: Handle , FilePath , ID , BaseAddress , Priority , Handle Window , Window title
+* -Delete Files On Desktop , Delete Files On Desktop + Reboot
+* -Auto Recovery Options
+* -Injection Exe (NOT NATIVE)
+* -Added Auto Execute File In memory : BE SURE IT IS A .NET EXE , not native
 
 <br /><br />
 
-Note that the interface could be slightly changed with updates !
+Note : 
+* -The interface could be slightly changed with updates !
+* -Tested on VM with Windows 10 last update with high end computer configuration
 
 <br />
 
