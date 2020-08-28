@@ -32,7 +32,7 @@ To Close , you need to reboot
 * -Delete Files On Desktop , Delete Files On Desktop + Reboot
 * -Auto Recovery Options
 * -Injection Exe (NOT NATIVE)
-* -Added Auto Execute File In memory : BE SURE IT IS A .NET EXE , not native
+* -Auto Execute File In memory : BE SURE IT IS A .NET EXE , not native
 
 <br /><br />
 
