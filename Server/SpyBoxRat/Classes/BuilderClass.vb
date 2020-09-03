@@ -13,7 +13,7 @@
                 Dim p As String = My.Resources.String1.Replace("127.0.0.1", REMOTE_BUILDER.TextBox1.Text)
                 Dim p2 As String = p.Replace("8080", REMOTE_BUILDER.NumericUpDown2.Value)
 
-                p2 = p2.Replace("1800", REMOTE_BUILDER.Remote_VPORT_UP.Value)
+                p2 = p2.Replace("8081", REMOTE_BUILDER.Remote_VPORT_UP.Value)
 
                 Dim p3
                 Dim p4

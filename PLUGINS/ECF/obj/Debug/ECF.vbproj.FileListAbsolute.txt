@@ -1,0 +1,10 @@
+E:\PROJECT VBNET\AnonMon\ECF\bin\Debug\ECF.dll
+E:\PROJECT VBNET\AnonMon\ECF\bin\Debug\ECF.pdb
+E:\PROJECT VBNET\AnonMon\ECF\bin\Debug\ECF.xml
+E:\PROJECT VBNET\AnonMon\ECF\obj\Debug\ECF.vbprojAssemblyReference.cache
+E:\PROJECT VBNET\AnonMon\ECF\obj\Debug\PL.Resources.resources
+E:\PROJECT VBNET\AnonMon\ECF\obj\Debug\ECF.vbproj.GenerateResource.cache
+E:\PROJECT VBNET\AnonMon\ECF\obj\Debug\ECF.vbproj.CoreCompileInputs.cache
+E:\PROJECT VBNET\AnonMon\ECF\obj\Debug\ECF.dll
+E:\PROJECT VBNET\AnonMon\ECF\obj\Debug\ECF.xml
+E:\PROJECT VBNET\AnonMon\ECF\obj\Debug\ECF.pdb

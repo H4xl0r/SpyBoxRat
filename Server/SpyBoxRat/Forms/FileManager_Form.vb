@@ -128,4 +128,42 @@ Public Class FileManager_Form
             End If
         End If
     End Sub
+
+
+
+
+
+
+    Private Async Sub AESENCToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AESENCToolStripMenuItem.Click
+        If ListView1.SelectedItems.Count = 1 Then
+            If ListView1.SelectedItems(0).Tag = "FILE" Then
+
+                Dim newP As String = Label1.Text & ListView1.SelectedItems(0).Text
+
+                Dim o As String = Form1.PL_ECF & "|SP1|" & "" & "|SP2|" & "|AESENC|" & "|SP2|" & newP & "|SP2|" & TextBox1.Text & "|ENDING|"
+
+
+
+
+                Await Task.Run(Sub() SenderHelper.SenderHelper(Form1.CliSt, Label4.Text, o))
+            End If
+        End If
+    End Sub
+
+
+    Private Async Sub AesDecryptionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AesDecryptionToolStripMenuItem.Click
+        If ListView1.SelectedItems.Count = 1 Then
+            If ListView1.SelectedItems(0).Tag = "FILE" Then
+
+                Dim newP As String = Label1.Text & ListView1.SelectedItems(0).Text
+
+                Dim o As String = Form1.PL_ECF & "|SP1|" & "" & "|SP2|" & "|AESDEC|" & "|SP2|" & newP & "|SP2|" & TextBox1.Text & "|ENDING|"
+
+
+
+
+                Await Task.Run(Sub() SenderHelper.SenderHelper(Form1.CliSt, Label4.Text, o))
+            End If
+        End If
+    End Sub
 End Class

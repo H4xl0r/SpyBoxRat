@@ -275,7 +275,6 @@ Partial Class REMOTE_BUILDER
         Me.XuiCustomGroupbox1.TabStop = False
         Me.XuiCustomGroupbox1.Text = "Remote Viewer Port"
         Me.XuiCustomGroupbox1.TextColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.XuiCustomGroupbox1.Visible = False
         '
         'Remote_VPORT_UP
         '

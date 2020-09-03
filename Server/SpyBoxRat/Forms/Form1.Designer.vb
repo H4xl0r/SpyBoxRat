@@ -76,6 +76,8 @@ Partial Class Form1
         Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RestartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShutDownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HibernateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SuspendToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BSODToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DDOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UDPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -97,6 +99,8 @@ Partial Class Form1
         Me.Test2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.XuiCustomGroupbox2 = New XanderUI.XUICustomGroupbox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.AUTO_CHK_FILE = New XanderUI.XUICheckBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Auto_RECOV = New XanderUI.XUICheckBox()
@@ -124,10 +128,9 @@ Partial Class Form1
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.AUTO_CHK_FILE = New XanderUI.XUICheckBox()
         Me.REMOTE_TOOL.SuspendLayout()
         Me.XuiCustomGroupbox2.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.XuiCustomGroupbox1.SuspendLayout()
@@ -140,7 +143,6 @@ Partial Class Form1
         Me.TabPage4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ListView2
@@ -582,7 +584,7 @@ Partial Class Form1
         'PowerToolStripMenuItem
         '
         Me.PowerToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.PowerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem, Me.RestartToolStripMenuItem, Me.ShutDownToolStripMenuItem})
+        Me.PowerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem, Me.RestartToolStripMenuItem, Me.ShutDownToolStripMenuItem, Me.HibernateToolStripMenuItem, Me.SuspendToolStripMenuItem})
         Me.PowerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.PowerToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_lightning_boltsds
         Me.PowerToolStripMenuItem.Name = "PowerToolStripMenuItem"
@@ -615,6 +617,24 @@ Partial Class Form1
         Me.ShutDownToolStripMenuItem.Name = "ShutDownToolStripMenuItem"
         Me.ShutDownToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.ShutDownToolStripMenuItem.Text = "ShutDown"
+        '
+        'HibernateToolStripMenuItem
+        '
+        Me.HibernateToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.HibernateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.HibernateToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_hibernssate_32
+        Me.HibernateToolStripMenuItem.Name = "HibernateToolStripMenuItem"
+        Me.HibernateToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.HibernateToolStripMenuItem.Text = "Hibernate"
+        '
+        'SuspendToolStripMenuItem
+        '
+        Me.SuspendToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.SuspendToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.SuspendToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_sleesdp_32
+        Me.SuspendToolStripMenuItem.Name = "SuspendToolStripMenuItem"
+        Me.SuspendToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.SuspendToolStripMenuItem.Text = "Suspend"
         '
         'BSODToolStripMenuItem
         '
@@ -812,6 +832,32 @@ Partial Class Form1
         Me.XuiCustomGroupbox2.Text = "Miscellaneous Settings"
         Me.XuiCustomGroupbox2.TextColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
         '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.AnonMon.My.Resources.Resources.icons8_Syringe_with_a_drop_of_bazlood_32
+        Me.PictureBox5.Location = New System.Drawing.Point(6, 85)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(22, 22)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 8
+        Me.PictureBox5.TabStop = False
+        '
+        'AUTO_CHK_FILE
+        '
+        Me.AUTO_CHK_FILE.CheckboxCheckColor = System.Drawing.Color.White
+        Me.AUTO_CHK_FILE.CheckboxColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.AUTO_CHK_FILE.CheckboxHoverColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.AUTO_CHK_FILE.CheckboxStyle = XanderUI.XUICheckBox.Style.Material
+        Me.AUTO_CHK_FILE.Checked = False
+        Me.AUTO_CHK_FILE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.AUTO_CHK_FILE.Location = New System.Drawing.Point(34, 85)
+        Me.AUTO_CHK_FILE.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.AUTO_CHK_FILE.Name = "AUTO_CHK_FILE"
+        Me.AUTO_CHK_FILE.Size = New System.Drawing.Size(180, 22)
+        Me.AUTO_CHK_FILE.TabIndex = 7
+        Me.AUTO_CHK_FILE.Text = "Auto Execute File"
+        Me.AUTO_CHK_FILE.TickThickness = 2
+        '
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.AnonMon.My.Resources.Resources.icons8_automatic_32
@@ -896,7 +942,6 @@ Partial Class Form1
         Me.XuiCustomGroupbox4.TabStop = False
         Me.XuiCustomGroupbox4.Text = "Remote Viewer Port : "
         Me.XuiCustomGroupbox4.TextColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.XuiCustomGroupbox4.Visible = False
         '
         'NumericUpDown2
         '
@@ -1020,7 +1065,7 @@ Partial Class Form1
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(169, 13)
         Me.Label1.TabIndex = 13
-        Me.Label1.Text = "SpyBoxRat Summer Edition V1.2"
+        Me.Label1.Text = "SpyBoxRat Summer Edition V1.3"
         '
         'TabControlExt3
         '
@@ -1148,32 +1193,6 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 15
         Me.PictureBox2.TabStop = False
         '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.AnonMon.My.Resources.Resources.icons8_Syringe_with_a_drop_of_bazlood_32
-        Me.PictureBox5.Location = New System.Drawing.Point(6, 85)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(22, 22)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 8
-        Me.PictureBox5.TabStop = False
-        '
-        'AUTO_CHK_FILE
-        '
-        Me.AUTO_CHK_FILE.CheckboxCheckColor = System.Drawing.Color.White
-        Me.AUTO_CHK_FILE.CheckboxColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.AUTO_CHK_FILE.CheckboxHoverColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.AUTO_CHK_FILE.CheckboxStyle = XanderUI.XUICheckBox.Style.Material
-        Me.AUTO_CHK_FILE.Checked = False
-        Me.AUTO_CHK_FILE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.AUTO_CHK_FILE.Location = New System.Drawing.Point(34, 85)
-        Me.AUTO_CHK_FILE.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.AUTO_CHK_FILE.Name = "AUTO_CHK_FILE"
-        Me.AUTO_CHK_FILE.Size = New System.Drawing.Size(180, 22)
-        Me.AUTO_CHK_FILE.TabIndex = 7
-        Me.AUTO_CHK_FILE.Text = "Auto Execute File"
-        Me.AUTO_CHK_FILE.TickThickness = 2
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1197,16 +1216,13 @@ Partial Class Form1
         Me.Text = "SpyBox By Arsium"
         Me.REMOTE_TOOL.ResumeLayout(False)
         Me.XuiCustomGroupbox2.ResumeLayout(False)
-        Me.XuiCustomGroupbox2.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.XuiCustomGroupbox1.ResumeLayout(False)
-        Me.XuiCustomGroupbox1.PerformLayout()
         Me.XuiCustomGroupbox4.ResumeLayout(False)
-        Me.XuiCustomGroupbox4.PerformLayout()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.XuiCustomGroupbox3.ResumeLayout(False)
-        Me.XuiCustomGroupbox3.PerformLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlExt3.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
@@ -1214,7 +1230,6 @@ Partial Class Form1
         Me.TabPage4.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1321,4 +1336,6 @@ Partial Class Form1
     Friend WithEvents InjectionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents AUTO_CHK_FILE As XanderUI.XUICheckBox
+    Friend WithEvents HibernateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SuspendToolStripMenuItem As ToolStripMenuItem
 End Class

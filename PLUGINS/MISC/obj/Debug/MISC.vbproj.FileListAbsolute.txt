@@ -8,3 +8,13 @@ E:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.dll
 E:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.xml
 E:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.pdb
 E:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.vbprojAssemblyReference.cache
+F:\PROJECT VBNET\AnonMon\MISC\bin\Debug\MISC.dll
+F:\PROJECT VBNET\AnonMon\MISC\bin\Debug\MISC.pdb
+F:\PROJECT VBNET\AnonMon\MISC\bin\Debug\MISC.xml
+F:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.vbprojAssemblyReference.cache
+F:\PROJECT VBNET\AnonMon\MISC\obj\Debug\PL.Resources.resources
+F:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.vbproj.GenerateResource.cache
+F:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.vbproj.CoreCompileInputs.cache
+F:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.dll
+F:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.xml
+F:\PROJECT VBNET\AnonMon\MISC\obj\Debug\MISC.pdb

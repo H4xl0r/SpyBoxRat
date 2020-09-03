@@ -263,6 +263,10 @@
   <ItemGroup>
     <Content Include="Arsium-Spartan.ico" />
     <Content Include="iconfinder_anonymous_395266s.ico" />
+    <None Include="Resources\icons8_fdile_32.png" />
+    <None Include="Resources\icons8_padsdflock_32.png" />
+    <None Include="Resources\icons8_sleesdp_32.png" />
+    <None Include="Resources\icons8_hibernssate_32.png" />
     <None Include="Resources\icons8_automatic_32.png" />
     <None Include="Resources\icons8_ssdd_32.png" />
     <None Include="Resources\icons8_info_squared_32.png" />
