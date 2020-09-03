@@ -19,7 +19,7 @@ Key Features :
 * -DDOS : UDP
 * -OS INFORMATION : Get Precious Information about OS
 * -Client : Close , Close And Delete
-* -Client Size :  14KB at least (depending on the options you add) => easy to encrypt and bind
+* -Client Size :  15KB at least (depending on the options you add) => easy to encrypt and bind
 * -Builder : X86 ,X64 (Default is AnyCPU)  , Stealth Mode , Spread , Add To Startup
 * -Currently DOESN'T SUPPORT DNS
 * -Show and Hide Desktop Icons  
