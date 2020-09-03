@@ -4,7 +4,8 @@
 
 Key Features : 
 <br />
-* -File Manager  :  Delete , Download , Launch Files  , Go through Folders and Disks , Go Back
+* -File Manager  :  Delete , Download , Launch Files  , Go through Folders and Disks , Go Back 
+* -Encryption : Can encrypt | decrypt files in files manager with custom key (actually one algo : AES)
 * -Passwords Recovery
 * -Tasks Manager : Kill Tasks , Refresh 
 * -Remote Desktop Viewer (OPTIONAL) : If you do not want to forward second port , do not use
@@ -13,7 +14,7 @@ Key Features :
 * -Mouse  : Swap Mouse Button , Lock Left Click , Lock Right Click , Lock Movements ,Lock All , Unlock All
 * -Keyboard : Lock , Unlock
 * -Message 
-* -Computer Power : Log Out , Reboot , Shutdown
+* -Computer Power : Log Out , Reboot , Shutdown ,  Hibernate,  Suspend 
 * -BSOD
 * -DDOS : UDP
 * -OS INFORMATION : Get Precious Information about OS
