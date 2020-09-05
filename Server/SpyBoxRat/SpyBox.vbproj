@@ -110,6 +110,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABTForm.Designer.vb">
+      <DependentUpon>ABTForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ABTForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Classes\AeroListView.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ABTForm.resx">
+      <DependentUpon>ABTForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Custom_Form.resx">
       <DependentUpon>Custom_Form.vb</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +272,14 @@
   <ItemGroup>
     <Content Include="Arsium-Spartan.ico" />
     <Content Include="iconfinder_anonymous_395266s.ico" />
+    <None Include="Resources\icons8_question_mark_32.png" />
+    <None Include="Resources\icons8_monitor_32.png" />
+    <None Include="Resources\icons8_windows_cliefghfgnt_641.png" />
+    <None Include="Resources\icons8_270_degrees_32.png" />
+    <None Include="Resources\icons8_180_degree_32.png" />
+    <None Include="Resources\icons8_90_degrees_32.png" />
+    <None Include="Resources\icons8_0_32.png" />
+    <None Include="Resources\icons8_3d_rotate_32.png" />
     <None Include="Resources\icons8_fdile_32.png" />
     <None Include="Resources\icons8_padsdflock_32.png" />
     <None Include="Resources\icons8_sleesdp_32.png" />

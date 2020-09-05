@@ -77,3 +77,4 @@ F:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBox.vbproj.CopyComplete
 F:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBoxRat.exe
 F:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBoxRat.xml
 F:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBoxRat.pdb
+E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\AnonMon.ABTForm.resources

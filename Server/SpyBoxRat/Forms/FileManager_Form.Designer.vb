@@ -48,6 +48,8 @@ Partial Class FileManager_Form
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.RC6EncryptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RC6DecryptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FM_MenuStrip.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -111,7 +113,7 @@ Partial Class FileManager_Form
         'SdToolStripMenuItem
         '
         Me.SdToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.SdToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AESENCToolStripMenuItem, Me.AesDecryptionToolStripMenuItem})
+        Me.SdToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AESENCToolStripMenuItem, Me.AesDecryptionToolStripMenuItem, Me.RC6EncryptionToolStripMenuItem, Me.RC6DecryptionToolStripMenuItem})
         Me.SdToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.SdToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_fdile_32
         Me.SdToolStripMenuItem.Name = "SdToolStripMenuItem"
@@ -124,7 +126,7 @@ Partial Class FileManager_Form
         Me.AESENCToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.AESENCToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_locks_64
         Me.AESENCToolStripMenuItem.Name = "AESENCToolStripMenuItem"
-        Me.AESENCToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.AESENCToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
         Me.AESENCToolStripMenuItem.Text = "Aes Encryption"
         '
         'AesDecryptionToolStripMenuItem
@@ -133,7 +135,7 @@ Partial Class FileManager_Form
         Me.AesDecryptionToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.AesDecryptionToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_padsdflock_32
         Me.AesDecryptionToolStripMenuItem.Name = "AesDecryptionToolStripMenuItem"
-        Me.AesDecryptionToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.AesDecryptionToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
         Me.AesDecryptionToolStripMenuItem.Text = "Aes Decryption"
         '
         'ToolTip1
@@ -318,6 +320,24 @@ Partial Class FileManager_Form
         Me.ListView1.TabIndex = 16
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
+        'RC6EncryptionToolStripMenuItem
+        '
+        Me.RC6EncryptionToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.RC6EncryptionToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.RC6EncryptionToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_locks_64
+        Me.RC6EncryptionToolStripMenuItem.Name = "RC6EncryptionToolStripMenuItem"
+        Me.RC6EncryptionToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
+        Me.RC6EncryptionToolStripMenuItem.Text = "RC6 Encryption"
+        '
+        'RC6DecryptionToolStripMenuItem
+        '
+        Me.RC6DecryptionToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.RC6DecryptionToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.RC6DecryptionToolStripMenuItem.Image = Global.AnonMon.My.Resources.Resources.icons8_padlosqdck_64
+        Me.RC6DecryptionToolStripMenuItem.Name = "RC6DecryptionToolStripMenuItem"
+        Me.RC6DecryptionToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
+        Me.RC6DecryptionToolStripMenuItem.Text = "RC6 Decryption"
+        '
         'FileManager_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -372,4 +392,6 @@ Partial Class FileManager_Form
     Friend WithEvents Label6 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents RC6EncryptionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RC6DecryptionToolStripMenuItem As ToolStripMenuItem
 End Class

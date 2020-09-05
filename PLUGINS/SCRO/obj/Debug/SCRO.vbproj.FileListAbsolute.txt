@@ -1,0 +1,10 @@
+E:\PROJECT VBNET\AnonMon\SCRO\bin\Debug\SCRO.dll
+E:\PROJECT VBNET\AnonMon\SCRO\bin\Debug\SCRO.pdb
+E:\PROJECT VBNET\AnonMon\SCRO\bin\Debug\SCRO.xml
+E:\PROJECT VBNET\AnonMon\SCRO\obj\Debug\SCRO.vbprojAssemblyReference.cache
+E:\PROJECT VBNET\AnonMon\SCRO\obj\Debug\PL.Resources.resources
+E:\PROJECT VBNET\AnonMon\SCRO\obj\Debug\SCRO.vbproj.GenerateResource.cache
+E:\PROJECT VBNET\AnonMon\SCRO\obj\Debug\SCRO.vbproj.CoreCompileInputs.cache
+E:\PROJECT VBNET\AnonMon\SCRO\obj\Debug\SCRO.dll
+E:\PROJECT VBNET\AnonMon\SCRO\obj\Debug\SCRO.xml
+E:\PROJECT VBNET\AnonMon\SCRO\obj\Debug\SCRO.pdb
