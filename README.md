@@ -5,7 +5,7 @@
 Key Features : 
 <br />
 * -File Manager  :  Delete , Download , Launch Files  , Go through Folders and Disks , Go Back 
-* -Encryption : Can encrypt | decrypt files in files manager with custom key (actually one algo : AES)
+* -Encryption : Can encrypt | decrypt files in files manager with custom key (AES , RC6)
 * -Passwords Recovery
 * -Tasks Manager : Kill Tasks , Refresh 
 * -Remote Desktop Viewer (OPTIONAL) : If you do not want to forward second port , do not use
@@ -34,6 +34,7 @@ To Close , you need to reboot
 * -Auto Recovery Options
 * -Injection Exe (NOT NATIVE)
 * -Auto Execute File In memory : BE SURE IT IS A .NET EXE , not native
+* -Monitor Rotation : 0 , 90 , 180 , 270 degrees
 
 <br /><br />
 
