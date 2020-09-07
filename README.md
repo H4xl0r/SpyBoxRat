@@ -7,7 +7,7 @@ Key Features :
 * -File Manager  :  Delete , Download , Launch Files  , Go through Folders and Disks , Go Back 
 * -Encryption : Can encrypt | decrypt files in files manager with custom key (AES , RC6)
 * -Passwords Recovery
-* -Tasks Manager : Kill Tasks , Refresh 
+* -Tasks Manager : Kill Tasks , Refresh , Get Information
 * -Remote Desktop Viewer (OPTIONAL) : If you do not want to forward second port , do not use
 * -Change Wallpaper
 * -TaskBar : Hide , Show , Hide Apps , SHow Apps
