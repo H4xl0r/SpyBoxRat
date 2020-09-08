@@ -47,7 +47,6 @@ E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\SpyBox.vbprojAssemblyReference.cach
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\AnonMon.ProcInfo_Form.resources
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\AnonMon.UserControl1.resources
 E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\AnonMon.Injector_Form.resources
-E:\PROJECT VBNET\AnonMon\SpyBoxRat\obj\Debug\AnonMon.Log_Form.resources
 F:\PROJECT VBNET\AnonMon\SpyBoxRat\bin\Debug\SpyBoxRat.exe.config
 F:\PROJECT VBNET\AnonMon\SpyBoxRat\bin\Debug\SpyBoxRat.exe
 F:\PROJECT VBNET\AnonMon\SpyBoxRat\bin\Debug\SpyBoxRat.pdb

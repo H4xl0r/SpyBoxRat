@@ -87,6 +87,12 @@ Public Class MainCL
                 End Try
 
 
+                Try
+                    o.Append(lp & "|/\|")
+                Catch ex As Exception
+
+                End Try
+
             End If
 
 
@@ -126,61 +132,40 @@ Public Class MainCL
 
         Dim jk As Process() = Process.GetProcesses
 
-        For Each h In jk
-
-            ' Dim lvi As New ListViewItem(h.ProcessName) 'first column
-
-            '  lvi.SubItems.Add(Convert.ToBase64String(Icon.ExtractAssociatedIcon(h.MainModule.FileName)))
-
-
-            ' Try
-            '  Dim aze As Icon = Icon.ExtractAssociatedIcon(h.MainModule.FileName)
-            '  Using aeaze As New MemoryStream()
-            '  aze.Save(aeaze)
-            '      IO.File.WriteAllBytes(aazejkl & ".png", aeaze.ToArray)
-            '   End Using
-
-            'Catch ex As Exception
-
-            'End Try
-
-
-            ' ListView1.Items.Add(lvi) 'add all in listview
-
-
-            '  GC.Collect()
-            '  GC.WaitForPendingFinalizers()
-
-
-        Next
         ListView1.Sorting = SortOrder.Descending
 
         For Each h In jk
 
-            Dim o As String
+
             Try
-
-                '   Dim i As System.Drawing.Icon = Icon.ExtractAssociatedIcon(h.MainModule.FileName)
-                '
-                '  Dim stream As MemoryStream = New MemoryStream()
-                '  Dim azo As Bitmap = i.ToBitmap
-
-                ' azo.Save(stream, ImageFormat.Png)
+                If File.Exists(h.MainModule.FileName) Then
 
 
 
 
-                '    o = Convert.ToBase64String(stream.ToArray())
+                    Dim i As System.Drawing.Icon = System.Drawing.Icon.ExtractAssociatedIcon(h.MainModule.FileName)
+
+
+
+                    Dim stream As MemoryStream = New MemoryStream()
+                    Dim azo As Bitmap = i.ToBitmap
+
+                    azo.Save(stream, ImageFormat.Png)
+
+
+
+
+                    Dim o As String = Convert.ToBase64String(stream.ToArray())
+
+                    Ultitask.AppendLine(h.ProcessName & "|IC|" & o)
+
+
+                End If
+
             Catch ex As Exception
-                '   o = ""
+                Ultitask.AppendLine(h.ProcessName & "|IC|")
             End Try
-
-
-
-
-
-
-            Ultitask.AppendLine(h.ProcessName) ' & "|IC|" & o) '& "////" & h.SubItems(1).Text & "////" & h.SubItems(2).Text) ' & "////" & h.SubItems(3).Text)
+            ' & "|IC|" & o) '& "////" & h.SubItems(1).Text & "////" & h.SubItems(2).Text) ' & "////" & h.SubItems(3).Text)
 
 
 

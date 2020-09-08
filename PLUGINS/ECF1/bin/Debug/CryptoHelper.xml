@@ -54,7 +54,7 @@ CryptoHelper
  <param name="Key"></param>
  <param name="UseBase64"></param>
 </member>
-<member name="M:CryptoHelper.Xorium.#ctor(System.Byte[],System.String,System.Boolean,System.UInt32)">
+<member name="M:CryptoHelper.Xorium.#ctor(System.Byte[],System.String,System.Boolean)">
  <summary>
  If you use Base64 , it will return you a string , else it will return the bytes array encrypted !
  </summary>

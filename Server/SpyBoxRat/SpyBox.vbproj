@@ -48,7 +48,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Arsium-Spartan.ico</ApplicationIcon>
+    <ApplicationIcon>icons8_greek_helmet.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -110,10 +110,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ABTForm.Designer.vb">
+    <Compile Include="Forms\ABTForm.Designer.vb">
       <DependentUpon>ABTForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="ABTForm.vb">
+    <Compile Include="Forms\ABTForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\AeroListView.vb">
@@ -122,6 +122,7 @@
     <Compile Include="Classes\BuilderClass.vb" />
     <Compile Include="Classes\Countries.vb" />
     <Compile Include="Classes\Helper.vb" />
+    <Compile Include="Classes\Logs_Helper.vb" />
     <Compile Include="Forms\Custom_Form.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -148,12 +149,6 @@
       <DependentUpon>Injector_Form.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Injector_Form.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Log_Form.Designer.vb">
-      <DependentUpon>Log_Form.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Log_Form.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\PassRecov_Form.Designer.vb">
@@ -211,7 +206,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ABTForm.resx">
+    <EmbeddedResource Include="Forms\ABTForm.resx">
       <DependentUpon>ABTForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Custom_Form.resx">
@@ -228,9 +223,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Injector_Form.resx">
       <DependentUpon>Injector_Form.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Log_Form.resx">
-      <DependentUpon>Log_Form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PassRecov_Form.resx">
       <DependentUpon>PassRecov_Form.vb</DependentUpon>
@@ -272,6 +264,14 @@
   <ItemGroup>
     <Content Include="Arsium-Spartan.ico" />
     <Content Include="iconfinder_anonymous_395266s.ico" />
+    <None Include="Resources\icons8_sdummer_321.png" />
+    <None Include="Resources\imageres_54.ico" />
+    <None Include="Resources\icons8_delete_docfument_32.png" />
+    <None Include="Resources\icons8_empty_trash_32.png" />
+    <None Include="Resources\icons8_full_trash_32.png" />
+    <None Include="Resources\icons8_recycldde_bin_32.png" />
+    <None Include="Resources\icons8_autumn_32.png" />
+    <None Include="Resources\imageres_15.ico" />
     <None Include="Resources\icons8_question_mark_32.png" />
     <None Include="Resources\icons8_monitor_32.png" />
     <None Include="Resources\icons8_windows_cliefghfgnt_641.png" />
@@ -365,6 +365,8 @@
     <None Include="Icons\icons8_delete_biqsdqsn_32.png" />
     <None Include="Icons\icons8_deskddtop_32.png" />
     <None Include="Icons\icons8_Syringe_with_a_drop_of_bazlood_32.png" />
+    <None Include="icons8_greek_helmet_64.png" />
+    <Content Include="icons8_greek_helmet.ico" />
     <Content Include="LOGO.ico" />
     <None Include="Icons\icons8_pictures_folder_32.png" />
     <None Include="Icons\icons8_windows_client_32.png" />

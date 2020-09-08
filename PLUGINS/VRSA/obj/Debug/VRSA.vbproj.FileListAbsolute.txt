@@ -1,10 +1,10 @@
 E:\PROJECT VBNET\AnonMon\VRSA\bin\Debug\VRSA.dll
 E:\PROJECT VBNET\AnonMon\VRSA\bin\Debug\VRSA.pdb
 E:\PROJECT VBNET\AnonMon\VRSA\bin\Debug\VRSA.xml
-E:\PROJECT VBNET\AnonMon\VRSA\obj\Debug\VRSA.vbprojAssemblyReference.cache
 E:\PROJECT VBNET\AnonMon\VRSA\obj\Debug\PL.Resources.resources
 E:\PROJECT VBNET\AnonMon\VRSA\obj\Debug\VRSA.vbproj.GenerateResource.cache
 E:\PROJECT VBNET\AnonMon\VRSA\obj\Debug\VRSA.vbproj.CoreCompileInputs.cache
 E:\PROJECT VBNET\AnonMon\VRSA\obj\Debug\VRSA.dll
 E:\PROJECT VBNET\AnonMon\VRSA\obj\Debug\VRSA.xml
 E:\PROJECT VBNET\AnonMon\VRSA\obj\Debug\VRSA.pdb
+E:\PROJECT VBNET\AnonMon\VRSA\obj\Debug\VRSA.vbprojAssemblyReference.cache

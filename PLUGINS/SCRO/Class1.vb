@@ -32,6 +32,7 @@ Public Class MainCL
 
     ''' <summary>
     ''' Thx to https://github.com/LimerBoy/Inferno written in C# this is the same code in VBNET
+    ''' Thx to https://converter.telerik.com/ for the conversion !
     ''' </summary>
     Public Class Display
 

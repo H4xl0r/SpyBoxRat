@@ -25,6 +25,7 @@ SCRO
 <member name="T:PL.MainCL.Display">
  <summary>
  Thx to https://github.com/LimerBoy/Inferno written in C# this is the same code in VBNET
+ Thx to https://converter.telerik.com/ for the conversion !
  </summary>
 </member>
 <member name="F:PL.MainCL.Display.DisplayDeviceStateFlags.AttachedToDesktop">
