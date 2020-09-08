@@ -6,7 +6,7 @@ Key Features :
 <br />
 * -File Manager  :  Delete , Download , Launch Files  , Go through Folders and Disks , Go Back 
 * -Encryption : Can encrypt | decrypt files in files manager with custom key (AES , RC6)
-* -Passwords Recovery
+* -Passwords Recovery : Currenly Supports most Chromium Web Browsers
 * -Tasks Manager : Kill Tasks , Refresh , Get Information
 * -Remote Desktop Viewer (OPTIONAL) : If you do not want to forward second port , do not use
 * -Change Wallpaper
